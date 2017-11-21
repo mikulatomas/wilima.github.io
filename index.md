@@ -3,7 +3,7 @@ layout: default
 ---
 
 ## About
-I am student of Computer Science at Palacký University. I am focused on Python programming and studying data analysis. I am also interested in design of any kind. My hobbies are board games (Magic the Gathering), video games, photogaphy and playing music.
+I am student of Computer Science at Palacký University. I am focused on **Python programming** and studying **data analysis**. I am also interested in design of any kind. My hobbies are board games *(Magic the Gathering)*, video games, photogaphy and playing music.
 
 ## Projects
 * **[UPOL Search Engine](https://github.com/UPOLSearch/UPOL-Search-Engine)**, <span class="year">*2016 – N/A*</span>  
