@@ -1,0 +1,93 @@
+---
+---
+
+// Colours
+
+// Uncomment and customise as required
+// $brand-primary:             #f7df1e;
+
+// Options
+
+$enable-flex:               true;
+$enable-rounded:            false;
+$enable-shadows:            false;
+$enable-gradients:          false;
+$enable-transitions:        true;
+
+// Typography
+
+$font-family-sans-serif: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$font-family-base:       $font-family-sans-serif;
+
+@import 'bootstrap';
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: white;
+    background-image: url('/assets/images/background.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: .9rem;
+    text-transform: uppercase;
+    color: #A7A7A7;
+    margin-top: 30px;
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+
+    li {
+        margin-bottom: 5px;
+    }
+}
+
+a {
+    color: #3D89E2;
+}
+
+.subhead {
+    font-size: .9rem;
+}
+
+.year {
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.site-header {
+    margin-top: 80px;
+    margin-bottom: 10px;
+
+    h1 {
+        margin-bottom: 0;
+    }
+}
+
+.site-footer {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+    body {
+        background-image: url('/assets/images/background@2x.png');
+        background-size: 898px 241px;
+    }
+}
