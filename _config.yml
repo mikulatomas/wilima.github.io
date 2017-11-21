@@ -30,10 +30,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # theme: minima
 plugins:
   - jekyll-feed
-  - bootstrap
 exclude:
   - Gemfile
   - Gemfile.lock
-
-bootstrap:
-  assets: true
