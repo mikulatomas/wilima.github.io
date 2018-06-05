@@ -3,10 +3,12 @@ layout: default
 ---
 
 ## About
-I am student of Computer Science at Palacký University. I am focused on **Python programming** and studying **data analysis**. I am also interested in design of any kind. My hobbies are board games *(Magic the Gathering)*, video games, photogaphy and playing music.
+I am PhD student of Computer Science at Palacký University. My specialization is **math psychology** and **Formal Concept Analysis**. I also love **Python programming** and design of any kind. My hobbies are board games *(Magic the Gathering)*, video games, photogaphy and playing music.
 
 ## Projects
-* **[UPOL Search Engine](https://github.com/UPOLSearch/UPOL-Search-Engine)**, <span class="year">*2016 – N/A*</span>  
+* **[formal-concepts library](https://github.com/wilima/formal-concepts)**, <span class="year">*2018 – N/A*</span>  
+Formal Concept Analysis (FCA) library for Python3 under development.
+* **[UPOL Search Engine](https://github.com/UPOLSearch/UPOL-Search-Engine)**, <span class="year">*2016 – 2018*</span>  
 Search engine for upol.cz domain.
 * **[UPlikace](https://play.google.com/store/apps/details?id=cz.uplikace.app&hl=cs)**, <span class="year">*2015 – 2016*</span>  
 Design of Android application for Palacký University in cooperation with [Lukáš Novák](https://www.novaklukas.cz).
@@ -16,7 +18,9 @@ Stock photographer on Stocksy.com, one of the most interesting stock sites.
 Web application for publishing semantically organized content.
 
 ## Education
-* **MSc**, <span class="year">*2016 – N/A*</span>  
+* **PhD**, <span class="year">*2018 – N/A*</span>  
+Department of Computer Science, Palacký University Olomouc
+* **MSc**, <span class="year">*2016 – 2018*</span>  
 Department of Computer Science, Palacký University Olomouc
 * **BSc**, <span class="year">*2013 – 2016*</span>  
 Department of Computer Science, Palacký University Olomouc
