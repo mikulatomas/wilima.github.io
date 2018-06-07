@@ -16,7 +16,7 @@
 title: Tomáš Mikula personal webpage
 email: mail@tomasmikula.cz
 description: > # this means to ignore newlines until "baseurl:"
-  I am student of Computer Science at Palacký University. I am focused on Python programming and studying data analysis. I am also interested in design of any kind. My hobbies are board games (Magic the Gathering), video games, photogaphy and playing music.
+  I am PhD student of Computer Science at Palacký University. My specialization is math psychology and Formal Concept Analysis. I also love Python programming and design of any kind. My hobbies are board games (Magic the Gathering), video games, photogaphy and playing music.
 author: Tomáš Mikula
 
 baseurl: "" # the subpath of your site, e.g. /blog
