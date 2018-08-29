@@ -13,11 +13,15 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Tomáš Mikula personal webpage
+title: Tomáš Mikula
 email: mail@tomasmikula.cz
+subtitle: PhD student of Computer Science at Palacký University
 description: > # this means to ignore newlines until "baseurl:"
   I am PhD student of Computer Science at Palacký University. My specialization is math psychology and Formal Concept Analysis. I also love Python programming and design of any kind. My hobbies are board games (Magic the Gathering), video games, photogaphy and playing music.
 author: Tomáš Mikula
+
+types: [course, summer, winter]
+courses: [PDS, PAPR1]
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com

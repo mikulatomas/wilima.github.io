@@ -5,15 +5,22 @@ html {
     font-size: 16px;
 }
 
-body {
+.main {
     background-color: white;
     background-image: url('/assets/images/background.png');
     background-repeat: no-repeat;
     background-position: center top;
 }
 
+nav {
+    width: 100%;
+}
+
 h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    // text-transform: uppercase;
 }
 
 h2 {
@@ -21,6 +28,10 @@ h2 {
     text-transform: uppercase;
     color: #A7A7A7;
     margin-top: 40px;
+}
+
+h3 {
+    font-size: 1.3rem;
 }
 
 ul {
@@ -44,6 +55,14 @@ a {
     color: #3D89E2;
 }
 
+p {
+    margin-bottom: 0 !important;
+}
+
+td {
+    padding-right: 2rem;
+}
+
 .subhead {
     font-size: .9rem;
 }
@@ -58,12 +77,13 @@ a {
     margin-bottom: 10px;
 
     h1 {
+        font-size: 1.8rem;
         margin-bottom: 0;
     }
 }
 
 .site-footer {
-    margin-top: 40px;
+    margin-top: 80px;
     margin-bottom: 60px;
 }
 
@@ -74,7 +94,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-    body {
+    .main {
         background-image: url('/assets/images/background@2x.png');
         background-size: 898px 241px;
     }

@@ -2,8 +2,15 @@
 layout: default
 ---
 
-## About
-I am PhD student of Computer Science at Palacký University. My specialization is **math psychology** and **Formal Concept Analysis**. I also love **Python programming** and design of any kind. My hobbies are board games *(Magic the Gathering)*, video games, photogaphy and playing music.
+# About
+I am PhD student of Computer Science at Palacký University. My specialization is **math psychology** and **Formal Concept Analysis**. I also love **Python programming** and design of any kind. My hobbies are board games *(Magic the Gathering)*, video games, RC cars and playing music.
+
+## Contact
+
+| ----------------- |:-------------------------------------------------:|
+| **Email:**        | [mail@tomasmikula.cz](mailto:mail@tomasmikula.cz) |
+| **Office:**       | _TBD_                                             |
+| **Office hours:** | _TBD_                                             |
 
 ## Projects
 * **[formal-concepts library](https://github.com/wilima/formal-concepts)**, <span class="year">*2018 – N/A*</span>  

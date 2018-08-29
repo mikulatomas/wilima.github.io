@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {% include head.html %}
-  <body>
+  <body class="main">
 
     {% include header.html %}
     <main class="container">
-      <div class="row">
-        <div class="col-md-6 offset-md-3">{{ content }}</div>
+        {% include nav.html %}
+    <div class="row">
+
+        <div class="col-md-8 offset-md-2">{{ content }}</div>
       </div>
     </main>
 
     {% include footer.html %}
-
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
   </body>
 </html>
