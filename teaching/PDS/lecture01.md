@@ -4,4 +4,4 @@ courses: PDS
 ---
 
 # Úvod do jazyka Python
-_TBD_
+_TBA_

@@ -8,4 +8,4 @@ course: PDS
 ---
 
 ## Zápočet
-_TBD_
+_TBA_

@@ -2,10 +2,10 @@
 layout: course
 title: KMI/PAPR1 Paradigmata programování 1
 lector: doc. RNDr. Michal Krupka, Ph.D.
-course_page: TBD
+course_page: TBA
 types: [course, winter]
 course: PAPR1
 ---
 
 ## Zápočet
-_TBD_
+_TBA_
