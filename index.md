@@ -13,7 +13,7 @@ I am PhD student of Computer Science at Palacký University. My specialization i
 | **Office hours:** | _TBA_                                             |
 
 ## Projects
-* **[formal-concepts library](https://github.com/wilima/formal-concepts)**, <span class="year">*2018 – N/A*</span>  
+* **[formal-concepts library](https://github.com/mikulatomas/formal-concepts)**, <span class="year">*2018 – N/A*</span>  
 Formal Concept Analysis (FCA) library for Python3 under development.
 * **[UPOL Search Engine](https://github.com/UPOLSearch/UPOL-Search-Engine)**, <span class="year">*2016 – 2018*</span>  
 Search engine for upol.cz domain.
@@ -21,7 +21,7 @@ Search engine for upol.cz domain.
 Design of Android application for Palacký University in cooperation with [Lukáš Novák](https://www.novaklukas.cz).
 * **[Stocksy Photographer](https://www.stocksy.com/tomasmikula)**, <span class="year">*2014 – N/A*</span>  
 Stock photographer on Stocksy.com, one of the most interesting stock sites.
-* **[Semantic CMS](https://github.com/wilima/Semantic-CMS)**, <span class="year">*2013 – 2016*</span>  
+* **[Semantic CMS](https://github.com/mikulatomas/Semantic-CMS)**, <span class="year">*2013 – 2016*</span>  
 Web application for publishing semantically organized content.
 
 ## Education
