@@ -5,14 +5,14 @@ layout: default
 # About
 I am PhD student of Computer Science at Palacký University. My specialization is **math psychology** and **Formal Concept Analysis**. I also love **Python programming** and design of any kind. My hobbies are board games *(Magic the Gathering)*, video games, RC cars and playing music.
 
-## Contact
+### Contact
 
 | ----------------- |:-------------------------------------------------:|
 | **Email:**        | [mail@tomasmikula.cz](mailto:mail@tomasmikula.cz) |
 | **Office:**       | _TBA_                                             |
 | **Office hours:** | _TBA_                                             |
 
-## Projects
+### Projects
 * **[formal-concepts library](https://github.com/mikulatomas/formal-concepts)**, <span class="year">*2018 – N/A*</span>  
 Formal Concept Analysis (FCA) library for Python3 under development.
 * **[UPOL Search Engine](https://github.com/UPOLSearch/UPOL-Search-Engine)**, <span class="year">*2016 – 2018*</span>  
@@ -24,7 +24,7 @@ Stock photographer on Stocksy.com, one of the most interesting stock sites.
 * **[Semantic CMS](https://github.com/mikulatomas/Semantic-CMS)**, <span class="year">*2013 – 2016*</span>  
 Web application for publishing semantically organized content.
 
-## Education
+### Education
 * **PhD**, <span class="year">*2018 – N/A*</span>  
 Department of Computer Science, Palacký University Olomouc
 * **MSc**, <span class="year">*2016 – 2018*</span>  

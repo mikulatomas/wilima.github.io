@@ -7,5 +7,8 @@ types: [course, winter]
 course: PDS
 ---
 
+## Co bude obsahem cvičení PDS
+Implementace algoritmů pro synchronizaci procesů, potažmo distribuovaných systémů.
+
 ## Zápočet
 _TBA_
