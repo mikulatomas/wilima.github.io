@@ -50,7 +50,7 @@ print("Hello world!")
 
 Více informací dostupné na odkazu [https://realpython.com/python-first-steps/](https://realpython.com/python-first-steps/). Následující příklady je možné stáhnout ve formě [Jupyter Notebooku](/assets/files/python_basics.ipynb).
 
-# Promněnné
+## Promněnné
 
 {% highlight python linenos %}
 # název proměnné by měl vždy obsahovat podtržítka
@@ -60,7 +60,7 @@ desetine_cslo = 1.56
 boolean = True
 {% endhighlight %}
 
-# Seznamy
+## Seznamy
 
 {% highlight python linenos %}
 seznam = []
@@ -93,7 +93,7 @@ assert seznam_s_hodnotami[2:] == [3, 'ahoj']
 # Seznamy lze libovolne zanorovat, nebo je pouzivat jako frontu, zasobnik, viz dokumentace
 {% endhighlight %}
 
-# Řetězce
+## Řetězce
 
 {% highlight python linenos %}
 retezec = 'abba'
@@ -109,7 +109,7 @@ assert retezec[0] == 'a'
 assert retezec[:2] == 'ab'
 {% endhighlight %}
 
-# Tuple
+## Tuple
 
 {% highlight python linenos %}
 # Tuple narozdíl od seznamu obsahuje neměnné prvky
@@ -142,7 +142,7 @@ toto_je_tuple[0] = 'ahoj'
     TypeError: 'tuple' object does not support item assignment
 {% endhighlight %}
 
-# Slovníky
+## Slovníky
 {% highlight python linenos %}
 slovnik = {'a': 1, 'b': 2}
 
@@ -150,7 +150,7 @@ assert slovnik.get('a') == slovnik['a']
 {% endhighlight %}
 
 
-# Print
+## Print
 
 
 {% highlight python linenos %}
@@ -177,7 +177,7 @@ print("Cislo {}".format(cislo))
 {% endhighlight %}
 
 
-# Podmínky
+## Podmínky
 
 
 {% highlight python linenos %}
@@ -203,7 +203,7 @@ assert (not True) == False
 {% endhighlight %}
 
 
-# Cykly
+## Cykly
 
 
 {% highlight python linenos %}
@@ -275,7 +275,7 @@ for klic, hodnota in slovnik.items():
     klic b hodnota 2
 {% endhighlight %}
 
-# Funkce
+## Funkce
 
 
 {% highlight python linenos %}
@@ -285,3 +285,20 @@ def moje_funkce(argument):
 
 assert moje_funkce(1) == 2
 {% endhighlight %}
+
+# Python vs. parallel programming
+Je Python vhodný pro paralelní/distribuované programování?
+
+## Global Interpreter Lock
+GIL je mutex, který pomáhá udržovat informaci o tom co v rámci Pythonu právě běží. Zároveň poskytuje aktuálnímu vlánknu přístup k interním funkcím Python interpretru. V čem je to problém? Pouze jedno vláknu může v jeden okamžik vyhodnocovat kód v interpretru. Multi-thread scripty jsou ve výsledku pomalejší než single-thread.
+
+> The GIL is controversial because it prevents multithreaded CPython programs from taking full advantage of multiprocessor systems in certain situations. Note that potentially blocking or long-running operations, such as I/O, image processing, and NumPy number crunching, happen outside the GIL. Therefore it is only in multithreaded programs that spend a lot of time inside the GIL, interpreting CPython bytecode, that the GIL becomes a bottleneck.
+
+## Jak vyřešit GIL problém?
+Oficiální knihovna `multiprocessing` pro jazyk Python je alternativa řešící problém s GIL. Místo vytváření vláken dochází k vytváření procesů. Každý proces má vlastní GIL a proto ve výsledku nedochází k problému zmíněném výše. Více informací a příklady jsou dostupné [zde](https://charlienewey.github.io/parallel-processing-python/).
+
+# Jak by to tedy správně mělo být?
+**Scala** [https://www.scala-lang.org](https://www.scala-lang.org) + **Apache Spark** [http://spark.apache.org](http://spark.apache.org), **Clojure** [https://clojure.org](https://clojure.org), výpočty na GPU **CUDA** [https://developer.nvidia.com/cuda-zone](https://developer.nvidia.com/cuda-zone) (existuje i API do Python).
+
+# Proč je dobré (i tak) umět Python?
+Python je jazyk, který získává stále více a více příznivců. Použivají jej firmy jako Google, Apple, Facebook, nebo Seznam.cz. Je to vynikající skriptovací jazyk na psaní prototypů, datamining případně machine learning. Obsahuje nespočet knihoven, které umožňují řešit většinu problému rychle a jednoduše. Více informací o jazyku Python na [odkazu](http://www.bestprogramminglanguagefor.me/why-learn-python).
