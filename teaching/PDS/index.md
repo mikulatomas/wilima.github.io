@@ -11,4 +11,4 @@ course: PDS
 Implementace algoritmů pro synchronizaci procesů, potažmo distribuovaných systémů.
 
 ## Zápočet
-_TBA_
+Zápočtový úkol *(bude doplněno)*, pro jeho splnění je účast na cvičení více než doporučena.
