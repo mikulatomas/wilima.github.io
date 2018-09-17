@@ -159,21 +159,23 @@ var = 'světe'
 # Jde to i takto, ale známe lepší
 print("Ahoj " + var)
 
+# Takto se formátovalo v Python 3
 print("Ahoj {}".format(var))
+
+# Takto by se mělo formátovat teď (Python 3.6+)
+print(f"Ahoj {var}")
 
 cislo = 1
 
-# pokud nepouzijeme format, musime cislo prevest na string
-print("Cislo " + str(cislo))
-
-print("Cislo {}".format(cislo))
+# Dokonce není ani nutné převádět číselnou hodnotu na string
+print(f"Krasne cislo {cislo}")
 {% endhighlight %}
 
 {% highlight plaintext %}
     Ahoj světe
     Ahoj světe
-    Cislo 1
-    Cislo 1
+    Ahoj světe
+    Krasne cislo 1
 {% endhighlight %}
 
 
@@ -238,19 +240,19 @@ for item in my_items:
 
 # pokud precejenom potrebujeme iterovat v nejakem rozmezi pouzivame range()
 for i in range(6):
-    print("Index: {}".format(i))
+    print(f"Index: {i}")
 
 # range muzeme pouzit i na sestupnou iteraci
 for i in range(5, -1, -1):
-    print("Sestupny index: {}".format(i))
+    print(f"Sestupny index: {i}")
 
 
 slovnik = {'a': 1, 'b': 2}
 
 # pomoci for each muzeme krasne iterovat pres slovniky,
 # ze slovniku je nutne ziskat seznam dvojic 'klic, hodnota' pomoci .items()
-for klic, hodnota in slovnik.items():
-    print("klic {} hodnota {}".format(klic, hodnota))
+for key, value in slovnik.items():
+    print(f"klic {key} hodnota {value}")
 {% endhighlight %}
 
 {% highlight plaintext %}
