@@ -25,12 +25,16 @@ Osobní zkušenost instalace mám pouze na Mac OS a Linux. V instalaci by vám m
 > # Úkol
 Instalace jazyka Python na vámi zvolenou platformu.
 
+# Pip vs (Ana)Conda
+Oba dva balíčkovače pro instalování programů/knihoven v rámci Python ekosystému. Anaconda zaměřená více na vědecký Python (dataminig, machine learning). Conda nejenom pro Python, na PC na univerzitě najdete Condu.
+
 # IDE
 Python je možné psát v jakémkoli textovém editoru [případně používat Python interpretr](https://docs.python.org/3/tutorial/interpreter.html).
 
 ### Doporučené Python IDE
 * Vim/Emacs (sadomasochisti)
-* Atom/SublimeText 3
+* [Spyder](https://pythonhosted.org/spyder/installation.html)
+* Atomπ/SublimeText 3
 * [Ostatní](https://realpython.com/python-ides-code-editors-guide/)
 
 ## Jupyter notebook
