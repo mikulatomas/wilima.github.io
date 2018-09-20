@@ -34,7 +34,7 @@ Python je možné psát v jakémkoli textovém editoru [případně používat P
 ### Doporučené Python IDE
 * Vim/Emacs (sadomasochisti)
 * [Spyder](https://pythonhosted.org/spyder/installation.html)
-* Atomπ/SublimeText 3
+* Atom/SublimeText 3
 * [Ostatní](https://realpython.com/python-ides-code-editors-guide/)
 
 ## Jupyter notebook
