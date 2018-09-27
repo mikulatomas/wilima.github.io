@@ -64,6 +64,9 @@ print(text)
 Máme dvě vlákna, která inkrementují sdílený čítač. Každé vlákno má čítač postupně zvýšit o 100 000. Očekávaná výsledná hodnota je 200 000, proč tomu tak ne vždy je?
 
 > # Úkol
+Vytvořte dvě vlákna, která se uspí na náhodně dlouhou dobu (v rozsahu několika sekund) a vypíší výstup na obrazovku.
+
+> # Úkol
 Naprogramujte úlohu sdíleného čítače a vyzkoušejte zda opravdu nefunguje.
 
 > # Úkol
