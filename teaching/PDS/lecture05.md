@@ -14,7 +14,9 @@ title: 5. Producent a konzument
 ## Objekt ```Condition```
 Podmínka je vždy asociována s nějakým druhem zámku. Podmínce může být zámek předán, případně si vytvoří zámek svůj. Toto je důležité pokud více podmínek používá stejný zámek. Již známe metody ```acquire()``` a ```release()``` jsou předány zámku v objektu ```Condition```.
 
-Novinkou však jsou metody ```wait()``` a ```notify()```. Metoda ```wait()``` volní zámek a čeká dokud jej jiné vlákno nepotvrdí metodou ```notify()```, nebo ```notify_all()``` a poté zámek zamče.
+Novinkou však jsou metody ```wait()``` a ```notify()```. Metoda ```wait()``` uvolní zámek a čeká dokud jej jiné vlákno nepotvrdí metodou ```notify()```, nebo ```notify_all()``` a poté zámek zamče.
+
+Metody ```notify()``` a ```notify_all()``` neuvolňují zámek. To znamená, že probuzené vlákno okamžitě nevysoupí ze svého volání ```wait()```, ale počká až se vlákno které volalo ```notify()``` vzdá vlastnictví zámku.
 
 `Condition` je většinou používán následovně:
 
