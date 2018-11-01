@@ -101,11 +101,11 @@ def function():
 
     node = current_process()
 
-    for output_node in node.out_pipes.values():
+    for output_node in node.out_pipes:
         for connection in output_node:
             connection.send("Msg from node {}".format(node.name))
 
-    for input_node in node.in_pipes.values():
+    for input_node in node.in_pipes:
         for connection in input_node:
             LOGGER.info("Node: {}, Msg: {}".format(node.name,
                                                    connection.recv()))
