@@ -12,7 +12,7 @@ title: 8. Simulátor distribuované sítě (2)
 * [Class structure in Python](https://medium.com/@daetam/class-structure-in-python-297792428ef0)
 
 ## Odbočka: Struktura knihovny 
-Naši knihovnu bude vhodné rozdělit minimálně do několika souborů. Dobrým zvykem je udržovat jednu třídu v jednom Python souboru. Soubor by měl být pojmenován malými písmeny, například tedy `nazev_tridy.py`. V tomto souboru je umístěna třída `NazevTridy`. Z ostatních souborů mohu poté provádět import této třídy za pomoci výrazu `from nazev_tridy import NazevTridy`.
+Naši knihovnu bude vhodné rozdělit minimálně do několika souborů. Dobrým zvykem je udržovat jednu třídu v jednom Python souboru. Soubor by měl být pojmenován malými písmeny. Například tedy `nazev_tridy.py`, v tomto souboru je umístěna třída `NazevTridy`. Z ostatních souborů mohu poté provádět import této třídy za pomoci výrazu `from nazev_tridy import NazevTridy`.
 
 Ukázková struktura projektu by tedy mohla být následující:
 
@@ -22,7 +22,7 @@ Ukázková struktura projektu by tedy mohla být následující:
 -rw-r--r--  1 tomasmikula  staff   681 Oct 30 21:35 node.py
 {% endhighlight %}
 
-V souboru `main.py` tedy provádíme základní vytvoření sítě a nastavení topologie. Takto vytvořené třídy můžeme importovat i v rámci interaktivní konzole Pythonu. Nemusíme tedy vůbec vytvářet hlavní soubor.
+V souboru `main.py` provádíme základní vytvoření sítě a nastavení topologie. Takto vytvořené třídy můžeme importovat i v rámci interaktivní konzole Pythonu, nemusíme tedy vůbec vytvářet hlavní soubor.
 
 {% highlight python linenos %}
 import logging
@@ -69,7 +69,7 @@ if __name__ == '__main__':
 {% endhighlight %}
 
 ## Rozšíření knihovny: Možnost předávat argumenty uzlům
-Aktuálně umí naše knihovna spouštět každý uzel s jiným kódem. Neumí však předávat argumenty funkci v daném uzlu. Upravte knihovnu tak, aby krom seznamu funkcí bylo možné předat i seznamy argumentů.
+Aktuálně umí naše knihovna spouštět každý uzel s jiným kódem. Neumí však předávat argumenty funkci v daném uzlu. Upravte knihovnu tak, aby kromě seznamu funkcí bylo možné předat i seznam argumentů (seznam tuples).
 
 {% highlight python linenos %}
 NETWORK = Network(
