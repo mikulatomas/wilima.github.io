@@ -1,7 +1,7 @@
 ---
 layout: lecture
 courses: PDS
-title: 7. Simulátor distribuované sítě (2)
+title: 8. Simulátor distribuované sítě (2)
 ---
 
 
