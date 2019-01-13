@@ -10,14 +10,16 @@ I am PhD student of Computer Science at Palacký University. My specialization i
 | ----------------- |:-------------------------------------------------:|
 | **Email:**        | [mail@tomasmikula.cz](mailto:mail@tomasmikula.cz) |
 | **Office:**       | 5.076                                             |
-| **Office hours:** | 14:00-15:30 Thursday                              |
+| **Office hours:** | 13:00-14:30 Monday                              |
 
 ### Projects
 * **[formal-concepts library](https://github.com/mikulatomas/formal-concepts)**, <span class="year">*2018 – N/A*</span>  
 Formal Concept Analysis (FCA) library for Python3 under development.
 * **[UPOL Search Engine](https://github.com/UPOLSearch/UPOL-Search-Engine)**, <span class="year">*2016 – 2018*</span>  
 Search engine for upol.cz domain.
-* **[UPlikace](https://play.google.com/store/apps/details?id=cz.uplikace.app&hl=cs)**, <span class="year">*2015 – 2016*</span>  
+* **[UPlikace iOS]()**, <span class="year">*2018 – 2019*</span>  
+Design of iOS application for Palacký University in cooperation with [Roman Vyjídáček](https://vyjidacek.cz).
+* **[UPlikace Android](https://play.google.com/store/apps/details?id=cz.uplikace.app&hl=cs)**, <span class="year">*2015 – 2016*</span>  
 Design of Android application for Palacký University in cooperation with [Lukáš Novák](https://www.novaklukas.cz).
 * **[Stocksy Photographer](https://www.stocksy.com/tomasmikula)**, <span class="year">*2014 – N/A*</span>  
 Stock photographer on Stocksy.com, one of the most interesting stock sites.
