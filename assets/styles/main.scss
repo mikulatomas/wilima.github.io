@@ -7,13 +7,15 @@ html {
 
 .main {
     background-color: white;
-    background-image: url('/assets/images/background.png');
-    background-repeat: no-repeat;
-    background-position: center top;
 }
 
 nav {
     width: 100%;
+    margin-top: 10px;
+    a {
+        color: white;
+        text-decoration: underline;
+    }
 }
 
 blockquote {
@@ -93,6 +95,7 @@ td {
 
 .subhead {
     font-size: .9rem;
+    color: #E9E9E9;
 }
 
 .year {
@@ -101,11 +104,17 @@ td {
 }
 
 .site-header {
-    margin-top: 80px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    background: rgb(85,176,227);
+background: radial-gradient(circle, rgba(85,176,227,1) 32%, rgba(71,145,231,1) 100%);
+
     margin-bottom: 10px;
+    color: white;
 
     h1 {
         font-size: 1.8rem;
+        font-weight: 700;
         margin-bottom: 0;
     }
 }
@@ -118,15 +127,4 @@ td {
 .showcase {
     width: 50%;
 }
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-    .main {
-        background-image: url('/assets/images/background@2x.png');
-        background-size: 898px 241px;
-    }
-}
+
