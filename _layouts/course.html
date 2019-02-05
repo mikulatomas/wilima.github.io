@@ -11,7 +11,11 @@
             <h1>{{page.title}}</h1>
             <p><b>Přednášející:</b> {{page.lector}}</p>
             <p><b>Stránka předmětu:</b> <a href="{{page.course_page}}">{{page.course_page}}</a></p>
+            {% if page.practise_headline %}
+            <h2>{{ page.practise_headline }}</h2>
+            {% else %}
             <h2>Seznam cvičení</h2>
+            {% endif %}
             {% capture type %}{{ page.course }}{% endcapture %}
             <ul>
             {% for page in site.pages %}

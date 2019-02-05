@@ -19,6 +19,16 @@
               </li>
               {% endif %}
             {% endfor %}
+            <h3>Letní semestr</h3>
+            <ul>
+            {% for page in site.pages %}
+              {% if page.types contains 'course' and page.types contains 'summer' %}
+              <li>
+                <a href="{{page.url}}">{{page.title}}</a>
+              </li>
+              {% endif %}
+            {% endfor %}
+
         </ul>
         </div>
       </div>
