@@ -4,7 +4,7 @@ courses: URO
 title: 1. Historie webu (deadline 24.2.2019)
 ---
 
-# Vývoj UI v rámci webu (deadline 24.2.2019)
+# Historie UI v rámci webu (deadline 24.2.2019)
 
 Zpracujte text ve kterém popíšete vývoj uživatelského zohraní na příkladu konkrétní webové stránky. Text musí rovněž obsahovat názorné ukázky (screenshoty). K analýze webu použíjte jeden z níže uvedných portálů.
 
