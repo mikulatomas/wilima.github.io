@@ -14,4 +14,4 @@ V případě, že v materiálech naleznete chybu, kontaktujte mě prosím na e-m
 
 Changelog
 ---------
-* 10.2.2018 - První verze
+* 10.2.2018 - První verze (2 kapitoly)
