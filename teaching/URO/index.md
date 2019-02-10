@@ -19,6 +19,10 @@ Kurs je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu
 4.	Základní prvky pro tvorbu uživatelského rozhraní. 
 5.	Časté chyby v návrhu uživatelského rozhraní.
 
+Materiály k předmětu
+--------------------
+* [Ke stažení zde](/teaching/URO/skripta)
+
 Užitečné odkazy
 ---------------
 * [https://cantunsee.space](https://cantunsee.space)
