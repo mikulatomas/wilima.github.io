@@ -13,8 +13,8 @@ I am PhD student of Computer Science at Palacký University. My specialization i
 | **Office hours:** | 13:00-14:30 Monday                              |
 
 ### Projects
-* **[formal-concepts library](https://github.com/mikulatomas/formal-concepts)**, <span class="year">*2018 – N/A*</span>  
-Formal Concept Analysis (FCA) library for Python3 under development.
+<!-- * **[formal-concepts library](https://github.com/mikulatomas/formal-concepts)**, <span class="year">*2018 – N/A*</span>  
+Formal Concept Analysis (FCA) library for Python3 under development. -->
 * **[UPOL Search Engine](https://github.com/UPOLSearch/UPOL-Search-Engine)**, <span class="year">*2016 – 2018*</span>  
 Search engine for upol.cz domain.
 * **[UPlikace iOS]()**, <span class="year">*2018 – 2019*</span>  
