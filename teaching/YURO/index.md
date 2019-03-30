@@ -28,4 +28,5 @@ Užitečné odkazy
 * [https://lawsofux.com](https://lawsofux.com)
 * [https://hackdesign.org](https://hackdesign.org)
 * [https://type.method.ac](https://type.method.ac)
+* [https://sneakpeekit.com](Printable wireframe layouts)
 
