@@ -6,6 +6,7 @@ practise_headline: Úkoly
 types: [course, summer]
 course_page: https://bit.ly/2HTF7pB
 course: URO
+year: 2019
 ---
 Popis předmětu
 --------------
@@ -21,15 +22,15 @@ Kurs je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu
 
 Materiály k předmětu
 --------------------
-* [Ke stažení zde](/teaching/URO/skripta)
+* [Ke stažení zde](/teaching/skripta)
 
 Užitečné odkazy
 ---------------
-* [https://cantunsee.space](https://cantunsee.space)
-* [https://lawsofux.com](https://lawsofux.com)
-* [https://hackdesign.org](https://hackdesign.org)
-* [https://type.method.ac](https://type.method.ac)
-* [https://sneakpeekit.com](Printable wireframe layouts)
+* [UI design game](https://cantunsee.space)
+* [Pravidla UX designu](https://lawsofux.com)
+* [Hack design](https://hackdesign.org)
+* [Kerning game](https://type.method.ac)
+* [Printable wireframe layouts](https://sneakpeekit.com)
 
 Podmínky kolokvia
 -----------------

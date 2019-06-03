@@ -5,6 +5,7 @@ lector: Mgr. Petr Osička, Ph.D.
 course_page: http://phoenix.inf.upol.cz/~osicka/pds.html
 types: [course, winter]
 course: PDS
+year: 2019
 ---
 
 ## Co bude obsahem cvičení PDS

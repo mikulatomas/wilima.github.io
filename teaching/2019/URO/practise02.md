@@ -19,11 +19,11 @@ Vyberte si jeden ze dvou níže uvedených projektů. Každý z projektů má dv
 * Nedůležitý text, může být nahrazen vlnovkami
 
 ### Užitečné odkazy
-* [https://lawsofux.com](https://lawsofux.com)
-* [https://hackdesign.org](https://hackdesign.org)
+* [UI design game](https://cantunsee.space)
+* [Pravidla UX designu](https://lawsofux.com)
+* [Hack design](https://hackdesign.org)
+* [Kerning game](https://type.method.ac)
 * [Printable wireframe layouts](https://sneakpeekit.com)
-* [Material Design Guide](https://material.io)
-* [Semantic Web UI](https://semantic-ui.com)
 
 
 ## Odevzdání/obhajoba
