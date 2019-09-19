@@ -20,7 +20,7 @@
           </li>
           {% endif %}
           {% endfor %}
-          <!-- <h3>Letní semestr</h3>
+          <h3>Letní semestr</h3>
           <ul>
             {% for page in site.pages %}
             {% if page.types contains 'course' and page.types contains 'summer' and page.year == 2020 %}
@@ -28,28 +28,28 @@
               <a href="{{page.url}}">{{page.title}}</a>
             </li>
             {% endif %}
-            {% endfor %} -->
-        </ul>
-        <h2>2018/2019</h2>
-        <h3>Zimní semestr</h3>
-        <ul>
-          {% for page in site.pages %}
-          {% if page.types contains 'course' and page.types contains 'winter' and page.year == 2019 %}
-          <li>
-            <a href="{{page.url}}">{{page.title}}</a>
-          </li>
-          {% endif %}
-          {% endfor %}
-          <h3>Letní semestr</h3>
+            {% endfor %}
+          </ul>
+          <h2>2018/2019</h2>
+          <h3>Zimní semestr</h3>
           <ul>
             {% for page in site.pages %}
-            {% if page.types contains 'course' and page.types contains 'summer' and page.year == 2019 %}
+            {% if page.types contains 'course' and page.types contains 'winter' and page.year == 2019 %}
             <li>
               <a href="{{page.url}}">{{page.title}}</a>
             </li>
             {% endif %}
             {% endfor %}
-          </ul>
+            <h3>Letní semestr</h3>
+            <ul>
+              {% for page in site.pages %}
+              {% if page.types contains 'course' and page.types contains 'summer' and page.year == 2019 %}
+              <li>
+                <a href="{{page.url}}">{{page.title}}</a>
+              </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
       </div>
     </div>
   </main>
