@@ -15,7 +15,7 @@ and integrate systems more effectively.
 * [Dokumentace jazyka Python3](https://docs.python.org/3/)
 * [The Hitchhiker’s Guide to Python!](https://docs.python-guide.org)
 * [Real Python](https://realpython.com)
-* [KMI/PHT Programování v jazyce Python](http://trnecka.inf.upol.cz/teaching/)
+* [KMI/PHT Programování v jazyce Python](http://trnecka.inf.upol.cz/teaching/pht/)
 
 ## Python 2.7 vs 3.x
 Většina produkce stále používá `Python 2.7`, `Python 3` je však zcela připraven pro ostré nasazení do produkce. `Python 2.7` bude dostávat bezpečnostní update pouze do roku 2020. Více info na [odkazu](https://docs.python-guide.org/starting/which-python/#the-state-of-python-3-2).
