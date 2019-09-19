@@ -2,6 +2,7 @@
 layout: lecture
 courses: PDS
 title: 3. Základy se semafory
+year: 2019
 ---
 
 

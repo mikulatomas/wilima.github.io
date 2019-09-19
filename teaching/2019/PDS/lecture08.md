@@ -2,6 +2,7 @@
 layout: lecture
 courses: PDS
 title: 8. Simulátor distribuované sítě (2)
+year: 2019
 ---
 
 

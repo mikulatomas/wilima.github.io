@@ -2,6 +2,7 @@
 layout: lecture
 courses: PDS
 title: 10. Výpočet infima 
+year: 2019
 ---
 
 

@@ -2,6 +2,7 @@
 layout: lecture
 courses: PDS
 title: 1. Úvod a instalace jazyka Python
+year: 2020
 ---
 
 # Základní informace o jazyku Python

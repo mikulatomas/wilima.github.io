@@ -2,6 +2,7 @@
 layout: lecture
 courses: PDS
 title: 4. Linear regression - operace s maticemi
+year: 2019
 ---
 
 

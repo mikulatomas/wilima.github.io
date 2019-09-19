@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  {% include head.html %}
-  <body>
+{% include head.html %}
 
-    {% include header_small.html %}
-    <main class="container">
-      <div class="row">
-        <div class="col-md-8 offset-md-2">
-            <h1>{{page.title}}</h1>
-            <p><b>Přednášející:</b> {{page.lector}}</p>
-            <p><b>Stránka předmětu:</b> <a href="{{page.course_page}}">{{page.course_page}}</a></p>
-            {% if page.practise_headline %}
-            <h2>{{ page.practise_headline }}</h2>
-            {% else %}
-            <h2>Seznam cvičení</h2>
-            {% endif %}
-            {% capture type %}{{ page.course }}{% endcapture %}
-            <ul>
-            {% for page in site.pages %}
-              {% if page.courses contains type %}
-                  <li>
-                    <a href="{{page.url}}">{{page.title}}</a>
-                  </li>
-              {% endif %}
-            {% endfor %}
+<body>
+
+  {% include header_small.html %}
+  <main class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1>{{page.title}}</h1>
+        <p><b>Přednášející:</b> {{page.lector}}</p>
+        <p><b>Stránka předmětu:</b> <a href="{{page.course_page}}">{{page.course_page}}</a></p>
+        {% if page.practise_headline %}
+        <h2>{{ page.practise_headline }}</h2>
+        {% else %}
+        <h2>Seznam cvičení</h2>
+        {% endif %}
+        {% capture type %}{{ page.course }}{% endcapture %}
+        <ul>
+          {% for lecture_page in site.pages %}
+          {% if lecture_page.courses contains type and lecture_page.year == page.year %}
+          <li>
+            <a href="{{lecture_page.url}}">{{lecture_page.title}}</a>
+          </li>
+          {% endif %}
+          {% endfor %}
         </ul>
-            {{ content }}</div>
+        {{ content }}
       </div>
-    </main>
+    </div>
+  </main>
 
-    {% include footer.html %}
-  </body>
+  {% include footer.html %}
+</body>
+
 </html>

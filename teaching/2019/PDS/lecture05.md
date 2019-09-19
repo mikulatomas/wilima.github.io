@@ -2,6 +2,7 @@
 layout: lecture
 courses: PDS
 title: 5. Producent a konzument
+year: 2019
 ---
 
 
