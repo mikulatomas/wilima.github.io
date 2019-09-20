@@ -10,7 +10,7 @@ I am PhD student of Computer Science at Palacký University. My specialization i
 | ----------------- |:-------------------------------------------------:|
 | **Email:**        | [mail@tomasmikula.cz](mailto:mail@tomasmikula.cz) |
 | **Office:**       | 5.076                                             |
-| **Office hours:** | 15:00-16:00 Thursday (e-mail me for other days)   |
+| **Office hours:** | 15:00-16:00 Wednesday (e-mail me for other days)   |
 
 ### Projects
 <!-- * **[formal-concepts library](https://github.com/mikulatomas/formal-concepts)**, <span class="year">*2018 – N/A*</span>  
