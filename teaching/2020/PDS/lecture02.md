@@ -2,7 +2,7 @@
 layout: lecture
 courses: PDS
 title: 2. Práce s vlákny
-year: 2019
+year: 2020
 ---
 
 
