@@ -71,7 +71,7 @@ Vytvořte dvě vlákna, která se uspí na náhodně dlouhou dobu (v rozsahu ně
 Naprogramujte úlohu sdíleného čítače a vyzkoušejte zda opravdu nefunguje.
 
 > # Úkol
-Mějme tři pole `a`, `b`, `c` s celými čísly. Je známo, že některé číslo se vyskytuje v každém poli. Paralelně nalézněte nejmenší index `i`, `j`, `k` pro které platí `a[i] == b[j] == c[k]`, hodnoty vypište na obrazovku. Úkol lze vyřešit tak, že není nutné použít synchronizaci.
+Mějme tři setřízená pole `a`, `b`, `c` s celými čísly. Je známo, že některé číslo se vyskytuje v každém poli. Paralelně nalézněte nejmenší index `i`, `j`, `k` pro které platí `a[i] == b[j] == c[k]`, hodnoty vypište na obrazovku. Úkol lze vyřešit tak, že není nutné použít synchronizaci.
 <br><br>
 > **Ukázkový vstup problému**
 ```
