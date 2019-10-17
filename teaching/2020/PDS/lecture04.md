@@ -39,7 +39,7 @@ with cv:
 V následující implementaci dochází k problému konzumace prázdné fronty.
 
 {% highlight python linenos %}
-from threading import Thread, Lock, Condition
+from threading import Thread, Lock
 import time
 import random
 
