@@ -11,7 +11,7 @@ year: 2020
 ### Užitečné odkazy
 * [Python `threading` — Thread-based parallelism](https://docs.python.org/3/library/threading.html)
 * [Python `Condition` — Thread-based parallelism](https://docs.python.org/3/library/threading.html#condition-objects)
-* [Zdrojové kódy z cvičení formou notebooku](/assets/files/lecture04.ipynb)
+* [Zdrojové kódy z cvičení formou notebooku](/assets/files/2020/lecture04.ipynb)
 
 ## Objekt ```Condition```
 Podmínka je vždy asociována s nějakým druhem zámku. Podmínce může být zámek předán, případně si vytvoří zámek svůj. Již známe metody ```acquire()``` a ```release()``` jsou předány zámku v objektu ```Condition```.
@@ -44,7 +44,7 @@ import time
 import random
 
 queue = []
-lock = Condition()
+lock = Lock()
 
 class ProducerThread(Thread):
     def run(self):
