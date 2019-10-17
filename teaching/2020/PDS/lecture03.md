@@ -10,7 +10,7 @@ year: 2020
 
 ### Užitečné odkazy
 * [Python Semaphore Objects](https://docs.python.org/3/library/threading.html#semaphore-objects)
-* [Zdrojové kódy z cvičení formou notebooku](/assets/files/lecture02.ipynb)
+* [Zdrojové kódy z cvičení formou notebooku](/assets/files/2020/lecture02.ipynb)
 
 ## Objekt `Semaphore`
 `Semaphore` je třída reprezentující synchronizační primitivum semafor. Semafor je při vytvoření nastaven na určitou hodnotu. Z teorie známe dvě funkce `P()` a `V()`, které tuto hodnotu mění, v Python3 jsou tyto funkce pojmenovány `acquire()` a `release()`.

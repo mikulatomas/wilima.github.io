@@ -10,7 +10,7 @@ year: 2020
 
 ### Užitečné odkazy
 * [Python `threading` — Thread-based parallelism](https://docs.python.org/3/library/threading.html)
-* [Zdrojové kódy z cvičení formou notebooku](/assets/files/lecture01.ipynb)
+* [Zdrojové kódy z cvičení formou notebooku](/assets/files/2020/lecture01.ipynb)
 
 ## Objekt `Thread`
 `Thread` třída reprezentuje aktivitu běžící v separátním vlákně. Jsou zde dvě možnosti jak objektu `Thread` specifikovat aktivitu: předání `callable object` do konstruktoru třídy `Thread`, nebo přepsání metody `run()`. Pro jednoduchost budeme používat první možnost.
