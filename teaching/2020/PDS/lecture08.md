@@ -178,19 +178,16 @@ TOPOLOGY = [[False, True, False],
 Ukázkový log:
 
 [INFO/0] child process calling self.run()
-[INFO/MainProcess] process shutting down
 [INFO/1] child process calling self.run()
-[INFO/1] Node: 1, Msg: Msg from node 0
-[INFO/MainProcess] calling join() for process 0
+[INFO/0] Node: 0, Msg: Msg from node 1
 [INFO/2] child process calling self.run()
-[INFO/2] Node: 2, Msg: Msg from node 1
-[INFO/0] Node: 0, Msg: Msg from node 2
-[INFO/1] process shutting down
-[INFO/1] process exiting with exitcode 0
+[INFO/2] Node: 2, Msg: Msg from node 0
+[INFO/1] Node: 1, Msg: Msg from node 2
 [INFO/0] process shutting down
-[INFO/2] process shutting down
 [INFO/0] process exiting with exitcode 0
+[INFO/1] process shutting down
+[INFO/2] process shutting down
+[INFO/1] process exiting with exitcode 0
 [INFO/2] process exiting with exitcode 0
-[INFO/MainProcess] calling join() for process 1
-[INFO/MainProcess] calling join() for process 2
+[INFO/MainProcess] process shutting down
 {% endhighlight %}
