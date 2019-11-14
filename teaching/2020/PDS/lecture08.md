@@ -67,6 +67,32 @@ NETWORK.start()
 NETWORK.join()
 {% endhighlight %}
 
+Třída `Network` obsahuje následující metody:
+
+{% highlight python linenos %}
+class Network():
+    """Represents distributed network"""
+
+    def __init__(self, functions, topology):
+        pass
+
+    def start(self):
+        """Starts all nodes in the network"""
+        pass
+
+    def terminate(self):
+        """Terminate all nodes in the network"""
+        pass
+
+    def kill(self):
+        """Kill all nodes in the network"""
+        pass
+
+    def join(self):
+        """Join all nodes in the network"""
+        pass
+{% endhighlight %}
+
 ## Třída `multiprocessing.Process`
 Reprezentuje aktivitu, která běží v samostatném procesu. Pro reprezentaci použijeme třídu `Process` s upravenou funkcionalitou. Více informací naleznete [zde](https://docs.python.org/3.8/library/multiprocessing.html#multiprocessing.Process).
 
@@ -95,6 +121,23 @@ client.send("Test")
 
 # Příjmeme zprávu na druhém konci
 server.recv()
+{% endhighlight %}
+
+Třída `Node` obsahuje následující metody:
+
+{% highlight python linenos %}
+class Node(Process):
+    """Represents one node in the distributed network"""
+
+    def __init__(self, name, function):
+        Process.__init__(self, name=name, target=function)
+        pass
+
+    def add_in_pipe(self, pipe):
+        pass
+
+    def add_out_pipe(self, pipe):
+        pass
 {% endhighlight %}
 
 ## Logování
