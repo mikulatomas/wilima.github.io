@@ -110,17 +110,17 @@ class Node(Process):
 Komunikační kanál mezi dvěma procesy. Po vytvoření objektu `Pipe` je vrácena dvojice objektu `Connection`. První reprezentuje cílový uzel (můžeme pouze přijímat), druhý počáteční (může pouze odesílat). Objekt budeme vytvářet s parametrem `duplex=False`, ten zařídí, že komunikační kanál je jednosměrný. Více informací naleznete [zde](https://docs.python.org/3.8/library/multiprocessing.html#multiprocessing.Pipe).
 
 {% highlight python linenos %}
-client, server = Pipe(duplex=False)
+reciever, sender = Pipe(duplex=False)
 
 ...
 
 # Odešleme zprávu
-client.send("Test")
+sender.send("Test")
 
 ...
 
 # Příjmeme zprávu na druhém konci
-server.recv()
+reciever.recv()
 {% endhighlight %}
 
 Třída `Node` obsahuje následující metody:
