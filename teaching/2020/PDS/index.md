@@ -12,4 +12,4 @@ year: 2020
 Implementace algoritmů pro synchronizaci procesů, potažmo distribuovaných systémů.
 
 ## Zápočet
-Zápočtový úkol *(bude doplněno)*, pro jeho splnění je účast na cvičení více než doporučena.
+Zápočtový úkol -- naprogramovat jednoduchý simulátor distribuované sítě, pro jeho splnění je účast na cvičení více než doporučena.
