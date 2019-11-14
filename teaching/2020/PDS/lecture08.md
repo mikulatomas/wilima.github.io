@@ -70,6 +70,16 @@ NETWORK.join()
 ## Třída `multiprocessing.Process`
 Reprezentuje aktivitu, která běží v samostatném procesu. Pro reprezentaci použijeme třídu `Process` s upravenou funkcionalitou. Více informací naleznete [zde](https://docs.python.org/3.8/library/multiprocessing.html#multiprocessing.Process).
 
+{% highlight python linenos %}
+from multiprocessing import Process
+
+class Node(Process):
+
+    def __init__(self, name, function):
+        Process.__init__(self, name=name, target=function)
+        ...
+{% endhighlight %}
+
 ## Třída `multiprocessing.Pipe`
 Komunikační kanál mezi dvěma procesy. Po vytvoření objektu `Pipe` je vrácena dvojice objektu `Connection`. První reprezentuje cílový uzel (můžeme pouze přijímat), druhý počáteční (může pouze odesílat). Objekt budeme vytvářet s parametrem `duplex=False`, ten zařídí, že komunikační kanál je jednosměrný. Více informací naleznete [zde](https://docs.python.org/3.8/library/multiprocessing.html#multiprocessing.Pipe).
 
