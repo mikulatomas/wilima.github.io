@@ -1,7 +1,7 @@
 ---
 layout: lecture
 courses: PDS
-title: 9. Vlnový algoritmus Echo 
+title: 10. Vlnový algoritmus Echo 
 year: 2020
 ---
 
