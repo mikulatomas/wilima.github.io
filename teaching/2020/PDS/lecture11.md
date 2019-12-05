@@ -12,7 +12,7 @@ year: 2020
 * [Python `multiprocessing` — Process-based parallelism](https://docs.python.org/3.8/library/multiprocessing.html)
 
 ## Využití algoritmu Echo z minula 
-Vlnový algoritmus `Echo` lze použít například k výpočtu infima v distribuované síti. Jako operaci použíjte `max`.
+Vlnový algoritmus `Echo` lze použít například k výpočtu infima v distribuované síti. Jako operaci použíjte `min`.
 
 <img src="/assets/images/PDS/lecture10/img_2.png" class="img-fluid" srcset="/assets/images/PDS/lecture10/img_2@2x.png 2x" />
 
