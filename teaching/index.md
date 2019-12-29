@@ -9,6 +9,12 @@ Témata bakalářských prací, které jsou k dispozici. Studenti s vlastnímy t
 > Vytvoření kompletní knihovny *(dokumentace, automatické testy, publikovaný Python balíček, atd.)* v jazyku Python.
 > Funkčnost a rozsah knihovny po domluvě, nejlépe nápad studenta.
 
+> **Hlídač cen kolekce Magic: The Gathering karet:**
+> Webová aplikace na správu kolekce Magic: The Gathering (MtG) karet (podobné https://deckbox.org).
+> Student využije veřejné API https://scryfall.com pro získávání/našeptávání všech existujících karet a jejich cen.
+> Aplikace bude periodicky kontrolovat ceny karet z kolekce a ukládat jejich hodnotu. Majitel kolekce tak tedy pozná zda karty na ceně rostou, či klesají. V případě extrémních změn pak aplikace uživatele upozorní.
+> V práci by měl být kladen důraz na uživatelské rozhraní (např. vykreslování karet a grafů). Aplikace by měla být rovněž funkční na mobilních zařízeních.
+
 V případě zájmu o téma nebo dalších otázek mi napište e-mail ([mail@tomasmikula.cz](mailto:mail@tomasmikula.cz)).
 
 
