@@ -3,7 +3,7 @@ layout: default
 ---
 
 # About
-I am PhD student of Computer Science at Palacký University. My specialization is **math psychology** and **Formal Concept Analysis**. I also love **Python programming** and design of any kind. My hobbies are board games *(Magic the Gathering)*, video games and RC cars.
+I am PhD student of Computer Science at Palacký University. My specialization is **[math psychology](https://en.wikipedia.org/wiki/Mathematical_psychology)** in context of **Machine Learning** and **Formal Concept Analysis**. I also love **Python programming** and design of any kind. My hobbies are Magic the Gathering, video games and RC cars.
 
 ### Contact
 
