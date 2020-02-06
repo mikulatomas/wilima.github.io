@@ -14,4 +14,5 @@ V případě, že v materiálech naleznete chybu, kontaktujte mě prosím na e-m
 
 Changelog
 ---------
-* 10.2.2018 - První verze (2 kapitoly)
+* 10.2.2019 - První verze (2 kapitoly)
+* 6.2.2020 - Přidány kapitoly "Grafické uživatelské rozhraní" a "Elementy grafického uživatelského rozhraní". Korektura prvních dvou kapitol.
