@@ -3,7 +3,7 @@ layout: lecture
 title: Uživatelská rozhraní materiály
 ---
 
-# Materiály k předmětu Uživatelská rozhraní (KMI/URO a KMI/YURO)
+# Materiály k předmětu Uživatelská rozhraní (KMI/URO a KMI/YUZR)
 Materiály jsou stále ve vývoji a budou postupně doplňovány.  
 
 **Download**: [uzivatelska-rozhrani.pdf](/assets/files/uzivatelska-rozhrani.pdf)

@@ -1,11 +1,11 @@
 ---
 layout: course
-title: KMI/YURO Uživatelská rozhraní
+title: KMI/YUZR Uživatelská rozhraní
 lector: Tomáš Mikula
 types: [course, summer]
 practise_headline: ""
 course_page: https://bit.ly/2MPti2m
-course: YURO
+course: YUZR
 year: 2020
 ---
 
