@@ -12,6 +12,9 @@ I am PhD student of Computer Science at Palacký University. My specialization i
 | **Office:**       | 5.076                                             |
 | **Office hours:** | 12:45-13:45 Monday (e-mail me for other days)   |
 
+### Publications
+<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-7514-8523" href="https://orcid.org/0000-0002-7514-8523" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0002-7514-8523</a></div>
+
 ### Projects
 <!-- * **[formal-concepts library](https://github.com/mikulatomas/formal-concepts)**, <span class="year">*2018 – N/A*</span>  
 Formal Concept Analysis (FCA) library for Python3 under development. -->
