@@ -6,7 +6,7 @@ title: 2. Návrh uživatelského rozhraní (wireframe)
 
 # Návrh uživatelského rozhraní (wireframe)
 
-Vyberte si jeden ze dvou níže uvedených projektů. Každý z projektů má dvě alternativy: **mobilní nebo webová aplikace**. Vytvořte **papírový** wireframe projektu, obsahující **veškerou požadovanou funkcionalitu**. Šablonu pro wireframe pro tisk stahujte [https://sneakpeekit.com](zde). **Konzultace jsou možné v době semináře případně po dohodě e-mailem**.
+Vyberte si jeden ze dvou níže uvedených projektů. Každý z projektů má dvě alternativy: **mobilní nebo webová aplikace**. V případě mobilní aplikace mějte v představě cílovou platformu (Android/iOS). V případě webové aplikace se doporučuji inspirovat Material Designem, nebo jiným frameworkem. Vytvořte **papírový** wireframe projektu, obsahující **veškerou požadovanou funkcionalitu**. Šablonu pro wireframe pro tisk stahujte [zde](https://sneakpeekit.com). **Konzultace jsou možné v době semináře případně po dohodě e-mailem**.
 
 ### Co **musí** obsahovat wireframe?
 * Základní rozmístění a volba elementů
@@ -24,6 +24,9 @@ Vyberte si jeden ze dvou níže uvedených projektů. Každý z projektů má dv
 * [Hack design](https://hackdesign.org)
 * [Kerning game](https://type.method.ac)
 * [Printable wireframe layouts](https://sneakpeekit.com)
+* [Human Interface Guidelines (iOS)](https://developer.apple.com/design/human-interface-guidelines/)
+* [Material Design (Android)](https://material.io/components/)
+* [Bootstrap Framework](https://getbootstrap.com/docs/4.4/components/alerts/)
 
 
 ## Odevzdání/obhajoba
