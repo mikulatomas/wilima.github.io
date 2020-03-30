@@ -9,7 +9,7 @@ I am PhD student of Computer Science at Palacký University. My specialization i
 
 | ----------------- |:-------------------------------------------------:|
 | **Email:**        | [mail@tomasmikula.cz](mailto:mail@tomasmikula.cz) |
-| **Office:**       | 5.076                                             |
+| **Office:**       | <del>5.076</del>                                           |
 | **Office hours:** | <del>12:45-13:45 Monday</del> (pouze e-mail, do odvolání)   |
 
 ### Publications

@@ -1,9 +1,11 @@
 <header class="site-header text-center" role="banner">
   {% assign custom_url = site.url | append: site.baseurl %}
   {% assign full_base_url = custom_url %}
-  <img src="{{ "/assets/images/portrait.png" | absolute_url }}" srcset="{{ "/assets/images/portrait@2x.png" | absolute_url }} 2x" alt="portrait"/>
+  <img src="{{ "/assets/images/portrait.png" | absolute_url }}"
+    srcset="{{ "/assets/images/portrait@2x.png" | absolute_url }} 2x" alt="portrait" />
   <h1 class="mt-4">{{site.author}}</h1>
   <p class="subhead">{{site.subtitle}}</p>
+  <hr />
 
-        {% include nav.html %}
+  {% include nav.html %}
 </header>

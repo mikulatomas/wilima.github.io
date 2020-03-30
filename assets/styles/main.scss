@@ -14,8 +14,19 @@ nav {
     margin-top: 10px;
     a {
         color: white;
-        text-decoration: underline;
+        i {
+            margin-right: 3px;
+        }
     }
+
+    .nav-link {
+        padding: .5rem .7rem;
+    }
+    
+}
+
+.subtitle {
+    font-size: 0.9rem;
 }
 
 blockquote {
@@ -64,6 +75,37 @@ h2 {
     font-size: 1.2rem;
     margin-top: 40px;
     margin-bottom: 15px;
+
+}
+.legend {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 60px;
+    text-align: right;
+
+    i:first-child {
+        margin-left: 0;
+    }
+
+    i {
+        margin-left: 5px;
+        margin-right: 2px !important;
+    }
+}
+
+i.finished {
+        color: #11bf3a;
+        margin-right: 5px;
+    }
+
+i.working {
+    color: #ff9f05;
+    margin-right: 5px;
+}
+
+i.free {
+    color: rgb(85,176,227);
+        margin-right: 5px;
 }
 
 ul {
@@ -119,11 +161,46 @@ background: radial-gradient(circle, rgba(85,176,227,1) 32%, rgba(71,145,231,1) 1
         font-weight: 700;
         margin-bottom: 0;
     }
+
+    hr {
+        width: 120px;
+        border-color: white;
+    }
 }
 
 .site-footer {
     margin-top: 80px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+    line-height: 1.1rem;
+    vertical-align: middle;
+
+    i {
+        font-size: 1.1rem;
+        opacity: 0.4;
+    }
+    
+    i:first-child {
+        color: #1d5dde;
+        position: absolute;
+        left: 30px;
+    }
+
+    i:last-child {
+        color: #f56905;
+        position: absolute;
+        right: 30px;
+    }
+
+    span {
+        font-size: 0.9rem;
+        opacity: 0.7;
+    }
+
+    a {
+        color: #3d3d3d;
+    }
+
 }
 
 .showcase {
