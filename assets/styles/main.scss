@@ -76,6 +76,10 @@ h2 {
     margin-top: 40px;
     margin-bottom: 15px;
 
+    i {
+        margin-right: 5px;
+        color: rgb(85,176,227);
+    }
 }
 .legend {
     font-size: 0.8rem;
@@ -92,20 +96,16 @@ h2 {
         margin-right: 2px !important;
     }
 }
-
 i.finished {
         color: #11bf3a;
-        margin-right: 5px;
     }
 
 i.working {
     color: #ff9f05;
-    margin-right: 5px;
 }
 
 i.free {
     color: rgb(85,176,227);
-        margin-right: 5px;
 }
 
 ul {
@@ -164,6 +164,7 @@ background: radial-gradient(circle, rgba(85,176,227,1) 32%, rgba(71,145,231,1) 1
 
     hr {
         width: 120px;
+        margin-top: 3   0px;
         border-color: white;
     }
 }
