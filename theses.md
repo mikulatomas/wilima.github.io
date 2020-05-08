@@ -21,7 +21,7 @@ Funkčnost a rozsah knihovny po domluvě, nejlépe nápad studenta.
 ## **<i class="fad fa-flag free"></i>Bot pro hru Rocket League®**
 <span class="subtitle text-muted">Bakalářská práce</span>
 
-Student prozkoumá možnosti a pokusí se vytvořit bota pro počítačovou hru [Rocket League®](https://www.rocketleague.com) za pomocí knihovny [RLBot](https://www.rlbot.org). Doporučený jazyk Python, platforma Windows. Práce nevyžaduje znalost strojového učení (RLBot není na tento přístup ani vhodný viz [zde](https://github.com/RLBot/RLBot/wiki/Machine-Learning-FAQ)). Součástí práce by mělo být zhodnocení limitací a možností frameworku RLBot. A studium a popsání použitých přístupů.
+Student prozkoumá možnosti a pokusí se vytvořit bota pro počítačovou hru [Rocket League®](https://www.rocketleague.com) za pomocí knihovny [RLBot](https://www.rlbot.org). Doporučený jazyk Python, platforma Windows. Práce nevyžaduje znalost strojového učení (RLBot není na tento přístup ani vhodný viz [zde](https://github.com/RLBot/RLBot/wiki/Machine-Learning-FAQ)). Součástí práce by mělo být zhodnocení limitací a možností frameworku RLBot a studium a popsání použitých přístupů.
 
 ## **<i class="fad fa-flag free"></i>Hlídač cen kolekce Magic: The Gathering karet**
 <span class="subtitle text-muted">Bakalářská práce</span>
