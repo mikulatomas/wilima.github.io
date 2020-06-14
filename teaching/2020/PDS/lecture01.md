@@ -1,50 +1,56 @@
 ---
-layout: lecture
+layout: default
 courses: PDS
 title: 1. Úvod a instalace jazyka Python
 year: 2020
 ---
 
-# Základní informace o jazyku Python
+## Základní informace o jazyku Python
 Co o Python říká oficiální web:
+
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
 
 > Python is a programming language that lets you work quickly
 and integrate systems more effectively.
 
-### Užitečné odkazy
+#### Užitečné odkazy
 * [Dokumentace jazyka Python3](https://docs.python.org/3/)
 * [The Hitchhiker’s Guide to Python!](https://docs.python-guide.org)
 * [Real Python](https://realpython.com)
 * [KMI/PHT Programování v jazyce Python](http://trnecka.inf.upol.cz/teaching/pht/)
 
-## Python 2.7 vs 3.x
+### Python 2.7 vs 3.x
 Většina produkce stále používá `Python 2.7`, `Python 3` je však zcela připraven pro ostré nasazení do produkce. `Python 2.7` bude dostávat bezpečnostní update pouze do roku 2020. Více info na [odkazu](https://docs.python-guide.org/starting/which-python/#the-state-of-python-3-2).
 
-# Instalace jazyka Python 3
+## Instalace jazyka Python 3
 Osobní zkušenost instalace mám pouze na Mac OS a Linux. V instalaci by vám měl pomoct následující [odkaz](https://docs.python-guide.org/starting/installation/).
 
-> # Úkol
+> ## Úkol
 Instalace jazyka Python na vámi zvolenou platformu.
 
-# Pip vs (Ana)Conda
+## Pip vs (Ana)Conda
 Oba dva balíčkovače pro instalování programů/knihoven v rámci Python ekosystému. Anaconda zaměřená více na vědecký Python (dataminig, machine learning). Conda nejenom pro Python, na PC na univerzitě najdete Condu.
 
-# IDE
+## IDE
 Python je možné psát v jakémkoli textovém editoru [případně používat Python interpretr](https://docs.python.org/3/tutorial/interpreter.html).
 
-### Doporučené Python IDE
+#### Doporučené Python IDE
 * Vim/Emacs (sadomasochisti)
 * [Visual Studio Code](https://code.visualstudio.com)
 * [Spyder](https://pythonhosted.org/spyder/installation.html)
 * Atom/SublimeText 3
 * [Ostatní](https://realpython.com/python-ides-code-editors-guide/)
 
-## Jupyter notebook
+### Jupyter notebook
 Jupyter Notebook doporučuji na experimentování nejenom v jazyce Python. Jupyter umožňuje psát a vyhodnocovat kód rovnou v prohlížeči v takzvaném `jupyter notebook`. Více informací naleznete na [oficiálním webu projektu](http://jupyter.org).
 
 > The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.
 
-> # Úkol
+> ## Úkol
 > Zprovoznit libobolné IDE (ideálně Jupyter) a otestovat jednoduchý `hello_world.py`.
 
 `hello_world.py`
@@ -52,21 +58,21 @@ Jupyter Notebook doporučuji na experimentování nejenom v jazyce Python. Jupyt
 print("Hello world!")
 {% endhighlight %}
 
-# Základy jazyka Python
+## Základy jazyka Python
 
 Více informací dostupné na odkazu [https://realpython.com/python-first-steps/](https://realpython.com/python-first-steps/). Následující příklady je možné stáhnout ve formě [Jupyter Notebooku](/assets/files/python_basics.ipynb).
 
-## Promněnné
+### Promněnné
 
 {% highlight python linenos %}
-# název proměnné by měl vždy obsahovat podtržítka
+## název proměnné by měl vždy obsahovat podtržítka
 nazev_promenne = 'hodnota'
 cislo = 1
 desetine_cslo = 1.56
 boolean = True
 {% endhighlight %}
 
-## Seznamy
+### Seznamy
 
 {% highlight python linenos %}
 seznam = []
@@ -99,7 +105,7 @@ assert seznam_s_hodnotami[2:] == [3, 'ahoj']
 # Seznamy lze libovolne zanorovat, nebo je pouzivat jako frontu, zasobnik, viz dokumentace
 {% endhighlight %}
 
-## Řetězce
+### Řetězce
 
 {% highlight python linenos %}
 retezec = 'abba'
@@ -115,7 +121,7 @@ assert retezec[0] == 'a'
 assert retezec[:2] == 'ab'
 {% endhighlight %}
 
-## Tuple
+### Tuple
 
 {% highlight python linenos %}
 # Tuple narozdíl od seznamu obsahuje neměnné prvky
@@ -148,7 +154,7 @@ toto_je_tuple[0] = 'ahoj'
     TypeError: 'tuple' object does not support item assignment
 {% endhighlight %}
 
-## Slovníky
+### Slovníky
 {% highlight python linenos %}
 slovnik = {'a': 1, 'b': 2}
 
@@ -156,7 +162,7 @@ assert slovnik.get('a') == slovnik['a']
 {% endhighlight %}
 
 
-## Print
+### Print
 
 
 {% highlight python linenos %}
@@ -185,7 +191,7 @@ print(f"Krasne cislo {cislo}")
 {% endhighlight %}
 
 
-## Podmínky
+### Podmínky
 
 
 {% highlight python linenos %}
@@ -211,7 +217,7 @@ assert (not True) == False
 {% endhighlight %}
 
 
-## Cykly
+### Cykly
 
 
 {% highlight python linenos %}
@@ -283,7 +289,7 @@ for key, value in slovnik.items():
     klic b hodnota 2
 {% endhighlight %}
 
-## Funkce
+### Funkce
 
 
 {% highlight python linenos %}
@@ -294,19 +300,19 @@ def moje_funkce(argument):
 assert moje_funkce(1) == 2
 {% endhighlight %}
 
-# Python vs. parallel programming
+## Python vs. parallel programming
 Je Python vhodný pro paralelní/distribuované programování?
 
-## Global Interpreter Lock
+### Global Interpreter Lock
 GIL je mutex, který pomáhá udržovat informaci o tom co v rámci Pythonu právě běží. Zároveň poskytuje aktuálnímu vlánknu přístup k interním funkcím Python interpretru. V čem je to problém? Pouze jedno vláknu může v jeden okamžik vyhodnocovat kód v interpretru. Multi-thread scripty jsou ve výsledku pomalejší než single-thread.
 
 > The GIL is controversial because it prevents multithreaded CPython programs from taking full advantage of multiprocessor systems in certain situations. Note that potentially blocking or long-running operations, such as I/O, image processing, and NumPy number crunching, happen outside the GIL. Therefore it is only in multithreaded programs that spend a lot of time inside the GIL, interpreting CPython bytecode, that the GIL becomes a bottleneck.
 
-## Jak vyřešit GIL problém?
+### Jak vyřešit GIL problém?
 Oficiální knihovna `multiprocessing` pro jazyk Python je alternativa řešící problém s GIL. Místo vytváření vláken dochází k vytváření procesů. Každý proces má vlastní GIL a proto ve výsledku nedochází k problému zmíněném výše. Více informací a příklady jsou dostupné [zde](https://charlienewey.github.io/parallel-processing-python/).
 
-# Jak by to tedy správně mělo být?
+## Jak by to tedy správně mělo být?
 **Scala** [https://www.scala-lang.org](https://www.scala-lang.org) + **Apache Spark** [http://spark.apache.org](http://spark.apache.org), **Clojure** [https://clojure.org](https://clojure.org), výpočty na GPU **CUDA** [https://developer.nvidia.com/cuda-zone](https://developer.nvidia.com/cuda-zone) (existuje i API do Python).
 
-# Proč je dobré (i tak) umět Python?
+## Proč je dobré (i tak) umět Python?
 Python je jazyk, který získává stále více a více příznivců. Použivají jej firmy jako Google, Apple, Facebook, nebo Seznam.cz. Je to vynikající skriptovací jazyk na psaní prototypů, datamining případně machine learning. Obsahuje nespočet knihoven, které umožňují řešit většinu problému rychle a jednoduše. Více informací o jazyku Python na [odkazu](http://www.bestprogramminglanguagefor.me/why-learn-python).

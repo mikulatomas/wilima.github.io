@@ -1,7 +1,13 @@
 {% include header.html %}
 
 <main>
-  {{ content }}
+  <div class="container--full-width">
+    {% if page.alert %}
+    <div class="alert">
+      <i class="fad fa-megaphone"></i> {{ page.alert }}</div>
+    {% endif %}
+    {{ content }}
+  </div>
 </main>
 
 {% include footer.html %}

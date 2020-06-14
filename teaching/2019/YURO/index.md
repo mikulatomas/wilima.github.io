@@ -1,30 +1,27 @@
 ---
-layout: course
+layout: default
 title: KMI/YURO Uživatelská rozhraní
-lector: Tomáš Mikula
-practise_headline: ""
 types: [course, summer]
-course_page: https://bit.ly/2MPti2m
 course: YURO
 year: 2019
 ---
-Popis předmětu
---------------
+## Popis předmětu
+
 Kurs je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu rozhraní softwarových aplikací. Posluchač získá znalosti a dovednosti potřebné pro tvorbu kvalitních a použitelných uživatelských rozhraní. Kurs seznamuje s obecnými i konkrétními principy fungování a návrhu grafických, ale i jiných rozhraní. 
 
-**Témata kursu:**
+### Témata kursu:
 1.	Historie a budoucnost uživatelského rozhraní. 
 2.	Základy designu a kognitivní psychologie. 
 3.	Základy obecných principů návrhu uživatelského rozhraní. 
 4.	Základní prvky pro tvorbu uživatelského rozhraní. 
 5.	Časté chyby v návrhu uživatelského rozhraní.
 
-Materiály k předmětu
---------------------
+### Materiály k předmětu
+
 * [Ke stažení zde](/teaching/skripta)
 
-Užitečné odkazy
----------------
+### Užitečné odkazy
+
 * [UI design game](https://cantunsee.space)
 * [Pravidla UX designu](https://lawsofux.com)
 * [Hack design](https://hackdesign.org)

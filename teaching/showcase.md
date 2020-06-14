@@ -1,9 +1,10 @@
 ---
-layout: default_small
+layout: default
 ---
 
-# Showcase - želví grafika
-Zde budou umísťovány obrazy zaslané na moji emailovou adresu [tomas.mikula01@upol.cz](mailto:tomas.mikula01@upol.cz). Kreativitě se meze nekladou :)
+## Showcase - želví grafika
+Zde budou umísťovány obrazy zaslané na moji emailovou adresu [{{ site.email }}](mailto:{{ site.email }}). Kreativitě se meze nekladou :)
+
 <p style="text-align: center">
 {% for image in site.static_files %}
     {% if image.path contains 'images/PAPR' %}

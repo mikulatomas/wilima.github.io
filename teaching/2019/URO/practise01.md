@@ -1,10 +1,11 @@
 ---
-layout: lecture
+layout: default
 courses: URO
-title: 1. Historie webu (deadline 24.2.2019)
+title: Historie webu
+alert: Deadline 23:59 24.2.2019!
 ---
 
-# Historie UI v rámci webu (deadline 24.2.2019)
+## {{ page.title }}
 
 Zpracujte text ve kterém popíšete vývoj uživatelského zohraní na příkladu konkrétní webové stránky. Text musí rovněž obsahovat názorné ukázky (screenshoty). K analýze webu použíjte jeden z níže uvedných portálů.
 

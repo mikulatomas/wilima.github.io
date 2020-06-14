@@ -1,113 +1,111 @@
 ---
 layout: default
 ---
-<div class="container--full-width">
-    <div class="container--flex bio">
-        <img class="rounded not-on-small" srcset="
+<div class="container--flex bio">
+    <img class="rounded not-on-small" srcset="
           {{ '/assets/images/portrait.jpg' | prepend: full_base_url }}, 
           {{ '/assets/images/portrait@2x.jpg' | prepend: full_base_url }} 2x" width="161" height="231" alt="portrait">
-        <div>
-            <h2 style="display: none;">Bio</h2>
-            <p>I am PhD student of Computer Science at Palacký University. My specialization is <strong>Math
-                    Psychology</strong> in
-                context
-                of
-                <strong>Machine
-                    Learning</strong> and <strong>Formal Concept Analysis</strong>. I also love Python programming and
-                design of any kind. My hobbies
-                are
-                Magic
-                the
-                Gathering, video games and RC cars.</p>
+    <div>
+        <h2 style="display: none;">Bio</h2>
+        <p>I am PhD student of Computer Science at Palacký University. My specialization is <strong>Math
+                Psychology</strong> in
+            context
+            of
+            <strong>Machine
+                Learning</strong> and <strong>Formal Concept Analysis</strong>. I also love Python programming and
+            design of any kind. My hobbies
+            are
+            Magic
+            the
+            Gathering, video games and RC cars.</p>
 
-            <table class="contacts" border="0" cellspacing="0" cellpadding="0">
-                <tbody>
-                    <tr>
-                        <td>Email:</td>
-                        <td><a href="mailto:{{ site.email }}">{{ site.email | escape }}</a></td>
-                    </tr>
-                    <tr>
-                        <td>ORCID:</td>
-                        <td><a href="https://orcid.org/0000-0002-7514-8523">0000-0002-7514-8523</a></td>
-                    </tr>
-                    <tr>
-                        <td>Office:</td>
-                        <td><strike>{{ site.office }}</strike></td>
-                    </tr>
-                    <tr>
-                        <td>Office hours:</td>
-                        <td><strike>{{ site.office-hours }}</strike></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <table class="contacts" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td>Email:</td>
+                    <td><a href="mailto:{{ site.email }}">{{ site.email | escape }}</a></td>
+                </tr>
+                <tr>
+                    <td>ORCID:</td>
+                    <td><a href="https://orcid.org/0000-0002-7514-8523">0000-0002-7514-8523</a></td>
+                </tr>
+                <tr>
+                    <td>Office:</td>
+                    <td><strike>{{ site.office }}</strike></td>
+                </tr>
+                <tr>
+                    <td>Office hours:</td>
+                    <td><strike>{{ site.office-hours }}</strike></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+</div>
 
-    <hr>
+<hr>
 
-    <h3>Publications</h3>
-    <div class="cv cv--publication">
-        <span class="cv__headline">Typicality in conceptual structures within the framework of formal concept
-            analysis.</span>
-        <span class="cv__subheadline">Belohlavek, R., Mikula, T.</span>
-        <span class="cv__info">CLA 2020
-            The 15th International Conference
-            on Concept Lattices and Their Applications</span>
-        <!-- <span class="cv__info">CLA 2020, (2020)</span>
+<h3>Publications</h3>
+<div class="cv cv--publication">
+    <span class="cv__headline">Typicality in conceptual structures within the framework of formal concept
+        analysis.</span>
+    <span class="cv__subheadline">Belohlavek, R., Mikula, T.</span>
+    <span class="cv__info">CLA 2020
+        The 15th International Conference
+        on Concept Lattices and Their Applications</span>
+    <!-- <span class="cv__info">CLA 2020, (2020)</span>
         <span class="cv__info">DOI 10.1016/j.knosys.2018.05.035 <i class="fas fa-link"></i></i><a href="">DOI</a> <i
                 class="fas fa-file-pdf"></i><a href="">PDF</a></span> -->
-    </div>
+</div>
 
 
-    <h3>Projects</h3>
-    <div class="cv cv--project">
-        <span class="cv__headline">UPOL Search Engine</span>
-        <span class="cv__subheadline">Master theses — Search engine for upol.cz domain.</span>
-        <span class="cv__info">Award winner of Dean of the Faculty of Science UP</span>
-        <span class="cv__info">2016 – 2018 <i class="fab fa-github"></i><a
-                href="https://github.com/UPOLSearch/UPOL-Search-Engine">GitHub</a></span>
-    </div>
+<h3>Projects</h3>
+<div class="cv cv--project">
+    <span class="cv__headline">UPOL Search Engine</span>
+    <span class="cv__subheadline">Master theses — Search engine for upol.cz domain.</span>
+    <span class="cv__info">Award winner of Dean of the Faculty of Science UP</span>
+    <span class="cv__info">2016 – 2018 <i class="fab fa-github"></i><a
+            href="https://github.com/UPOLSearch/UPOL-Search-Engine">GitHub</a></span>
+</div>
 
-    <div class="cv cv--project">
-        <span class="cv__headline">UPlikace iOS</span>
-        <span class="cv__subheadline">Design of iOS application for Palacký University in cooperation with <a
-                href="https://vyjidacek.cz">Roman Vyjídáček</a>.</span>
-        <span class="cv__info">2018 – 2019 <i class="fab fa-app-store-ios"></i></i><a
-                href="https://apps.apple.com/cz/app/uplikace/id1386643214">AppStore</a></span>
-    </div>
+<div class="cv cv--project">
+    <span class="cv__headline">UPlikace iOS</span>
+    <span class="cv__subheadline">Design of iOS application for Palacký University in cooperation with <a
+            href="https://vyjidacek.cz">Roman Vyjídáček</a>.</span>
+    <span class="cv__info">2018 – 2019 <i class="fab fa-app-store-ios"></i></i><a
+            href="https://apps.apple.com/cz/app/uplikace/id1386643214">AppStore</a></span>
+</div>
 
-    <div class="cv cv--project">
-        <span class="cv__headline">UPlikace Android</span>
-        <span class="cv__subheadline">Design of Android application for Palacký University in cooperation with <a
-                href="https://www.novaklukas.cz">Lukáš Novák</a>.</span>
-        <span class="cv__info">2018 – 2020 <i class="fab fa-google-play"></i><a
-                href="https://play.google.com/store/apps/details?id=cz.uplikace.app&hl=cs">GooglePlay</a></span>
-    </div>
+<div class="cv cv--project">
+    <span class="cv__headline">UPlikace Android</span>
+    <span class="cv__subheadline">Design of Android application for Palacký University in cooperation with <a
+            href="https://www.novaklukas.cz">Lukáš Novák</a>.</span>
+    <span class="cv__info">2018 – 2020 <i class="fab fa-google-play"></i><a
+            href="https://play.google.com/store/apps/details?id=cz.uplikace.app&hl=cs">GooglePlay</a></span>
+</div>
 
-    <div class="cv cv--project">
-        <span class="cv__headline">Stocksy Photographer</span>
-        <span class="cv__subheadline">Stock photographer on Stocksy.com, one of the most interesting stock sites.</span>
-        <span class="cv__info">2014 – N/A <i class="far fa-link"></i><a
-                href="https://www.stocksy.com/tomasmikula">Stocksy.com</a></span>
-    </div>
+<div class="cv cv--project">
+    <span class="cv__headline">Stocksy Photographer</span>
+    <span class="cv__subheadline">Stock photographer on Stocksy.com, one of the most interesting stock sites.</span>
+    <span class="cv__info">2014 – N/A <i class="far fa-link"></i><a
+            href="https://www.stocksy.com/tomasmikula">Stocksy.com</a></span>
+</div>
 
 
-    <h3>Education</h3>
-    <div class="cv cv--education">
-        <span class="cv__headline">PhD — Computer Science</span>
-        <span class="cv__subheadline">Department of Computer Science, Palacký University Olomouc</span>
-        <span class="cv__info">2018 – N/A</span>
-    </div>
+<h3>Education</h3>
+<div class="cv cv--education">
+    <span class="cv__headline">PhD — Computer Science</span>
+    <span class="cv__subheadline">Department of Computer Science, Palacký University Olomouc</span>
+    <span class="cv__info">2018 – N/A</span>
+</div>
 
-    <div class="cv cv--education">
-        <span class="cv__headline">MSc — Computer Science</span>
-        <span class="cv__subheadline">Department of Computer Science, Palacký University Olomouc</span>
-        <span class="cv__info">2016 – 2018</span>
-    </div>
+<div class="cv cv--education">
+    <span class="cv__headline">MSc — Computer Science</span>
+    <span class="cv__subheadline">Department of Computer Science, Palacký University Olomouc</span>
+    <span class="cv__info">2016 – 2018</span>
+</div>
 
-    <div class="cv cv--education">
-        <span class="cv__headline">BSc — Computer Science</span>
-        <span class="cv__subheadline">Department of Computer Science, Palacký University Olomouc</span>
-        <span class="cv__info">2013 – 2016</span>
-    </div>
+<div class="cv cv--education">
+    <span class="cv__headline">BSc — Computer Science</span>
+    <span class="cv__subheadline">Department of Computer Science, Palacký University Olomouc</span>
+    <span class="cv__info">2013 – 2016</span>
 </div>
