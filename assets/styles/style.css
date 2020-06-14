@@ -6,12 +6,25 @@ body {
     padding: 0;
     color: #262626;
 }
-
-h2 {
+h2, h3 {
     font-weight: bold;
-    font-size: 1.2em;
-    margin-top: 2em;
-    margin-bottom: 1.1em;
+    margin-top: 1.7em;
+    margin-bottom: 0.9em;
+}
+
+h3 {font-size: 1.15em;}
+
+h2 {font-size: 1.5em;
+margin-bottom: 0;}
+
+h4 {
+    font-size: 1em;
+    color: #8E8E8E;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin: 0.9em 0;
 }
 
 a {
@@ -23,6 +36,39 @@ a:hover {
     text-decoration: underline;
 }
 
+ul {
+    padding: 0;
+    margin-top: 0.3em;
+}
+
+ul li {
+    list-style-type: none;
+    border-left-width: 6px;
+    border-left-style: solid;
+    border-left-color: #E9E9E9;
+    padding-left: 0.8em;
+    margin-bottom: 0.5em;
+}
+
+h3 i {
+    padding-right: 0.3em;
+}
+
+i.blue {
+    color: #3D89E2;
+}
+
+i.green {
+    color: #20B000;
+}
+
+i.yellow {
+    color: #FF9738;
+}
+
+.opacity {
+    opacity: 0.4;
+}
 .rounded {
     border-radius: 5px;
 }
@@ -80,9 +126,11 @@ header a {
 
 .nav li {
     color: white;
-    list-style-type: none;
     display: inline-block;
     margin-left: 1.7em;
+    padding-left: 0;
+    border: 0;
+    margin-bottom: 0;
 }
 
 .nav li:first-child {
@@ -130,7 +178,7 @@ header .logo span {
 
 .bio p{
     margin-top: 0;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
 .bio img {
@@ -216,6 +264,42 @@ main {
     padding-bottom: 8em;
 }
 
+.legend {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 60px;
+    text-align: right;
+}
+
+.legend i:first-child {
+        margin-left: 0;
+    }
+
+.legend i {
+        margin-left: 5px;
+        margin-right: 2px !important;
+    }
+
+.thesis {
+    margin-bottom: 3em;
+}
+
+.thesis h3 {
+    margin-bottom: 0.1em;
+}
+.thesis__info {
+    margin-bottom: 1em;
+    font-size: 0.9em;
+    color: #8D8D8D;
+}
+
+
+.year .container--flex {
+    justify-content: space-between;
+}
+.year__semester {width:45%;}
+.year__semester h4{ margin-top: 0;}
+
 footer {
     text-align: center;
     padding-bottom: 2em;
@@ -252,6 +336,8 @@ footer a {
 
 @media all and (max-width: 507px) {
   header div.container--flex {justify-content: center;}
+  .year .container--flex {flex-wrap: wrap;}
+  .year__semester {width: 100%;}
   header .logo {padding-bottom: 0.7em; text-align: center;}
   .bio {margin: 2em 0;}
   nav {margin-bottom: 0.6em}

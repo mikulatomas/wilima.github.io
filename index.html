@@ -7,6 +7,7 @@ layout: default
           {{ '/assets/images/portrait.jpg' | prepend: full_base_url }}, 
           {{ '/assets/images/portrait@2x.jpg' | prepend: full_base_url }} 2x" width="161" height="231" alt="portrait">
         <div>
+            <h2 style="display: none;">Bio</h2>
             <p>I am PhD student of Computer Science at Palacký University. My specialization is <strong>Math
                     Psychology</strong> in
                 context
@@ -26,12 +27,16 @@ layout: default
                         <td><a href="mailto:{{ site.email }}">{{ site.email | escape }}</a></td>
                     </tr>
                     <tr>
+                        <td>ORCID:</td>
+                        <td><a href="https://orcid.org/0000-0002-7514-8523">0000-0002-7514-8523</a></td>
+                    </tr>
+                    <tr>
                         <td>Office:</td>
-                        <td>{{ site.office }}</td>
+                        <td><strike>{{ site.office }}</strike></td>
                     </tr>
                     <tr>
                         <td>Office hours:</td>
-                        <td>{{ site.office-hours }}</td>
+                        <td><strike>{{ site.office-hours }}</strike></td>
                     </tr>
                 </tbody>
             </table>
@@ -40,18 +45,21 @@ layout: default
 
     <hr>
 
-    <h2>Publications</h2>
+    <h3>Publications</h3>
     <div class="cv cv--publication">
         <span class="cv__headline">Typicality in conceptual structures within the framework of formal concept
             analysis.</span>
         <span class="cv__subheadline">Belohlavek, R., Mikula, T.</span>
-        <span class="cv__info">CLA 2020, (2020)</span>
+        <span class="cv__info">CLA 2020
+            The 15th International Conference
+            on Concept Lattices and Their Applications</span>
+        <!-- <span class="cv__info">CLA 2020, (2020)</span>
         <span class="cv__info">DOI 10.1016/j.knosys.2018.05.035 <i class="fas fa-link"></i></i><a href="">DOI</a> <i
-                class="fas fa-file-pdf"></i><a href="">PDF</a></span>
+                class="fas fa-file-pdf"></i><a href="">PDF</a></span> -->
     </div>
 
 
-    <h2>Projects</h2>
+    <h3>Projects</h3>
     <div class="cv cv--project">
         <span class="cv__headline">UPOL Search Engine</span>
         <span class="cv__subheadline">Master theses — Search engine for upol.cz domain.</span>
@@ -78,14 +86,13 @@ layout: default
 
     <div class="cv cv--project">
         <span class="cv__headline">Stocksy Photographer</span>
-        <span class="cv__subheadline">Design of Android application for Palacký University in cooperation with <a
-                href="https://www.novaklukas.cz">Lukáš Novák</a>.</span>
-        <span class="cv__info">2014 – N/A* <i class="far fa-link"></i><a
+        <span class="cv__subheadline">Stock photographer on Stocksy.com, one of the most interesting stock sites.</span>
+        <span class="cv__info">2014 – N/A <i class="far fa-link"></i><a
                 href="https://www.stocksy.com/tomasmikula">Stocksy.com</a></span>
     </div>
 
 
-    <h2>Education</h2>
+    <h3>Education</h3>
     <div class="cv cv--education">
         <span class="cv__headline">PhD — Computer Science</span>
         <span class="cv__subheadline">Department of Computer Science, Palacký University Olomouc</span>
