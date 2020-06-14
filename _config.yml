@@ -13,12 +13,18 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+
 title: Tomáš Mikula
-email: mail@tomasmikula.cz
-subtitle: PhD student of Computer Science at Palacký University
+subtitle: PhD student of CS @ UPOL
 description: > # this means to ignore newlines until "baseurl:"
   I am PhD student of Computer Science at Palacký University. My specialization is math psychology and Formal Concept Analysis. I also love Python programming and design of any kind. My hobbies are board games (Magic the Gathering), video games, photogaphy and playing music.
+keywords: Tomas Mikula, computer science, UPOL, FCA, ML
 author: Tomáš Mikula
+
+email: mail@tomasmikula.cz
+office: 5.076
+office-hours: 12:45-13:45 Monday (pouze e-mail, do odvolání)
+
 
 types: [course, summer, winter]
 courses: [PDS, PAPR1]

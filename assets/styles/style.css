@@ -1,0 +1,265 @@
+html {-webkit-text-size-adjust: none;}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #262626;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 2em;
+    margin-bottom: 1.1em;
+}
+
+a {
+    color: #3D89E2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.rounded {
+    border-radius: 5px;
+}
+
+
+.container--full-width {
+  max-width: 715px;
+  margin: auto;
+}
+
+.container--flex {
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+}
+
+header {
+    background: radial-gradient(circle, #55b0e3 32%, #4791e7 100%);
+}
+/* 
+header {
+    background: linear-gradient(139deg, #52a1ee, #588be1, #719bf0, #5993f3, #5ea7ee, #3e98f0);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: HeaderGradient 36s ease infinite;
+    -moz-animation: HeaderGradient 36s ease infinite;
+    animation: HeaderGradient 36s ease infinite;
+}
+
+@-webkit-keyframes HeaderGradient {
+    0%{background-position:0% 0%}
+    50%{background-position:93% 100%}
+    100%{background-position:0% 0%}
+}
+@-moz-keyframes HeaderGradient {
+    0%{background-position:0% 0%}
+    50%{background-position:93% 100%}
+    100%{background-position:0% 0%}
+}
+@keyframes HeaderGradient { 
+    0%{background-position:0% 0%}
+    50%{background-position:93% 100%}
+    100%{background-position:0% 0%}
+} */
+
+header a {
+    color: white;
+    font-size: 0.9em;
+}
+
+
+.nav {
+    padding: 0;
+}
+
+.nav li {
+    color: white;
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 1.7em;
+}
+
+.nav li:first-child {
+    margin-left: 0;
+}
+
+.nav i:first-child {
+    margin-left: 0;
+}
+
+.nav i {
+    padding-right: 0.4em;
+    font-size: 1.2em;
+}
+
+
+
+header div.container--flex {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    padding-top: 1.8em;
+    padding-bottom: 1.8em;
+}
+header .logo h1 {
+    font-size: 1.7em;
+    line-height: 1em;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+}
+
+header .logo span {
+    color: #E1E1E1;
+    letter-spacing: -0.02em;
+}
+
+.bio {
+    align-items: center;
+    margin: 3em 0;
+}
+
+.bio p{
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+.bio img {
+    margin-right: 2em;
+}
+
+hr {
+    border: 1px solid #F0F0F0;
+}
+
+.contacts {
+    /* flex-grow: 4; */
+    border: 0;
+}
+
+.contacts > td {
+    padding: 0;
+}
+
+.contacts tr td:first-child {
+    font-weight: bold;
+    padding-right: 1.5em;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+
+.cv {
+    padding-left: 0.8em;
+}
+
+.cv {
+    margin-bottom: 1.3em;
+    border-left-width: 6px;
+    border-left-style: solid;
+}
+
+.cv:last-child {
+    margin-bottom: 0;
+}
+
+.cv span {
+    display:block;
+}
+
+.cv--publication {
+    border-left-color:#C8E1FF;
+}
+
+.cv--project {
+    border-left-color: #EEDA9D;
+}
+
+.cv--education {
+    border-left-color: #C2E9A3;
+}
+
+.cv__headline {
+    font-weight: bold;
+}
+
+.cv__info {
+    font-size: 0.9em;
+    color: #8D8D8D;
+    margin-top: 0.2em;
+}
+
+.cv__info i {
+    padding-right: 0.3em;
+    padding-left: 0.8em;
+    color: #B3B3B3;
+}
+
+.cv__info ~ .cv__info {
+    margin-top: 0;
+}
+
+.cv__info a {
+    color: #8D8D8D;
+}
+
+main {
+    padding-bottom: 8em;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 2em;
+    opacity: 0.4;
+    vertical-align: middle;
+}
+
+footer i:first-child {
+        color: #1d5dde;
+        position: absolute;
+        left: 30px;
+}
+
+footer i:last-child {
+        color: #f56905;
+        position: absolute;
+        right: 30px;
+}
+
+footer i {
+        font-size: 1.1rem;
+        opacity: 0.4;
+    }
+
+footer a {
+        color: #3d3d3d;
+    }
+
+@media all and (max-width: 750px) {
+    .not-on-small {display: none !important;}
+    main {padding: 0 1em 4em 1em;}
+    header div.container--flex {padding: 0 1em;}
+}
+
+@media all and (max-width: 507px) {
+  header div.container--flex {justify-content: center;}
+  header .logo {padding-bottom: 0.7em; text-align: center;}
+  .bio {margin: 2em 0;}
+  nav {margin-bottom: 0.6em}
+
+}
+
+@media all and (max-width: 320px) {
+  .nav li {margin-left: 0.7em;}
+  main {padding: 0 0.5em 2em 0.5em;}
+  body {font-size: 14px;}
+}

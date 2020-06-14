@@ -5,6 +5,8 @@ layout: default
 # About
 I am PhD student of Computer Science at Palacký University. My specialization is **[Math Psychology](https://en.wikipedia.org/wiki/Mathematical_psychology)** in context of **Machine Learning** and **Formal Concept Analysis**. I also love **Python programming** and design of any kind. My hobbies are Magic the Gathering, video games and RC cars.
 
+---
+
 ### Contact
 
 | ----------------- |:-------------------------------------------------:|
@@ -16,8 +18,6 @@ I am PhD student of Computer Science at Palacký University. My specialization i
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-7514-8523" href="https://orcid.org/0000-0002-7514-8523" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0002-7514-8523</a></div>
 
 ### Projects
-<!-- * **[formal-concepts library](https://github.com/mikulatomas/formal-concepts)**, <span class="year">*2018 – N/A*</span>  
-Formal Concept Analysis (FCA) library for Python3 under development. -->
 * **[UPOL Search Engine](https://github.com/UPOLSearch/UPOL-Search-Engine)**, <span class="year">*2016 – 2018*</span>  
 Search engine for upol.cz domain.
 * **[UPlikace iOS]()**, <span class="year">*2018 – 2019*</span>  
