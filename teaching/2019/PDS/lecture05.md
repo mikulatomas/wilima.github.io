@@ -1,19 +1,20 @@
 ---
-layout: lecture
+layout: default
 courses: PDS
 title: 5. Producent a konzument
 year: 2019
 ---
 
 
-# Producent a konzument
+## Producent a konzument
 
-### Užitečné odkazy
+#### Užitečné odkazy
 * [Python `threading` — Thread-based parallelism](https://docs.python.org/3/library/threading.html)
-* [Zdrojové kódy z cvičení formou notebooku](/assets/files/lecture04.ipynb)
+* [Python `Condition` — Thread-based parallelism](https://docs.python.org/3/library/threading.html#condition-objects)
+* [Zdrojové kódy z cvičení formou notebooku](/assets/files/2020/lecture04.ipynb)
 
-## Objekt ```Condition```
-Podmínka je vždy asociována s nějakým druhem zámku. Podmínce může být zámek předán, případně si vytvoří zámek svůj. Toto je důležité pokud více podmínek používá stejný zámek. Již známe metody ```acquire()``` a ```release()``` jsou předány zámku v objektu ```Condition```.
+### Objekt ```Condition```
+Podmínka je vždy asociována s nějakým druhem zámku. Podmínce může být zámek předán, případně si vytvoří zámek svůj. Již známe metody ```acquire()``` a ```release()``` jsou předány zámku v objektu ```Condition```.
 
 Novinkou však jsou metody ```wait()``` a ```notify()```. Metoda ```wait()``` uvolní zámek a čeká dokud jej jiné vlákno nepotvrdí metodou ```notify()```, nebo ```notify_all()``` a poté zámek zamče.
 
@@ -34,7 +35,7 @@ with cv:
     cv.notify()
 {% endhighlight %}
 
-## Producent a konzument
+### Producent a konzument
 V následující implementaci dochází k problému konzumace prázdné fronty.
 
 {% highlight python linenos %}
@@ -48,41 +49,37 @@ lock = Lock()
 class ProducerThread(Thread):
     def run(self):
         # Vytvoreni seznamu [0, 1, 2, 3, 4]
-        nums = range(5)
-
+        nums = range(5) 
+        
         # Umozneni zapisu do globalni promenne (append)
         global queue
-
-        while True:
+        
+        for _ in range(10):
             # Vyber nahodneho cisla z [0, 1, 2, 3, 4]
-            num = random.choice(nums)
-
-            lock.acquire()
-            queue.append(num)
-            print("Produced {}".format(num))
-            lock.release()
-
+            num = random.choice(nums) 
+            
+            with lock:
+                queue.append(num)
+                print("Produced {}".format(num))
+            
             time.sleep(random.random())
 
 
 class ConsumerThread(Thread):
     def run(self):
-
         # Umozneni zapisu do globalni promenne (pop)
         global queue
+        
+        for _ in range(10):
+            with lock:
+                # Demonstrace problemu, pop na prazdnou frontu
+                # Konzument by mel cekat
+                if not queue:
+                    print("Nothing in queue, but consumer will try to consume")
 
-        while True:
-            lock.acquire()
-
-            # Demonstrace problemu, pop na prazdnou frontu
-            # Konzument by mel cekat
-            if not queue:
-                print("Nothing in queue, but consumer will try to consume")
-
-            num = queue.pop(0)
-            print("Consumed {}".format(num))
-            lock.release()
-
+                num = queue.pop(0)
+                print("Consumed {}".format(num))
+            
             time.sleep(random.random())
 
 
@@ -90,8 +87,10 @@ ProducerThread().start()
 ConsumerThread().start()
 {% endhighlight %}
 
-> # Úkol
-Předchozí kód upravte za pomoci `Condition` tak, aby nedocházelo ke konzumaci prázdné fronty. Pokud ve frontě nebude žádné číslo, konzument musí čekat.
+<div class="task">
+<p><span>Úkol</span><br/>Předchozí kód upravte za pomoci <code>Condition</code> tak, aby nedocházelo ke konzumaci prázdné fronty. Pokud ve frontě nebude žádné číslo, konzument musí čekat.</p>
+</div>
 
-> # Úkol
-Upravte úkol tak aby velikost fronty byla omezena.
+<div class="task">
+<p><span>Úkol</span><br/>Upravte úkol tak aby velikost fronty byla omezena. Například na délku 5 hodnot ve frontě. K řešení využíjte <code>Condition</code>.</p>
+</div>

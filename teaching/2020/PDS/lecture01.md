@@ -8,12 +8,6 @@ year: 2020
 ## Základní informace o jazyku Python
 Co o Python říká oficiální web:
 
-{% highlight ruby %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
-
 > Python is a programming language that lets you work quickly
 and integrate systems more effectively.
 
@@ -29,8 +23,10 @@ Většina produkce stále používá `Python 2.7`, `Python 3` je však zcela př
 ## Instalace jazyka Python 3
 Osobní zkušenost instalace mám pouze na Mac OS a Linux. V instalaci by vám měl pomoct následující [odkaz](https://docs.python-guide.org/starting/installation/).
 
-> ## Úkol
-Instalace jazyka Python na vámi zvolenou platformu.
+<div class="task">
+<p><span>Úkol</span><br/>Instalace jazyka Python na vámi zvolenou platformu.</p>
+</div>
+
 
 ## Pip vs (Ana)Conda
 Oba dva balíčkovače pro instalování programů/knihoven v rámci Python ekosystému. Anaconda zaměřená více na vědecký Python (dataminig, machine learning). Conda nejenom pro Python, na PC na univerzitě najdete Condu.
@@ -50,8 +46,9 @@ Jupyter Notebook doporučuji na experimentování nejenom v jazyce Python. Jupyt
 
 > The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.
 
-> ## Úkol
-> Zprovoznit libobolné IDE (ideálně Jupyter) a otestovat jednoduchý `hello_world.py`.
+<div class="task">
+<p><span>Úkol</span><br/>Zprovoznit libobolné IDE (ideálně Jupyter) a otestovat jednoduchý <code>hello_world.py</code>.</p>
+</div>
 
 `hello_world.py`
 {% highlight python linenos %}
@@ -65,7 +62,7 @@ Více informací dostupné na odkazu [https://realpython.com/python-first-steps/
 ### Promněnné
 
 {% highlight python linenos %}
-## název proměnné by měl vždy obsahovat podtržítka
+# název proměnné by měl vždy obsahovat podtržítka
 nazev_promenne = 'hodnota'
 cislo = 1
 desetine_cslo = 1.56
@@ -135,23 +132,23 @@ toto_je_tuple[0] = 'ahoj'
 {% endhighlight %}
 
 
-{% highlight plaintext %}
+{% highlight console linenos %}
 
-    (1, 3, 2)
-
-
-
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    <ipython-input-51-4dd037267949> in <module>()
-          6
-          7 # nefunguje
-    ----> 8 toto_je_tuple[0] = 'ahoj'
+(1, 3, 2)
 
 
-    TypeError: 'tuple' object does not support item assignment
+
+---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+<ipython-input-51-4dd037267949> in <module>()
+      6
+      7 # nefunguje
+----> 8 toto_je_tuple[0] = 'ahoj'
+
+
+TypeError: 'tuple' object does not support item assignment
 {% endhighlight %}
 
 ### Slovníky
@@ -183,11 +180,11 @@ cislo = 1
 print(f"Krasne cislo {cislo}")
 {% endhighlight %}
 
-{% highlight plaintext %}
-    Ahoj světe
-    Ahoj světe
-    Ahoj světe
-    Krasne cislo 1
+{% highlight console linenos %}
+Ahoj světe
+Ahoj světe
+Ahoj světe
+Krasne cislo 1
 {% endhighlight %}
 
 
@@ -212,8 +209,8 @@ assert (not True) == False
 
 {% endhighlight %}
 
-{% highlight plaintext %}
-    kladne
+{% highlight console linenos %}
+kladne
 {% endhighlight %}
 
 
@@ -231,12 +228,12 @@ while i < len(my_items):
     i += 1
 {% endhighlight %}
 
-{% highlight plaintext %}
-    1
-    2
-    3
-    4
-    5
+{% highlight console linenos %}
+1
+2
+3
+4
+5
 {% endhighlight %}
 
 
@@ -267,26 +264,26 @@ for key, value in slovnik.items():
     print(f"klic {key} hodnota {value}")
 {% endhighlight %}
 
-{% highlight plaintext %}
-    1
-    2
-    3
-    4
-    5
-    Index: 0
-    Index: 1
-    Index: 2
-    Index: 3
-    Index: 4
-    Index: 5
-    Sestupny index: 5
-    Sestupny index: 4
-    Sestupny index: 3
-    Sestupny index: 2
-    Sestupny index: 1
-    Sestupny index: 0
-    klic a hodnota 1
-    klic b hodnota 2
+{% highlight console linenos %}
+1
+2
+3
+4
+5
+Index: 0
+Index: 1
+Index: 2
+Index: 3
+Index: 4
+Index: 5
+Sestupny index: 5
+Sestupny index: 4
+Sestupny index: 3
+Sestupny index: 2
+Sestupny index: 1
+Sestupny index: 0
+klic a hodnota 1
+klic b hodnota 2
 {% endhighlight %}
 
 ### Funkce

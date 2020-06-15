@@ -1,0 +1,145 @@
+I"�!<h2 id="producent-a-konzument">Producent a konzument</h2>
+
+<h4 id="užitečné-odkazy">Užitečné odkazy</h4>
+<ul>
+  <li><a href="https://docs.python.org/3/library/threading.html">Python <code class="language-plaintext highlighter-rouge">threading</code> — Thread-based parallelism</a></li>
+  <li><a href="https://docs.python.org/3/library/threading.html#condition-objects">Python <code class="language-plaintext highlighter-rouge">Condition</code> — Thread-based parallelism</a></li>
+  <li><a href="/assets/files/2020/lecture04.ipynb">Zdrojové kódy z cvičení formou notebooku</a></li>
+</ul>
+
+<h3 id="objekt-condition">Objekt <code class="language-plaintext highlighter-rouge">Condition</code></h3>
+<p>Podmínka je vždy asociována s nějakým druhem zámku. Podmínce může být zámek předán, případně si vytvoří zámek svůj. Již známe metody <code class="language-plaintext highlighter-rouge">acquire()</code> a <code class="language-plaintext highlighter-rouge">release()</code> jsou předány zámku v objektu <code class="language-plaintext highlighter-rouge">Condition</code>.</p>
+
+<p>Novinkou však jsou metody <code class="language-plaintext highlighter-rouge">wait()</code> a <code class="language-plaintext highlighter-rouge">notify()</code>. Metoda <code class="language-plaintext highlighter-rouge">wait()</code> uvolní zámek a čeká dokud jej jiné vlákno nepotvrdí metodou <code class="language-plaintext highlighter-rouge">notify()</code>, nebo <code class="language-plaintext highlighter-rouge">notify_all()</code> a poté zámek zamče.</p>
+
+<p>Metody <code class="language-plaintext highlighter-rouge">notify()</code> a <code class="language-plaintext highlighter-rouge">notify_all()</code> neuvolňují zámek. To znamená, že probuzené vlákno okamžitě nevysoupí ze svého volání <code class="language-plaintext highlighter-rouge">wait()</code>, ale počká až se vlákno které volalo <code class="language-plaintext highlighter-rouge">notify()</code> vzdá vlastnictví zámku.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Condition</code> je většinou používán následovně:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="c1"># Consume one item
+</span><span class="k">with</span> <span class="n">cv</span><span class="p">:</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">an_item_is_available</span><span class="p">():</span>
+        <span class="n">cv</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+    <span class="n">get_an_available_item</span><span class="p">()</span>
+
+<span class="c1"># Produce one item
+</span><span class="k">with</span> <span class="n">cv</span><span class="p">:</span>
+    <span class="n">make_an_item_available</span><span class="p">()</span>
+    <span class="n">cv</span><span class="p">.</span><span class="n">notify</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="producent-a-konzument-1">Producent a konzument</h3>
+<p>V následující implementaci dochází k problému konzumace prázdné fronty.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span><span class="p">,</span> <span class="n">Lock</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">queue</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lock</span> <span class="o">=</span> <span class="n">Lock</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">ProducerThread</span><span class="p">(</span><span class="n">Thread</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Vytvoreni seznamu [0, 1, 2, 3, 4]
+</span>        <span class="n">nums</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> 
+        
+        <span class="c1"># Umozneni zapisu do globalni promenne (append)
+</span>        <span class="k">global</span> <span class="n">queue</span>
+        
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+            <span class="c1"># Vyber nahodneho cisla z [0, 1, 2, 3, 4]
+</span>            <span class="n">num</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> 
+            
+            <span class="k">with</span> <span class="n">lock</span><span class="p">:</span>
+                <span class="n">queue</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"Produced {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+            
+            <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">random</span><span class="p">())</span>
+
+
+<span class="k">class</span> <span class="nc">ConsumerThread</span><span class="p">(</span><span class="n">Thread</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Umozneni zapisu do globalni promenne (pop)
+</span>        <span class="k">global</span> <span class="n">queue</span>
+        
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+            <span class="k">with</span> <span class="n">lock</span><span class="p">:</span>
+                <span class="c1"># Demonstrace problemu, pop na prazdnou frontu
+</span>                <span class="c1"># Konzument by mel cekat
+</span>                <span class="k">if</span> <span class="ow">not</span> <span class="n">queue</span><span class="p">:</span>
+                    <span class="k">print</span><span class="p">(</span><span class="s">"Nothing in queue, but consumer will try to consume"</span><span class="p">)</span>
+
+                <span class="n">num</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"Consumed {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+            
+            <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">random</span><span class="p">())</span>
+
+
+<span class="n">ProducerThread</span><span class="p">().</span><span class="n">start</span><span class="p">()</span>
+<span class="n">ConsumerThread</span><span class="p">().</span><span class="n">start</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<div class="task">
+<p><span>Úkol</span><br />Předchozí kód upravte za pomoci <code>Condition</code> tak, aby nedocházelo ke konzumaci prázdné fronty. Pokud ve frontě nebude žádné číslo, konzument musí čekat.</p>
+</div>
+
+<div class="task">
+<p><span>Úkol</span><br />Upravte úkol tak aby velikost fronty byla omezena. Například na délku 5 hodnot ve frontě. K řešení využíjte <code>Condition</code>.</p>
+</div>
+:ET

@@ -1,0 +1,61 @@
+I"�<h2 id="návrh-uživatelského-rozhraní-wireframe">Návrh uživatelského rozhraní (wireframe)</h2>
+
+<p>Vyberte si jeden ze dvou níže uvedených projektů. Každý z projektů má dvě alternativy: <strong>mobilní nebo webová aplikace</strong>. Vytvořte <strong>papírový</strong> wireframe projektu, obsahující <strong>veškerou požadovanou funkcionalitu</strong>. Šablonu pro wireframe pro tisk stahujte <a href="https://sneakpeekit.com">zde</a>. <strong>Konzultace jsou možné v době semináře případně po dohodě e-mailem</strong>.</p>
+
+<h4 id="co-musí-obsahovat-wireframe">Co <strong>musí</strong> obsahovat wireframe?</h4>
+<ul>
+  <li>Základní rozmístění a volba elementů</li>
+  <li>Popis elementů (např. popis tlačítka)</li>
+  <li>Určení priorit elementů (velikost nadpisu, primární/sekundární tlačítka atd.)</li>
+</ul>
+
+<h4 id="co-nemusí-obsahovat-wireframe">Co <strong>nemusí</strong> obsahovat wireframe?</h4>
+<ul>
+  <li>Barvy</li>
+  <li>Podrobný vzhled elementů (zaoblené/nezaoblené rohy)</li>
+  <li>Nedůležitý text, může být nahrazen vlnovkami</li>
+</ul>
+
+<h4 id="užitečné-odkazy">Užitečné odkazy</h4>
+<ul>
+  <li><a href="https://cantunsee.space">UI design game</a></li>
+  <li><a href="https://lawsofux.com">Pravidla UX designu</a></li>
+  <li><a href="https://hackdesign.org">Hack design</a></li>
+  <li><a href="https://type.method.ac">Kerning game</a></li>
+  <li><a href="https://sneakpeekit.com">Printable wireframe layouts</a></li>
+</ul>
+
+<h3 id="odevzdáníobhajoba">Odevzdání/obhajoba</h3>
+<p>Odevzdání a obhajoba probíhá formou kolokvia, na kterém je nutné odevzdat papírový wireframe ve formátu A4 a adekvátně okomentovat klíčová rozhodnutí v designu <em>(“Tlačítko je zde protože…”, “Použil jsem tento element protože…”)</em>. <strong>První kolokvia budou vypsána v zápočtovém týdnu, doporučuji cílit na tento deadline</strong>. Pro odevzdání je nutné splnit veškeré <a href="/teaching/URO/practise01.html">předchozí úlohy</a>.</p>
+
+<h2 id="portál-upol">Portál UPOL</h2>
+<p>Rozcestník (portál) univerzity Palackého, aktuální verze se nachází na adrese <a href="https://portal.upol.cz">https://portal.upol.cz</a>.</p>
+
+<h4 id="požadovaná-funkcionalita">Požadovaná funkcionalita</h4>
+<ul>
+  <li><strong>login/logout</strong></li>
+  <li><strong>uživatelský profil</strong></li>
+  <li><strong>důležitá oznámení</strong></li>
+  <li><strong>novinky</strong></li>
+  <li><strong>studijní dokumenty</strong> (služba umožňující přijímat soubory (PDF) – implementace volná)</li>
+  <li><strong>ke stažení</strong> <a href="https://portal.upol.cz/Apps/Download">https://portal.upol.cz/Apps/Download</a></li>
+  <li><strong>vyhledávání</strong> (studenti, zamestnanci) – poté možnost zobrazit profilu</li>
+  <li><strong>rozcestník (odkazy) obsahující následující služby:</strong> Office 365, Edis, Koleje / ISKaM, OneDrive, ELF/ Formuláře, Plány budov, E-mail, LMS Unifor, STAG, Erasmus, Menza, Evaluace, MOODLE, UPShare, FileSender, UPWiki, HAP, HelpDesk, OBD</li>
+</ul>
+
+<h2 id="menza-upol">Menza UPOL</h2>
+<p>Systém pro objednávání jídel pro Menza UPOL, aktuální verze se nachází na adrese <a href="https://menza.upol.cz/WebKredit/">https://menza.upol.cz/WebKredit/</a>.</p>
+
+<h4 id="požadovaná-funkcionalita-1">Požadovaná funkcionalita</h4>
+<ul>
+  <li><strong>login/logout</strong></li>
+  <li><strong>výběr jídelny</strong></li>
+  <li><strong>výběr dne</strong></li>
+  <li><strong>přehled jídel na vybraný den</strong> (cena, gramáž, dostupné porce alergeny atd.)</li>
+  <li><strong>objednání jídla</strong></li>
+  <li><strong>stav účtu</strong> (peníze, bony)</li>
+  <li><strong>burza</strong> (a vše potřebné k tomu)</li>
+  <li><strong>přehled všech alergenů</strong></li>
+  <li><strong>hodnocení spokojenosti</strong> (hodnocení posledních jídel, které člověk jedl)</li>
+</ul>
+:ET

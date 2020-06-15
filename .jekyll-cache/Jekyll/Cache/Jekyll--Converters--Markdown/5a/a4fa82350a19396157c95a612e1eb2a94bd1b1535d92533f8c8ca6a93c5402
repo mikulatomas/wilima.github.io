@@ -1,0 +1,299 @@
+I"�P<h1 id="simulátor-distribuované-sítě">Simulátor distribuované sítě</h1>
+
+<h3 id="užitečné-odkazy">Užitečné odkazy</h3>
+<ul>
+  <li><a href="https://docs.python.org/3.8/library/multiprocessing.html">Python <code class="language-plaintext highlighter-rouge">multiprocessing</code> — Process-based parallelism</a></li>
+</ul>
+
+<h2 id="distribuovaná-síť">Distribuovaná síť</h2>
+<p>Distribuovaná síť obsahuje několik uzlů a komunikačních kanálů, které propojují jednotlivé uzly. Pomoci komunikačních kanálů mají uzly možnost zasílat a přijímat zprávy.</p>
+
+<p>Distribuovaná síť o třech uzlech může vypadat následovně:</p>
+
+<p><img src="/assets/images/PDS/lecture07/img_0.png" class="img-fluid" srcset="/assets/images/PDS/lecture07/img_0@2x.png 2x" /></p>
+
+<p>Topologii takové sítě můžeme zapsat stejně jako orientovaný graf:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="n">TOPOLOGY</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">],</span>
+    <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">],</span>
+    <span class="p">[</span><span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+<span class="p">]</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Pokud se podíváme na uzel <code class="language-plaintext highlighter-rouge">N1</code> vidíme, že obsahuje jeden vstupní a jeden výstupní kanál.</p>
+
+<p><img src="/assets/images/PDS/lecture07/img_1.png" class="img-fluid" srcset="/assets/images/PDS/lecture07/img_1@2x.png 2x" /></p>
+
+<p>Každému uzlu je možné předat zdrojový kód, který má uzel vykonávat. V rámci tohoto zdrojového kódu jsou přístupny všechny komunikační kanály a název daného uzlu. Volitelně by mělo být možné zjistit název procesu z/do kterého komunikační kanál vede.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">current_process</span>
+
+<span class="k">def</span> <span class="nf">function</span><span class="p">():</span>
+    <span class="s">"""Function for node"""</span>
+
+    <span class="n">node</span> <span class="o">=</span> <span class="n">current_process</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">connection</span> <span class="ow">in</span> <span class="n">node</span><span class="p">.</span><span class="n">out_pipes</span><span class="p">:</span>
+        <span class="n">connection</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">"Msg from node {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="n">name</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">connection</span> <span class="ow">in</span> <span class="n">node</span><span class="p">.</span><span class="n">in_pipes</span><span class="p">:</span>
+        <span class="n">connection</span><span class="p">.</span><span class="n">recv</span><span class="p">()</span>
+
+    <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>V prvním stádiu by měla knihovna fungovat následovně:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="n">TOPOLOGY</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">],</span>
+            <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">],</span>
+            <span class="p">[</span><span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">]]</span>
+
+<span class="c1"># functions - pole funkci pro uzly, delky rovné počtu uzlů
+</span>
+<span class="n">NETWORK</span> <span class="o">=</span> <span class="n">Network</span><span class="p">(</span><span class="n">functions</span><span class="p">,</span> <span class="n">TOPOLOGY</span><span class="p">)</span>
+
+<span class="n">NETWORK</span><span class="p">.</span><span class="n">start</span><span class="p">()</span>
+<span class="n">NETWORK</span><span class="p">.</span><span class="n">join</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Třída <code class="language-plaintext highlighter-rouge">Network</code> obsahuje následující metody:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="code"><pre><span class="k">class</span> <span class="nc">Network</span><span class="p">():</span>
+    <span class="s">"""Represents distributed network"""</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">functions</span><span class="p">,</span> <span class="n">topology</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""Starts all nodes in the network"""</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">terminate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""Terminate all nodes in the network"""</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">kill</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""Kill all nodes in the network"""</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">join</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""Join all nodes in the network"""</span>
+        <span class="k">pass</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="třída-multiprocessingprocess">Třída <code class="language-plaintext highlighter-rouge">multiprocessing.Process</code></h2>
+<p>Reprezentuje aktivitu, která běží v samostatném procesu. Pro reprezentaci použijeme třídu <code class="language-plaintext highlighter-rouge">Process</code> s upravenou funkcionalitou. Více informací naleznete <a href="https://docs.python.org/3.8/library/multiprocessing.html#multiprocessing.Process">zde</a>.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Process</span>
+
+<span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">Process</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">function</span><span class="p">):</span>
+        <span class="n">Process</span><span class="p">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="n">function</span><span class="p">)</span>
+        <span class="p">...</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="třída-multiprocessingpipe">Třída <code class="language-plaintext highlighter-rouge">multiprocessing.Pipe</code></h2>
+<p>Komunikační kanál mezi dvěma procesy. Po vytvoření objektu <code class="language-plaintext highlighter-rouge">Pipe</code> je vrácena dvojice objektu <code class="language-plaintext highlighter-rouge">Connection</code>. První reprezentuje cílový uzel (můžeme pouze přijímat), druhý počáteční (může pouze odesílat). Objekt budeme vytvářet s parametrem <code class="language-plaintext highlighter-rouge">duplex=False</code>, ten zařídí, že komunikační kanál je jednosměrný. Více informací naleznete <a href="https://docs.python.org/3.8/library/multiprocessing.html#multiprocessing.Pipe">zde</a>.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre><span class="n">reciever</span><span class="p">,</span> <span class="n">sender</span> <span class="o">=</span> <span class="n">Pipe</span><span class="p">(</span><span class="n">duplex</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="p">...</span>
+
+<span class="c1"># Odešleme zprávu
+</span><span class="n">sender</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">"Test"</span><span class="p">)</span>
+
+<span class="p">...</span>
+
+<span class="c1"># Příjmeme zprávu na druhém konci
+</span><span class="n">reciever</span><span class="p">.</span><span class="n">recv</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Třída <code class="language-plaintext highlighter-rouge">Node</code> obsahuje následující metody:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="code"><pre><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">Process</span><span class="p">):</span>
+    <span class="s">"""Represents one node in the distributed network"""</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">function</span><span class="p">):</span>
+        <span class="n">Process</span><span class="p">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="n">function</span><span class="p">)</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">add_in_pipe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pipe</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">add_out_pipe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pipe</span><span class="p">):</span>
+        <span class="k">pass</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="logování">Logování</h2>
+<p>V rámci multiprocessingu je možné používat globální logger. Použítí je vidět na příkladu:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">multiprocessing</span>
+
+<span class="n">LOGGER</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="p">.</span><span class="n">log_to_stderr</span><span class="p">()</span>
+<span class="n">LOGGER</span><span class="p">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="p">.</span><span class="n">INFO</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">function</span><span class="p">():</span>
+    <span class="s">"""Function for node"""</span>
+
+    <span class="n">node</span> <span class="o">=</span> <span class="n">current_process</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">output_node</span> <span class="ow">in</span> <span class="n">node</span><span class="p">.</span><span class="n">out_pipes</span><span class="p">:</span>
+        <span class="n">output_node</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">"Msg from node {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="n">name</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">input_node</span> <span class="ow">in</span> <span class="n">node</span><span class="p">.</span><span class="n">in_pipes</span><span class="p">:</span>
+        <span class="n">LOGGER</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s">"Node: {}, Msg: {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>
+                                               <span class="n">input_node</span><span class="p">.</span><span class="n">recv</span><span class="p">()))</span>
+
+    <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>V pozdější verzi by měla knihovna umět logovat do souborů, názvy těchto souborů budou korespondovat s názvy uzlů. Více informací o logování v knihovně <code class="language-plaintext highlighter-rouge">multiprocessing</code> naleznete <a href="https://docs.python.org/3.8/library/multiprocessing.html#logging">zde</a></p>
+
+<blockquote>
+  <h1 id="úkol">Úkol</h1>
+  <p>Naprogramujte základní verzi knihovny, která umožňí vytvořit distribuovaný systém na základně předané topologie. Knihovnu otestujte na jednoduchém příkladu, kdy každý uzel pošle informační zprávu sousedu.</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="code"><pre><span class="n">TOPOLOGY</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">],</span>
+            <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">],</span>
+            <span class="p">[</span><span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">]]</span>
+
+<span class="n">Ukázkový</span> <span class="n">log</span><span class="p">:</span>
+
+<span class="p">[</span><span class="n">INFO</span><span class="o">/</span><span class="mi">0</span><span class="p">]</span> <span class="n">child</span> <span class="n">process</span> <span class="n">calling</span> <span class="bp">self</span><span class="p">.</span><span class="n">run</span><span class="p">()</span>
+<span class="p">[</span><span class="n">INFO</span><span class="o">/</span><span class="mi">1</span><span class="p">]</span> <span class="n">child</span> <span class="n">process</span> <span class="n">calling</span> <span class="bp">self</span><span class="p">.</span><span class="n">run</span><span class="p">()</span>
+<span class="p">[</span><span class="n">INFO</span><span class="o">/</span><span class="mi">0</span><span class="p">]</span> <span class="n">Node</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Msg</span><span class="p">:</span> <span class="n">Msg</span> <span class="k">from</span> <span class="n">node</span> <span class="mi">1</span>
+<span class="p">[</span><span class="n">INFO</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span> <span class="n">child</span> <span class="n">process</span> <span class="n">calling</span> <span class="bp">self</span><span class="p">.</span><span class="n">run</span><span class="p">()</span>
+<span class="p">[</span><span class="n">INFO</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span> <span class="n">Node</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">Msg</span><span class="p">:</span> <span class="n">Msg</span> <span class="k">from</span> <span class="n">node</span> <span class="mi">0</span>
+<span class="p">[</span><span class="n">INFO</span><span class="o">/</span><span class="mi">1</span><span class="p">]</span> <span class="n">Node</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Msg</span><span class="p">:</span> <span class="n">Msg</span> <span class="k">from</span> <span class="n">node</span> <span class="mi">2</span>
+<span class="p">[</span><span class="n">INFO</span><span class="o">/</span><span class="mi">0</span><span class="p">]</span> <span class="n">process</span> <span class="n">shutting</span> <span class="n">down</span>
+<span class="p">[</span><span class="n">INFO</span><span class="o">/</span><span class="mi">0</span><span class="p">]</span> <span class="n">process</span> <span class="n">exiting</span> <span class="k">with</span> <span class="n">exitcode</span> <span class="mi">0</span>
+<span class="p">[</span><span class="n">INFO</span><span class="o">/</span><span class="mi">1</span><span class="p">]</span> <span class="n">process</span> <span class="n">shutting</span> <span class="n">down</span>
+<span class="p">[</span><span class="n">INFO</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span> <span class="n">process</span> <span class="n">shutting</span> <span class="n">down</span>
+<span class="p">[</span><span class="n">INFO</span><span class="o">/</span><span class="mi">1</span><span class="p">]</span> <span class="n">process</span> <span class="n">exiting</span> <span class="k">with</span> <span class="n">exitcode</span> <span class="mi">0</span>
+<span class="p">[</span><span class="n">INFO</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span> <span class="n">process</span> <span class="n">exiting</span> <span class="k">with</span> <span class="n">exitcode</span> <span class="mi">0</span>
+<span class="p">[</span><span class="n">INFO</span><span class="o">/</span><span class="n">MainProcess</span><span class="p">]</span> <span class="n">process</span> <span class="n">shutting</span> <span class="n">down</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+:ET

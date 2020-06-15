@@ -32,6 +32,14 @@ courses: [PDS, PAPR1]
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+markdown: kramdown
+
+kramdown:
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
 exclude:
   - Gemfile
   - Gemfile.lock

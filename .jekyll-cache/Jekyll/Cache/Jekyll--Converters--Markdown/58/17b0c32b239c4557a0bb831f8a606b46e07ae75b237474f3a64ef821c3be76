@@ -1,0 +1,84 @@
+I"<h1 id="vlnový-algoritmus-echo">Vlnový algoritmus Echo</h1>
+
+<h3 id="užitečné-odkazy">Užitečné odkazy</h3>
+<ul>
+  <li><a href="https://docs.python.org/3.4/library/multiprocessing.html">Python <code class="language-plaintext highlighter-rouge">multiprocessing</code> — Process-based parallelism</a></li>
+  <li><a href="http://phoenix.inf.upol.cz/~osicka/dist-sys.pdf">Slidy k předmětu PDS</a></li>
+</ul>
+
+<h2 id="separátní-logy-pro-každý-proces">Separátní logy pro každý proces</h2>
+<p>Ve třídě <code class="language-plaintext highlighter-rouge">Node</code> implementujte separátní logger podobně jak je uvedeno níže.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="bp">self</span><span class="p">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="p">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">name_of_the_node</span><span class="p">)</span>
+<span class="n">hdlr</span> <span class="o">=</span> <span class="n">logging</span><span class="p">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="s">'/path/to/log/{}.log'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s">'w'</span><span class="p">)</span>
+<span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="p">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s">'%(asctime)s %(levelname)s %(message)s'</span><span class="p">)</span>
+<span class="n">hdlr</span><span class="p">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+<span class="bp">self</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">hdlr</span><span class="p">)</span>
+<span class="bp">self</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="p">.</span><span class="n">INFO</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="algoritmus-echo">Algoritmus Echo</h2>
+<p>Vlnový, centralizovaný algoritmus pro libovolnou topologii. Algoritmus je pro neorientované sítě, je tedy nutné mít obousměrné kanály, případně dvojci kanálů (náš případ).</p>
+
+<p>Pseudokód procesu <code class="language-plaintext highlighter-rouge">initiator</code>:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">neighbors</span><span class="p">:</span>
+	<span class="n">send</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">rec</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">neighbors</span><span class="p">):</span>
+	<span class="n">recieve</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+	<span class="n">rec</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">decide</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Pseudokód ostatních procesů:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="code"><pre><span class="n">token</span><span class="p">,</span> <span class="n">source</span> <span class="o">=</span> <span class="n">recieve_any</span><span class="p">()</span>
+<span class="n">father</span> <span class="o">=</span> <span class="n">source</span>
+<span class="n">rec</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">neighbors</span><span class="p">:</span>
+	<span class="k">if</span> <span class="n">node</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">father</span><span class="p">:</span>
+		<span class="n">send</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">rec</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">neighbors</span><span class="p">):</span>
+	<span class="n">recieve</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+	<span class="n">rec</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">send</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">father</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<blockquote>
+  <h1 id="úkol">Úkol</h1>
+  <p>V simulátoru dist. sítě implementujte vlnový algoritmus Echo.</p>
+</blockquote>
+
+:ET
