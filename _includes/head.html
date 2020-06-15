@@ -1,0 +1,32 @@
+<head>
+    <meta charset="utf-8">
+
+    <title>{{ site.title | escape }}{% if page.title %} - {{ page.title | escape }}{% endif %}</title>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="{{ site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}"
+        name="description">
+    <meta content="{{ site.keywords}}" name="keywords">
+    <meta content="{{ site.author }}" name="author">
+
+    {% assign custom_url = site.url | append: site.baseurl %}
+    {% assign full_base_url = custom_url %}
+    <link rel="stylesheet" href="https://use.typekit.net/hcj7kny.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "/assets/styles/highlight.css" | prepend: full_base_url }}">
+    <link rel="stylesheet" href="{{ "/assets/styles/style.css" | prepend: full_base_url }}">
+
+    <link rel="shortcut icon" type="image/png" href="{{ '/assets/images/fav.png' | prepend: full_base_url }}">
+    <meta name="robots" content="index, follow" />
+
+    {% if jekyll.environment == 'production' %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-49624235-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-49624235-1');
+    </script>
+    {% endif %}
+    <script src="https://kit.fontawesome.com/26d59cb169.js" crossorigin="anonymous"></script>
+</head>
