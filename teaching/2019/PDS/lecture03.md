@@ -1,22 +1,23 @@
 ---
-layout: lecture
+layout: default
 courses: PDS
 title: 3. Základy se semafory
 year: 2019
 ---
 
 
-# Základní práce se semafory
+## Základní práce se semafory
 
-### Užitečné odkazy
+#### Užitečné odkazy
 * [Python Semaphore Objects](https://docs.python.org/3/library/threading.html#semaphore-objects)
-* [Zdrojové kódy z cvičení formou notebooku](/assets/files/lecture02.ipynb)
+* [Zdrojové kódy z cvičení formou notebooku](/assets/files/2020/lecture02.ipynb)
 
-## Objekt `Semaphore`
+### Objekt `Semaphore`
 `Semaphore` je třída reprezentující synchronizační primitivum semafor. Semafor je při vytvoření nastaven na určitou hodnotu. Z teorie známe dvě funkce `P()` a `V()`, které tuto hodnotu mění, v Python3 jsou tyto funkce pojmenovány `acquire()` a `release()`.
 
-> # Úkol
-Pomoci semaforu můžeme elegantně implementovat takzvaný `mutex` a vyřešít tím problém z předchozí hodiny. Upravte tedy sdílený čítač tak, aby byla hodnota vždy správná
+<div class="task">
+<p><span>Úkol</span><br/>Pomoci semaforu můžeme elegantně implementovat takzvaný <code>mutex</code> a vyřešít tím problém z předchozí hodiny. Upravte tedy sdílený čítač tak, aby byla hodnota vždy správná.</p>
+</div>
 
 {% highlight python linenos %}
 import threading
@@ -27,25 +28,29 @@ def increment():
     for i in range(100000):
         counter += 1
 
-# Globální counter        
+## Globální counter        
 counter = 0    
 
 thread1 = threading.Thread(target=increment)
 thread2 = threading.Thread(target=increment)
 
-# Spustíme thread
+## Spustíme thread
 thread1.start()
 thread2.start()
 
-# Počkáme na to až thread doběhne
+## Počkáme na to až thread doběhne
 thread1.join()
 thread2.join()
 
 print(counter)
 {% endhighlight %}
 
-> # Úkol
+> ## Úkol
 Následující kód doplňte o synchronizaci, tak aby byl `print()` prováděn ve správném pořadí. Synchronizace by neměla být příliš silná, například nás nezajímá v jakém pořadí bude vypsáno `Print before B` a `Print before A`.
+
+<div class="task">
+<p><span>Úkol</span><br/>Následující kód doplňte o synchronizaci, tak aby byl <code>print()</code> prováděn ve správném pořadí. Synchronizace by neměla být příliš silná, například nás nezajímá v jakém pořadí bude vypsáno <code>Print before B</code> a <code>Print before A</code>.</p>
+</div>
 
 {% highlight python linenos %}
 import threading

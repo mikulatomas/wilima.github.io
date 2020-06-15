@@ -1,20 +1,20 @@
 ---
-layout: lecture
+layout: default
 courses: PDS
 title: 4. Linear regression - operace s maticemi
 year: 2019
 ---
 
 
-# Linear regression - operace s maticemi
+## Linear regression - operace s maticemi
 
-### Užitečné odkazy
+#### Užitečné odkazy
 * [Linear Regression](https://en.wikipedia.org/wiki/Linear_regression)
 * [Gradient Descent](https://en.wikipedia.org/wiki/Gradient_descent)
 * [Machine Learning - Coursera.org](https://www.coursera.org/learn/machine-learning)
 * [Zdrojové kódy z cvičení formou notebooku](/assets/files/lecture03.ipynb)
 
-## Motivace
+### Motivace
 V případě regression (oproti classification) má za úkol algoritmus predikovat 'real-value' hodnotu. Linear regression je jednoduchý přístup k `supervised machine learning`. Linear regression je používána na predikci hodnoty `Y` na základě hodnoty `X`, předpokládáme, že mezi těmito hodnotami je lineární závislost. I přes jeho jednoduchost je tento přístup ve světe machine learning stále používán.
 
 > In statistics, linear regression is a linear approach to modelling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables).
@@ -136,7 +136,7 @@ plt.show()
 
 ![png](/assets/images/PDS/lecture04/output_5_0.png)
 
-## Výpočet s využítím matic a vektorizace
+### Výpočet s využítím matic a vektorizace
 
 {% highlight python linenos %}
 def hypothesis(X, theta):
@@ -174,7 +174,7 @@ plt.show()
 
 ![png](/assets/images/PDS/lecture04/output_6_0.png)
 
-## Predikce na základě získaných hodnot
+### Predikce na základě získaných hodnot
 
 {% highlight python linenos %}
 # plot training data

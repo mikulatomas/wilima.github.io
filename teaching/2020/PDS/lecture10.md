@@ -1,17 +1,17 @@
 ---
-layout: lecture
+layout: default
 courses: PDS
 title: 10. Vlnový algoritmus Echo 
 year: 2020
 ---
 
 
-# Vlnový algoritmus Echo
+## Vlnový algoritmus Echo
 
-### Užitečné odkazy
+#### Užitečné odkazy
 * [Python `multiprocessing` — Process-based parallelism](https://docs.python.org/3.8/library/multiprocessing.html)
 
-## Separátní logy pro každý proces
+### Separátní logy pro každý proces
 Ve třídě `Node` implementujte separátní logger podobně jak je uvedeno níže.
 
 {% highlight python linenos %}
@@ -23,7 +23,7 @@ self.logger.addHandler(hdlr)
 self.logger.setLevel(logging.INFO)
 {% endhighlight %}
 
-## Algoritmus Echo 
+### Algoritmus Echo 
 Vlnový, centralizovaný algoritmus pro libovolnou topologii. Algoritmus je pro neorientované sítě, je tedy nutné mít obousměrné kanály, případně dvojci kanálů (náš případ).
 
 Token může být například `tuple` s hodnotami `(číslo, název uzlu z kterého byl poslán)`. Cílem je zjistit počet uzlů v topologii (decide v `initiator`).
@@ -57,6 +57,7 @@ while rec < len(neighbors):
 send(token, father)
 {% endhighlight %}
 
-> # Úkol
-V simulátoru dist. sítě implementujte vlnový algoritmus Echo.
+<div class="task">
+<p><span>Úkol</span><br/>V simulátoru dist. sítě implementujte vlnový algoritmus Echo.</p>
+</div>
 

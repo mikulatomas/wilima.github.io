@@ -1,0 +1,143 @@
+I"�<h2 id="kmipds-paralelní-distribuované-systémy">KMI/PDS Paralelní distribuované systémy</h2>
+<p><strong>Vyučující:</strong> Mgr. Petr Osička, Ph.D.</p>
+
+<p><strong>Stránky předmětu:</strong> <a href="http://phoenix.inf.upol.cz/~osicka/pds.html">http://phoenix.inf.upol.cz/~osicka/pds.html</a></p>
+
+<h3 id="seznam-cvičení">Seznam cvičení</h3>
+<ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+<a href="/teaching/2019/PDS/lecture01.html">1. Úvod a instalace jazyka Python</a>
+</li>
+
+
+
+<li>
+<a href="/teaching/2020/PDS/lecture01.html">1. Úvod a instalace jazyka Python</a>
+</li>
+
+
+
+<li>
+<a href="/teaching/2020/PDS/lecture02.html">2. Práce s vlákny</a>
+</li>
+
+
+
+<li>
+<a href="/teaching/2019/PDS/lecture02.html">2. Práce s vlákny</a>
+</li>
+
+
+
+<li>
+<a href="/teaching/2020/PDS/lecture03.html">3. Základy se semafory</a>
+</li>
+
+
+
+<li>
+<a href="/teaching/2019/PDS/lecture03.html">3. Základy se semafory</a>
+</li>
+
+
+
+
+
+<li>
+<a href="/teaching/2020/PDS/lecture04.html">4. Producent a konzument</a>
+</li>
+
+
+
+
+
+
+
+<li>
+<a href="/teaching/2020/PDS/lecture08.html">8. Simulátor distribuované sítě</a>
+</li>
+
+
+
+
+
+<li>
+<a href="/teaching/2020/PDS/lecture09.html">9. Simulátor distribuované sítě (2)</a>
+</li>
+
+
+
+<li>
+<a href="/teaching/2019/PDS/lecture0r%CC%8C.html">4. Producent a konzument</a>
+</li>
+
+
+
+<li>
+<a href="/teaching/2020/PDS/lecture10.html">10. Vlnový algoritmus Echo</a>
+</li>
+
+
+
+
+
+<li>
+<a href="/teaching/2020/PDS/lecture11.html">11. Výpočet infima</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+<h3 id="co-bude-obsahem-cvičení-pds">Co bude obsahem cvičení PDS</h3>
+<p>Implementace algoritmů pro synchronizaci procesů, potažmo distribuovaných systémů.</p>
+
+<h3 id="zápočet">Zápočet</h3>
+<p>Zápočtový úkol – naprogramovat jednoduchý simulátor distribuované sítě, pro jeho splnění je účast na cvičení více než doporučena. Hotový zápočtový úkol odevzdávejte e-mailem.</p>
+:ET

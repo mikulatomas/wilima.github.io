@@ -1,0 +1,113 @@
+I"n<h2 id="základní-práce-s-vlákny">Základní práce s vlákny</h2>
+
+<h4 id="užitečné-odkazy">Užitečné odkazy</h4>
+<ul>
+  <li><a href="https://docs.python.org/3/library/threading.html">Python <code class="language-plaintext highlighter-rouge">threading</code> — Thread-based parallelism</a></li>
+  <li><a href="/assets/files/2020/lecture01.ipynb">Zdrojové kódy z cvičení formou notebooku</a></li>
+</ul>
+
+<h3 id="objekt-thread">Objekt <code class="language-plaintext highlighter-rouge">Thread</code></h3>
+<p><code class="language-plaintext highlighter-rouge">Thread</code> třída reprezentuje aktivitu běžící v separátním vlákně. Jsou zde dvě možnosti jak objektu <code class="language-plaintext highlighter-rouge">Thread</code> specifikovat aktivitu: předání <code class="language-plaintext highlighter-rouge">callable object</code> do konstruktoru třídy <code class="language-plaintext highlighter-rouge">Thread</code>, nebo přepsání metody <code class="language-plaintext highlighter-rouge">run()</code>. Pro jednoduchost budeme používat první možnost.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">threading</span>
+
+<span class="k">def</span> <span class="nf">example_activity</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">)</span>
+
+<span class="n">example_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">example_activity</span><span class="p">)</span>
+
+<span class="n">example_thread</span><span class="p">.</span><span class="n">start</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Při vytváření objektu <code class="language-plaintext highlighter-rouge">Thread</code> je rovněž možné předat aktivitě argumenty.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">threading</span>
+
+<span class="k">def</span> <span class="nf">example_activity_with_args</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">f"Your number is </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="n">example_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">example_activity_with_args</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,))</span>
+
+<span class="n">example_thread</span><span class="p">.</span><span class="n">start</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="modifikace-globální-proměnné-v-rámci-vlákna">Modifikace globální proměnné v rámci vlákna</h3>
+<p>Pokud potřebujeme modifikovat proměnnou v rámci vlákna musíme použít klíčové slovo <code class="language-plaintext highlighter-rouge">global</code>.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">threading</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="s">'ahoj '</span>
+
+<span class="k">def</span> <span class="nf">thread_function</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">text</span>
+
+    <span class="n">text</span> <span class="o">+=</span> <span class="s">'svete'</span>
+
+<span class="n">thread</span> <span class="o">=</span> <span class="n">threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">thread_function</span><span class="p">)</span>
+
+<span class="n">thread</span><span class="p">.</span><span class="n">start</span><span class="p">()</span>
+<span class="n">thread</span><span class="p">.</span><span class="n">join</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="problém-sdíleného-čítače">Problém sdíleného čítače</h3>
+<p>Máme dvě vlákna, která inkrementují sdílený čítač. Každé vlákno má čítač postupně zvýšit o 100 000. Očekávaná výsledná hodnota je 200 000, proč tomu tak ne vždy je?</p>
+
+<div class="task">
+<p><span>Úkol</span><br />Vytvořte dvě vlákna, která se uspí na náhodně dlouhou dobu (v rozsahu několika sekund) a vypíší výstup na obrazovku.</p>
+</div>
+
+<div class="task">
+<p><span>Úkol</span><br />Naprogramujte úlohu sdíleného čítače a vyzkoušejte zda opravdu nefunguje.</p>
+</div>
+
+<div class="task">
+<p><span>Úkol</span><br />Mějme tři setřízená pole <code>a</code>, <code>b</code>, <code>c</code> s celými čísly. Je známo, že některé číslo se vyskytuje v každém poli. Paralelně nalézněte nejmenší index <code>i</code>, <code>j</code>, <code>k</code> pro které platí <code>a[i] == b[j] == c[k]</code>, hodnoty vypište na obrazovku. Úkol lze vyřešit tak, že není nutné použít synchronizaci.</p>
+<p>
+**Ukázkový vstup problému**
+```
+a = [3,4,5,6,7]
+b = [1,2,5,7,9]
+c = [3,4,6,7,9]
+```
+&gt; **Ukázkový výstup**
+```
+Thread 1 result: 7
+Thread 2 result: 7
+Thread 3 result: 7
+```
+</p>
+</div>
+:ET

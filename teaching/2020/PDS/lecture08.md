@@ -1,22 +1,22 @@
 ---
-layout: lecture
+layout: default
 courses: PDS
 title: 8. Simulátor distribuované sítě
 year: 2020
 ---
 
 
-# Simulátor distribuované sítě
+## Simulátor distribuované sítě
 
-### Užitečné odkazy
+#### Užitečné odkazy
 * [Python `multiprocessing` — Process-based parallelism](https://docs.python.org/3.8/library/multiprocessing.html)
 
-## Distribuovaná síť
+### Distribuovaná síť
 Distribuovaná síť obsahuje několik uzlů a komunikačních kanálů, které propojují jednotlivé uzly. Pomoci komunikačních kanálů mají uzly možnost zasílat a přijímat zprávy.
 
 Distribuovaná síť o třech uzlech může vypadat následovně:
 
-<img src="/assets/images/PDS/lecture07/img_0.png" class="img-fluid" srcset="/assets/images/PDS/lecture07/img_0@2x.png 2x" />
+<img src="/assets/images/PDS/lecture07/img_0.png" class="center" srcset="/assets/images/PDS/lecture07/img_0@2x.png 2x" />
 
 Topologii takové sítě můžeme zapsat stejně jako orientovaný graf:
 
@@ -30,7 +30,7 @@ TOPOLOGY = [
 
 Pokud se podíváme na uzel `N1` vidíme, že obsahuje jeden vstupní a jeden výstupní kanál.
 
-<img src="/assets/images/PDS/lecture07/img_1.png" class="img-fluid" srcset="/assets/images/PDS/lecture07/img_1@2x.png 2x" />
+<img src="/assets/images/PDS/lecture07/img_1.png" class="center" srcset="/assets/images/PDS/lecture07/img_1@2x.png 2x" />
 
 Každému uzlu je možné předat zdrojový kód, který má uzel vykonávat. V rámci tohoto zdrojového kódu jsou přístupny všechny komunikační kanály a název daného uzlu. Volitelně by mělo být možné zjistit název procesu z/do kterého komunikační kanál vede.
 
@@ -93,7 +93,7 @@ class Network():
         pass
 {% endhighlight %}
 
-## Třída `multiprocessing.Process`
+### Třída `multiprocessing.Process`
 Reprezentuje aktivitu, která běží v samostatném procesu. Pro reprezentaci použijeme třídu `Process` s upravenou funkcionalitou. Více informací naleznete [zde](https://docs.python.org/3.8/library/multiprocessing.html#multiprocessing.Process).
 
 {% highlight python linenos %}
@@ -106,7 +106,7 @@ class Node(Process):
         ...
 {% endhighlight %}
 
-## Třída `multiprocessing.Pipe`
+### Třída `multiprocessing.Pipe`
 Komunikační kanál mezi dvěma procesy. Po vytvoření objektu `Pipe` je vrácena dvojice objektu `Connection`. První reprezentuje cílový uzel (můžeme pouze přijímat), druhý počáteční (může pouze odesílat). Objekt budeme vytvářet s parametrem `duplex=False`, ten zařídí, že komunikační kanál je jednosměrný. Více informací naleznete [zde](https://docs.python.org/3.8/library/multiprocessing.html#multiprocessing.Pipe).
 
 {% highlight python linenos %}
@@ -140,7 +140,7 @@ class Node(Process):
         pass
 {% endhighlight %}
 
-## Logování
+### Logování
 V rámci multiprocessingu je možné používat globální logger. Použítí je vidět na příkladu:
 
 {% highlight python linenos %}
@@ -167,8 +167,9 @@ def function():
 
 V pozdější verzi by měla knihovna umět logovat do souborů, názvy těchto souborů budou korespondovat s názvy uzlů. Více informací o logování v knihovně `multiprocessing` naleznete [zde](https://docs.python.org/3.8/library/multiprocessing.html#logging)
 
-> # Úkol
-Naprogramujte základní verzi knihovny, která umožňí vytvořit distribuovaný systém na základně předané topologie. Knihovnu otestujte na jednoduchém příkladu, kdy každý uzel pošle informační zprávu sousedu.
+<div class="task">
+<p><span>Úkol</span><br/>
+Naprogramujte základní verzi knihovny, která umožňí vytvořit distribuovaný systém na základně předané topologie. Knihovnu otestujte na jednoduchém příkladu, kdy každý uzel pošle informační zprávu sousedu.</p></div>
 
 {% highlight python linenos %}
 TOPOLOGY = [[False, True, False],

@@ -1,19 +1,19 @@
 ---
-layout: lecture
+layout: default
 courses: PDS
 title: 4. Producent a konzument
 year: 2020
 ---
 
 
-# Producent a konzument
+## Producent a konzument
 
-### Užitečné odkazy
+#### Užitečné odkazy
 * [Python `threading` — Thread-based parallelism](https://docs.python.org/3/library/threading.html)
 * [Python `Condition` — Thread-based parallelism](https://docs.python.org/3/library/threading.html#condition-objects)
 * [Zdrojové kódy z cvičení formou notebooku](/assets/files/2020/lecture04.ipynb)
 
-## Objekt ```Condition```
+### Objekt ```Condition```
 Podmínka je vždy asociována s nějakým druhem zámku. Podmínce může být zámek předán, případně si vytvoří zámek svůj. Již známe metody ```acquire()``` a ```release()``` jsou předány zámku v objektu ```Condition```.
 
 Novinkou však jsou metody ```wait()``` a ```notify()```. Metoda ```wait()``` uvolní zámek a čeká dokud jej jiné vlákno nepotvrdí metodou ```notify()```, nebo ```notify_all()``` a poté zámek zamče.
@@ -35,7 +35,7 @@ with cv:
     cv.notify()
 {% endhighlight %}
 
-## Producent a konzument
+### Producent a konzument
 V následující implementaci dochází k problému konzumace prázdné fronty.
 
 {% highlight python linenos %}
@@ -87,8 +87,10 @@ ProducerThread().start()
 ConsumerThread().start()
 {% endhighlight %}
 
-> # Úkol
-Předchozí kód upravte za pomoci `Condition` tak, aby nedocházelo ke konzumaci prázdné fronty. Pokud ve frontě nebude žádné číslo, konzument musí čekat.
+<div class="task">
+<p><span>Úkol</span><br/>Předchozí kód upravte za pomoci <code>Condition</code> tak, aby nedocházelo ke konzumaci prázdné fronty. Pokud ve frontě nebude žádné číslo, konzument musí čekat.</p>
+</div>
 
-> # Úkol
-Upravte úkol tak aby velikost fronty byla omezena. Například na délku 5 hodnot ve frontě. K řešení využíjte `Condition`.
+<div class="task">
+<p><span>Úkol</span><br/>Upravte úkol tak aby velikost fronty byla omezena. Například na délku 5 hodnot ve frontě. K řešení využíjte <code>Condition</code>.</p>
+</div>

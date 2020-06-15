@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  {% include head.html %}
-  <body class="main">
+{% include header.html %}
 
-    {% include header.html %}
-    <main class="container">
-    <div class="row">
-        <div class="col-md-8 offset-md-2">{{ content }}</div>
-      </div>
-    </main>
+<main>
+  <div class="container--full-width">
+    {% if page.alert %}
+    <div class="alert">
+      <i class="fad fa-megaphone"></i> {{ page.alert }}</div>
+    {% endif %}
+    {{ content }}
+  </div>
+</main>
 
-    {% include footer.html %}
-  </body>
-</html>
+{% include footer.html %}
