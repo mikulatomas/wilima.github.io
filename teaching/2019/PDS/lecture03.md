@@ -15,9 +15,7 @@ year: 2019
 ### Objekt `Semaphore`
 `Semaphore` je třída reprezentující synchronizační primitivum semafor. Semafor je při vytvoření nastaven na určitou hodnotu. Z teorie známe dvě funkce `P()` a `V()`, které tuto hodnotu mění, v Python3 jsou tyto funkce pojmenovány `acquire()` a `release()`.
 
-<div class="task">
-<p><span>Úkol</span><br/>Pomoci semaforu můžeme elegantně implementovat takzvaný <code>mutex</code> a vyřešít tím problém z předchozí hodiny. Upravte tedy sdílený čítač tak, aby byla hodnota vždy správná.</p>
-</div>
+{% include task.html content="Pomoci semaforu můžeme elegantně implementovat takzvaný <code>mutex</code> a vyřešít tím problém z předchozí hodiny. Upravte tedy sdílený čítač tak, aby byla hodnota vždy správná." %}
 
 {% highlight python linenos %}
 import threading
@@ -48,9 +46,7 @@ print(counter)
 > ## Úkol
 Následující kód doplňte o synchronizaci, tak aby byl `print()` prováděn ve správném pořadí. Synchronizace by neměla být příliš silná, například nás nezajímá v jakém pořadí bude vypsáno `Print before B` a `Print before A`.
 
-<div class="task">
-<p><span>Úkol</span><br/>Následující kód doplňte o synchronizaci, tak aby byl <code>print()</code> prováděn ve správném pořadí. Synchronizace by neměla být příliš silná, například nás nezajímá v jakém pořadí bude vypsáno <code>Print before B</code> a <code>Print before A</code>.</p>
-</div>
+{% include task.html content="Následující kód doplňte o synchronizaci, tak aby byl <code>print()</code> prováděn ve správném pořadí. Synchronizace by neměla být příliš silná, například nás nezajímá v jakém pořadí bude vypsáno <code>Print before B</code> a <code>Print before A</code>." %}
 
 {% highlight python linenos %}
 import threading

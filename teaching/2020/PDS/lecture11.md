@@ -26,6 +26,4 @@ args = [(6, ), (2, ), (3, ), (1, )]
 
 {% endhighlight %}
 
-<div class="task">
-<p><span>Úkol</span><br/>Za pomoci algoritmu <code>Echo</code> naprogramujte výpočet infima v distribuované síti.</p>
-</div>
+{% include task.html content="Za pomoci algoritmu <code>Echo</code> naprogramujte výpočet infima v distribuované síti." %}

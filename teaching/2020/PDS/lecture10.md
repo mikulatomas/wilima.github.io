@@ -57,7 +57,7 @@ while rec < len(neighbors):
 send(token, father)
 {% endhighlight %}
 
-<div class="task">
-<p><span>Úkol</span><br/>V simulátoru dist. sítě implementujte vlnový algoritmus Echo.</p>
-</div>
+{% include task.html content="V simulátoru dist. sítě implementujte vlnový algoritmus Echo." %}
+
+
 

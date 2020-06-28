@@ -10,10 +10,22 @@ body {
     color: #262626;
 }
 
+pre {
+    margin: 0;
+    border-radius: 10px;
+}
+
+figure {
+    -webkit-box-shadow: 0px 0px 28px -13px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px 0px 28px -13px rgba(0,0,0,0.26);
+    box-shadow: 0px 0px 28px -13px rgba(0,0,0,0.26);
+    border-radius: 10px;
+}
+
 h2, h3 {
     font-weight: bold;
-    margin-top: 1.3em;
-    margin-bottom: 0.9em;
+    margin-top: 1.7em;
+    margin-bottom: 1em;
 }
 
 h3 {font-size: 1.15em;}
@@ -28,13 +40,16 @@ h4 {
 }
 
 blockquote, .task {
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 3em 0;
     
-    border-radius: 5px;
-    border-left-width: 6px;
-    border-left-style: solid;
-    
-    margin: 2em 0;
-    padding: 0.5em 1em ;
+    div {
+        border-left-width: 6px;
+        border-left-style: solid;
+        
+        padding: 0.5em 1em;
+    }
 
     h1, h2, h3 {
         margin-top: 0.5em;
@@ -69,13 +84,20 @@ blockquote, .task {
 }
 
 blockquote {
-    background-color: #F5F5F5;
-    border-left-color: #E9E9E9;
+    font-style: italic;
+    background-color: white;
+    div {
+        border-left-color: #E9E9E9;
+    }
+    
 }
 
 .task {
-    background-color: #E3FFDC;
-    border-left-color: #C2E9A3;
+    background-color: white;
+
+    div {
+        border-left-color: #C2E9A3;
+    }
 
     span {
         font-weight: bold;
@@ -111,14 +133,23 @@ ul {
 }
 
 .alert {
+    overflow: hidden;
+    border-radius: 10px;
     margin-top: 1em;
-    border-radius: 5px;
-    padding: 1em;
-    border-top: 6px #FF9738 solid;
-    background-color: rgba(255, 151, 56, 0.2);
+    background-color: rgba(255, 155, 56, 0.28);
+    -webkit-box-shadow: 0px 0px 28px -13px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px 0px 28px -13px rgba(0,0,0,0.26);
+    box-shadow: 0px 0px 28px -13px rgba(0,0,0,0.26);
 
+    div {
+        
+        padding: 1.2em;
+        padding-left: .8em;
+        border-left: 6px #FF9738 solid;
+    }
     i {
         margin-right: 0.5em;
+        color: #FF9738;
     }
 }
 
@@ -142,7 +173,13 @@ i.yellow {
     opacity: 0.4;
 }
 .rounded {
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+.shadow {
+    -webkit-box-shadow: 0px 0px 28px -13px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px 0px 28px -13px rgba(0,0,0,0.26);
+    box-shadow: 0px 0px 28px -13px rgba(0,0,0,0.26);
 }
 
 

@@ -167,9 +167,7 @@ def function():
 
 V pozdější verzi by měla knihovna umět logovat do souborů, názvy těchto souborů budou korespondovat s názvy uzlů. Více informací o logování v knihovně `multiprocessing` naleznete [zde](https://docs.python.org/3.8/library/multiprocessing.html#logging)
 
-<div class="task">
-<p><span>Úkol</span><br/>
-Naprogramujte základní verzi knihovny, která umožňí vytvořit distribuovaný systém na základně předané topologie. Knihovnu otestujte na jednoduchém příkladu, kdy každý uzel pošle informační zprávu sousedu.</p></div>
+{% include task.html content="Naprogramujte základní verzi knihovny, která umožňí vytvořit distribuovaný systém na základně předané topologie. Knihovnu otestujte na jednoduchém příkladu, kdy každý uzel pošle informační zprávu sousedu." %}
 
 {% highlight python linenos %}
 TOPOLOGY = [[False, True, False],

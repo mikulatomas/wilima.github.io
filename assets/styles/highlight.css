@@ -1,12 +1,14 @@
 
-.highlight {margin: 2em 0; font-size: 13px; line-height: 18px;}
+.highlight {margin: 3em 0; font-size: 13px; line-height: 18px; border-radius: 10px;}
+.rouge-table {
+    border-left-width: 6px;
+    border-left-style: solid;
+    border-left-color: #E9E9E9;
+}
 .code {padding: 0; padding-left: 0.8em;}
 .code pre {margin: 0; font-family: 'IBM Plex Mono', monospace;}
-.gutter {padding: 0 0.8em; color: gray; text-align: right; font-family: 'IBM Plex Mono', monospace; border-right: 1px solid #EBEBEB;}
-.highlight > pre {padding: 0 ; overflow: scroll; background-color: #F5F5F5; border-radius: 5px;
-border-left-width: 6px;
-    border-left-style: solid;
-    border-left-color: #E9E9E9;}
+.gutter {padding: 1em 0.8em; color: rgb(180, 180, 180); text-align: right; font-family: 'IBM Plex Mono', monospace; border-right: 1px solid #f0f0f0;}
+.highlight > pre {padding: 0 ; overflow: scroll; background-color: white;}
 
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #0099FF; font-style: italic } /* Comment */

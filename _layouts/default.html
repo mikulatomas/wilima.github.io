@@ -8,7 +8,9 @@
         <div class="container--full-width">
             {% if page.alert %}
             <div class="alert">
-                <i class="fad fa-megaphone"></i> {{ page.alert }}</div>
+                <div>
+                    <i class="fad fa-megaphone"></i> {{ page.alert }}</div>
+            </div>
             {% endif %}
             {{ content }}
         </div>

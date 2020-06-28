@@ -8,8 +8,7 @@ year: 2019
 ## Základní informace o jazyku Python
 Co o Python říká oficiální web:
 
-> Python is a programming language that lets you work quickly
-and integrate systems more effectively.
+{% include quote.html content="Python is a programming language that lets you work quickly and integrate systems more effectively." %}
 
 #### Užitečné odkazy
 * [Dokumentace jazyka Python3](https://docs.python.org/3/)
@@ -23,10 +22,8 @@ Většina produkce stále používá `Python 2.7`, `Python 3` je však zcela př
 ## Instalace jazyka Python 3
 Osobní zkušenost instalace mám pouze na Mac OS a Linux. V instalaci by vám měl pomoct následující [odkaz](https://docs.python-guide.org/starting/installation/).
 
-<div class="task">
-<p><span>Úkol</span><br/>Instalace jazyka Python na vámi zvolenou platformu.</p>
-</div>
 
+{% include task.html content="Instalace jazyka Python na vámi zvolenou platformu." %}
 
 ## Pip vs (Ana)Conda
 Oba dva balíčkovače pro instalování programů/knihoven v rámci Python ekosystému. Anaconda zaměřená více na vědecký Python (dataminig, machine learning). Conda nejenom pro Python, na PC na univerzitě najdete Condu.
@@ -44,11 +41,9 @@ Python je možné psát v jakémkoli textovém editoru [případně používat P
 ### Jupyter notebook
 Jupyter Notebook doporučuji na experimentování nejenom v jazyce Python. Jupyter umožňuje psát a vyhodnocovat kód rovnou v prohlížeči v takzvaném `jupyter notebook`. Více informací naleznete na [oficiálním webu projektu](http://jupyter.org).
 
-> The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.
+{% include quote.html content="The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more." %}
 
-<div class="task">
-<p><span>Úkol</span><br/>Zprovoznit libobolné IDE (ideálně Jupyter) a otestovat jednoduchý <code>hello_world.py</code>.</p>
-</div>
+{% include task.html content="Zprovoznit libobolné IDE (ideálně Jupyter) a otestovat jednoduchý <code>hello_world.py</code>." %}
 
 `hello_world.py`
 {% highlight python linenos %}
@@ -303,7 +298,8 @@ Je Python vhodný pro paralelní/distribuované programování?
 ### Global Interpreter Lock
 GIL je mutex, který pomáhá udržovat informaci o tom co v rámci Pythonu právě běží. Zároveň poskytuje aktuálnímu vlánknu přístup k interním funkcím Python interpretru. V čem je to problém? Pouze jedno vláknu může v jeden okamžik vyhodnocovat kód v interpretru. Multi-thread scripty jsou ve výsledku pomalejší než single-thread.
 
-> The GIL is controversial because it prevents multithreaded CPython programs from taking full advantage of multiprocessor systems in certain situations. Note that potentially blocking or long-running operations, such as I/O, image processing, and NumPy number crunching, happen outside the GIL. Therefore it is only in multithreaded programs that spend a lot of time inside the GIL, interpreting CPython bytecode, that the GIL becomes a bottleneck.
+
+{% include quote.html content="The GIL is controversial because it prevents multithreaded CPython programs from taking full advantage of multiprocessor systems in certain situations. Note that potentially blocking or long-running operations, such as I/O, image processing, and NumPy number crunching, happen outside the GIL. Therefore it is only in multithreaded programs that spend a lot of time inside the GIL, interpreting CPython bytecode, that the GIL becomes a bottleneck." %}
 
 ### Jak vyřešit GIL problém?
 Oficiální knihovna `multiprocessing` pro jazyk Python je alternativa řešící problém s GIL. Místo vytváření vláken dochází k vytváření procesů. Každý proces má vlastní GIL a proto ve výsledku nedochází k problému zmíněném výše. Více informací a příklady jsou dostupné [zde](https://charlienewey.github.io/parallel-processing-python/).

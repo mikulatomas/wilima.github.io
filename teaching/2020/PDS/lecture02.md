@@ -5,7 +5,6 @@ title: 2. Práce s vlákny
 year: 2020
 ---
 
-
 ## Základní práce s vlákny
 
 #### Užitečné odkazy
@@ -64,17 +63,11 @@ print(text)
 ### Problém sdíleného čítače
 Máme dvě vlákna, která inkrementují sdílený čítač. Každé vlákno má čítač postupně zvýšit o 100 000. Očekávaná výsledná hodnota je 200 000, proč tomu tak ne vždy je?
 
-<div class="task">
-<p><span>Úkol</span><br/>Vytvořte dvě vlákna, která se uspí na náhodně dlouhou dobu (v rozsahu několika sekund) a vypíší výstup na obrazovku.</p>
-</div>
+{% include task.html content="Vytvořte dvě vlákna, která se uspí na náhodně dlouhou dobu (v rozsahu několika sekund) a vypíší výstup na obrazovku." %}
 
-<div class="task">
-<p><span>Úkol</span><br/>Naprogramujte úlohu sdíleného čítače a vyzkoušejte zda opravdu nefunguje.</p>
-</div>
+{% include task.html content="Naprogramujte úlohu sdíleného čítače a vyzkoušejte zda opravdu nefunguje." %}
 
-
-<div class="task">
-<p><span>Úkol</span><br/>Mějme tři setřízená pole <code>a</code>, <code>b</code>, <code>c</code> s celými čísly. Je známo, že některé číslo se vyskytuje v každém poli. Paralelně nalézněte nejmenší index <code>i</code>, <code>j</code>, <code>k</code> pro které platí <code>a[i] == b[j] == c[k]</code>, hodnoty vypište na obrazovku. Úkol lze vyřešit tak, že není nutné použít synchronizaci.</p>
+{% include task.html content="Mějme tři setřízená pole <code>a</code>, <code>b</code>, <code>c</code> s celými čísly. Je známo, že některé číslo se vyskytuje v každém poli. Paralelně nalézněte nejmenší index <code>i</code>, <code>j</code>, <code>k</code> pro které platí <code>a[i] == b[j] == c[k]</code>, hodnoty vypište na obrazovku. Úkol lze vyřešit tak, že není nutné použít synchronizaci.</p>
 <p>
 <strong>Ukázkový vstup problému</strong>
 </p>
@@ -92,5 +85,4 @@ c = [3,4,6,7,9]<br/>
 Thread 1 result: 7<br/>
 Thread 2 result: 7<br/>
 Thread 3 result: 7<br/>
-</code>
-</p>
+</code>" %}
