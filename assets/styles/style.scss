@@ -284,7 +284,7 @@ header {
 
 .bio {
     align-items: center;
-    margin-top: 1.2em;
+    margin-top: 1.7em;
     margin-bottom: 3em;
 
     p {
@@ -444,7 +444,7 @@ footer {
 
 @media all and (max-width: 750px) {
     .alert {margin-top: 1.5em;}
-    .not-on-small {display: none !important;}
+    .not-on-small {display: none !important;}}
     main {padding: 0 1em 4em 1em;}
     header div.container--flex {padding: 0 1em;}
 }
@@ -454,7 +454,7 @@ footer {
   .year .container--flex {flex-wrap: wrap;}
   .year__semester {width: 100%;}
   header .logo {padding-bottom: 0.7em; text-align: center;}
-  .bio {margin: 2em 0;}
+  .bio {margin: 1.5em 0;}
   nav {margin-bottom: 1.3em}
 
 }
