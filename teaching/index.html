@@ -1,5 +1,6 @@
 ---
 layout: default
+alert_covid: Na vyučovaných předmětech <strong><a href="https://koronavirus.mzcr.cz/aktualni-opatreni/">dodržujte vládní nařízení týkající se COVID-19</a></strong>. V případě <strong>jakýchkoli příznaků se neúčastněte prezenční výuky mých předmětů a <a href="/">kontaktujte mě</a></strong> pro více informací k distanční výuce.
 ---
 
 
@@ -13,17 +14,7 @@ layout: default
             <h4>Zimní semestr</h4>
             <ul>
                 {% for page in site.pages %}
-                {% if page.types contains 'course' and page.types contains 'winter' and page.year == 2020 %}
-                <li><a href="{{page.url}}">{{page.title}}</a></li>
-                {% endif %}
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="year__semester">
-            <h4>Letní semestr</h4>
-            <ul>
-                {% for page in site.pages %}
-                {% if page.types contains 'course' and page.types contains 'summer' and page.year == 2020 %}
+                {% if page.types contains 'course' and page.types contains 'winter' and page.year == 2021 %}
                 <li><a href="{{page.url}}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
@@ -35,6 +26,32 @@ layout: default
 <div class="opacity">
     <h2>Archiv</h2>
     <p>Starší ročníky, aktuálnost a validita není zaručena.</p>
+    <div class="year">
+        <h3><i class="fad fa-calendar-alt blue"></i> 2019/2020</h3>
+        <div class="container--flex">
+            <div class="year__semester">
+                <h4>Zimní semestr</h4>
+                <ul>
+                    {% for page in site.pages %}
+                    {% if page.types contains 'course' and page.types contains 'winter' and page.year == 2020 %}
+                    <li><a href="{{page.url}}">{{page.title}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="year__semester">
+                <h4>Letní semestr</h4>
+                <ul>
+                    {% for page in site.pages %}
+                    {% if page.types contains 'course' and page.types contains 'summer' and page.year == 2020 %}
+                    <li><a href="{{page.url}}">{{page.title}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="year">
         <h3><i class="fad fa-calendar-alt blue"></i> 2018/2019</h3>
         <div class="container--flex">

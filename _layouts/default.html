@@ -6,8 +6,14 @@
 <body>
     <main>
         <div class="container--full-width">
+            {% if page.alert_covid %}
+            <div class="alert orange">
+                <div>
+                    <i class="fad fa-virus fa-swap-opacity"></i> {{ page.alert_covid }}</div>
+            </div>
+            {% endif %}
             {% if page.alert %}
-            <div class="alert">
+            <div class="alert blue">
                 <div>
                     <i class="fad fa-megaphone"></i> {{ page.alert }}</div>
             </div>
