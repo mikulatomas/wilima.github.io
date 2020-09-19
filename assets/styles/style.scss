@@ -10,6 +10,10 @@ body {
     color: #262626;
 }
 
+main {
+    padding-top: 0.7em;
+}
+
 pre {
     margin: 0;
     border-radius: 10px;
@@ -24,7 +28,7 @@ figure {
 
 h2, h3 {
     font-weight: bold;
-    margin-top: 1.7em;
+    margin-top: 1em;
     margin-bottom: 1em;
 }
 
@@ -280,7 +284,7 @@ header {
 
 .bio {
     align-items: center;
-    margin-top: 2em;
+    margin-top: 1.2em;
     margin-bottom: 3em;
 
     p {
@@ -439,6 +443,7 @@ footer {
 }
 
 @media all and (max-width: 750px) {
+    .alert {margin-top: 1.5em;}
     .not-on-small {display: none !important;}
     main {padding: 0 1em 4em 1em;}
     header div.container--flex {padding: 0 1em;}
