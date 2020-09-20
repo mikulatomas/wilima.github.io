@@ -43,9 +43,6 @@ thread2.join()
 print(counter)
 {% endhighlight %}
 
-> ## Úkol
-Následující kód doplňte o synchronizaci, tak aby byl `print()` prováděn ve správném pořadí. Synchronizace by neměla být příliš silná, například nás nezajímá v jakém pořadí bude vypsáno `Print before B` a `Print before A`.
-
 {% include task.html content="Následující kód doplňte o synchronizaci, tak aby byl <code>print()</code> prováděn ve správném pořadí. Synchronizace by neměla být příliš silná, například nás nezajímá v jakém pořadí bude vypsáno <code>Print before B</code> a <code>Print before A</code>." %}
 
 {% highlight python linenos %}

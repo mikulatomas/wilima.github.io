@@ -2,7 +2,7 @@
 layout: default
 courses: PDS
 title: 3. Základy se semafory
-year: 2020
+year: 2021
 ---
 
 

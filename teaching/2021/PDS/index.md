@@ -29,7 +29,7 @@ alert_covid: Na vyučovaných předmětech <strong><a href="https://koronavirus.
 </ul>
 
 ### Co bude obsahem cvičení PDS
-Bude doplněno.
+Implementace paralelních a distribuovaných algoritmů.
 
 ### Zápočet
-Bude doplněno.
+Splnění a odevzdání závěrečné implementace distribuovaného algoritmu. Plagiátorství není tolerováno.

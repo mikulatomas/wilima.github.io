@@ -2,9 +2,8 @@
 layout: default
 courses: PDS
 title: 2. Práce s vlákny
-year: 2019
+year: 2021
 ---
-
 
 ## Základní práce s vlákny
 
@@ -86,4 +85,4 @@ c = [3,4,6,7,9]<br/>
 Thread 1 result: 7<br/>
 Thread 2 result: 7<br/>
 Thread 3 result: 7<br/>
-</code></p>" %}
+</code></p>"%}
