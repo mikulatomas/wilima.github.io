@@ -57,7 +57,7 @@ print("Hello world!")
 
 ## Základy jazyka Python
 
-Více informací dostupné na odkazu [https://realpython.com/python-first-steps/](https://realpython.com/python-first-steps/). Následující příklady je možné stáhnout ve formě [Jupyter Notebooku](/assets/files/python_basics.ipynb).
+Více informací dostupné na odkazu [https://realpython.com/python-first-steps/](https://realpython.com/python-first-steps/). Následující příklady je možné stáhnout ve formě [Jupyter Notebooku](/assets/files/2021/python_basics.ipynb).
 
 ### Promněnné
 
@@ -178,6 +178,9 @@ cislo = 1
 
 # Dokonce není ani nutné převádět číselnou hodnotu na string
 print(f"Krasne cislo {cislo}")
+
+# Od Python 3.8+, debug print statement
+print(f"{cislo = }")
 {% endhighlight %}
 
 {% highlight console linenos %}
@@ -185,6 +188,7 @@ Ahoj světe
 Ahoj světe
 Ahoj světe
 Krasne cislo 1
+cislo = 1
 {% endhighlight %}
 
 
