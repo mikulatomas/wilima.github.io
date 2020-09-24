@@ -305,7 +305,7 @@ assert moje_funkce(1) == 2
 Je Python vhodný pro paralelní/distribuované programování?
 
 ### Global Interpreter Lock
-GIL je mutex, který pomáhá udržovat informaci o tom co v rámci Pythonu právě běží. Zároveň poskytuje aktuálnímu vlánknu přístup k interním funkcím Python interpretru. V čem je to problém? Pouze jedno vláknu může v jeden okamžik vyhodnocovat kód v interpretru. Multi-thread scripty jsou ve výsledku pomalejší než single-thread.
+GIL je mutex, který pomáhá udržovat informaci o tom co v rámci Pythonu právě běží. Zároveň poskytuje aktuálnímu vláknu přístup k interním funkcím Python interpretru. V čem je to problém? Pouze jedno vláknu může v jeden okamžik vyhodnocovat kód v interpretru. Multi-thread scripty jsou ve výsledku pomalejší než single-thread.
 
 
 {% include quote.html content="The GIL is controversial because it prevents multithreaded CPython programs from taking full advantage of multiprocessor systems in certain situations. Note that potentially blocking or long-running operations, such as I/O, image processing, and NumPy number crunching, happen outside the GIL. Therefore it is only in multithreaded programs that spend a lot of time inside the GIL, interpreting CPython bytecode, that the GIL becomes a bottleneck." %}
