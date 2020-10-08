@@ -6,7 +6,6 @@ course_page: http://www.inf.upol.cz/lide/michal-krupka/vyuka/paradigmata-program
 types: [course, winter]
 course: PAPR1
 year: 2021
-alert: Z důvodu studijní stáže mě na cvičení do 12.10.2020 zastupuje Mgr. David Kočíř.
 alert_covid: Na vyučovaných předmětech <strong><a href="https://koronavirus.mzcr.cz/aktualni-opatreni/">dodržujte vládní
         nařízení týkající se COVID-19</a></strong>. V případě <strong>jakýchkoli příznaků se neúčastněte prezenční výuky
     mých předmětů</strong>. Pro více informací k distanční výuce mě kontaktujte.
