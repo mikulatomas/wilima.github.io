@@ -13,7 +13,7 @@ year: 2021
 * [Distsim příklady](https://github.com/mikulatomas/distsim/tree/master/examples)
 * [Python `threading` — Thread-based parallelism](https://docs.python.org/3/library/threading.html)
 
-Dnes si ukážeme jak je možné použít ```Thread``` v rámci objektu ```Node``` v knihovně ```distsim```.
+Dnes si ukážeme, jak je možné použít ```Thread``` v rámci objektu ```Node``` v knihovně ```distsim```.
 
 ### Broadcast
 Minule bylo za úkol naprogramovat jednoduchý broadcast. Každý proces odeslal zprávu všem uzlům a poté počkal na zprávy od všech ostatních uzlů.
