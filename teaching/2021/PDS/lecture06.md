@@ -81,8 +81,8 @@ Celý příklad včetně logů naleznete [zde](https://github.com/mikulatomas/di
 ### Hearth Beat
 Dalším možným příkladem je takzvaný Hearth Beat. V distribuované síti se nachází jeden řídící uzel ```master``` a několik podřízených uzlů ```slave```.
 
-Uzel ```master``` zašle všem ```slave``` uzlům pokyn k zahájení práce. Podřízené ```slave``` uzly zahájí prácí a periodicky informují uzel ```master```, že výpočet stále běží (takzvaný hearth beat).
+Uzel ```master``` zašle všem ```slave``` uzlům pokyn k zahájení práce. Podřízené ```slave``` uzly zahájí práci a periodicky informují uzel ```master```, že výpočet stále běží (takzvaný hearth beat).
 
-Jakmile nějaký ```slave``` uzel práci dokončí rovněž o této skutečnosti informuje ```master``` uzel. Jakmile má ```master``` informaci od všech ```slave``` uzlů ukončí se.
+Jakmile nějaký ```slave``` uzel práci dokončí, rovněž o této skutečnosti informuje ```master``` uzel. Jakmile má ```master``` informaci od všech ```slave``` uzlů ukončí se.
 
 {% include task.html content="Naprogramujte implementaci Hearth Beat v knihovně <code>distsim</code>. Veškeré zprávy logujte." %}
