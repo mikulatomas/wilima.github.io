@@ -42,7 +42,7 @@ def node_code():
     logger.info(f"Shutting down.")
 {% endhighlight %}
 
-Dnes upravíme toto řešení aby se příjem a odeslání zpráv mohl prokládat. To je možné za pomoci dvou vláken. První vlákno se stará o odesílání a druhé o přijímaní zpráv.
+Dnes upravíme toto řešení, aby se příjem a odeslání zpráv mohlo prokládat. To je možné za pomoci dvou vláken. První vlákno se stará o odesílání a druhé o přijímaní zpráv.
 
 {% highlight python linenos %}
 def node_code():
