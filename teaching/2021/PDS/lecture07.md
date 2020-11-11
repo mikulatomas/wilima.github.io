@@ -6,7 +6,7 @@ year: 2021
 ---
 
 
-## Použití vláken v rámci uzlu distribuované sítě
+## Použití vláken v rámci uzlu distribuované sítě (2)
 
 #### Užitečné odkazy
 * [Distsim knihovna](https://github.com/mikulatomas/distsim)
