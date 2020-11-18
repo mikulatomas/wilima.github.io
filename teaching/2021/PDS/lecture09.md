@@ -76,7 +76,7 @@ def master():
     logger.info(f"Shutting down.")
 {% endhighlight %}
 
-Jednoduchý klient, který zažádá o jeden výpočet, a po obddržení výsledku skončí:
+Jednoduchý klient, který zažádá o jeden výpočet, a po obdržení výsledku skončí:
 
 {% highlight python linenos %}
 def client():
