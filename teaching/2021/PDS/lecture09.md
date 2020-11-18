@@ -50,7 +50,7 @@ Jakmile RPC Server obdrží zprávu pro vzdálený výpočet, vytvoří vlákno 
 
 RPC Server je možné ukončit zavoláním metody ``stop()`` (to klasické vlákno neumožňuje).
 
-Kód uzlu ``master`` může vypada nasledovně:
+Kód uzlu ``master`` může vypadat nasledovně:
 
 {% highlight python linenos %}
 def master():
