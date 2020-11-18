@@ -16,7 +16,7 @@ year: 2021
 * [SimpleXMLRPCServer Example](https://docs.python.org/3/library/xmlrpc.server.html#simplexmlrpcserver-example)
 
 ### Kolekce ``namedtuple``
-Pro vytvoření jednoduché třídy na reprezentaci zprávy je vhodné použít ``namedtuple``. Interně se jedná o ``tuple`` a lze sním tak pracovat.
+Pro vytvoření jednoduché třídy na reprezentaci zprávy je vhodné použít ``namedtuple``. Interně se jedná o ``tuple`` a lze s ním tak pracovat.
 
 {% highlight python linenos %}
 from collections import namedtuple
@@ -44,7 +44,7 @@ function.__code__.co_varnames
 ### RPC Server
 Úkolem bude vytvořit RPC Server, který půjde spustit jako vlákno v rámci kódu třídy ``Node``. Uživatel při vytvoření RPC Serveru předá seznam funkcí, které bude RPC podporovat. Tyto funkce poté mohou klienti serveru vzdáleně volat s dodanýmy argumenty.
 
-V aktuální verzi bude RPC Server obsluhovat veškeré zprávy, které do daného objektu ``Node`` příjdou. Zprávy které tak nepatří RPC Serveru může zahazovat. Při vytváření RPC Serveru je tedy nutné, aby byl předán objekt ``Node`` a ``logger`` pro logování do souboru daného uzlu.
+V aktuální verzi bude RPC Server obsluhovat veškeré zprávy, které do daného objektu ``Node`` přijdou. Zprávy které tak nepatří RPC Serveru může zahazovat. Při vytváření RPC Serveru je tedy nutné, aby byl předán objekt ``Node`` a ``logger`` pro logování do souboru daného uzlu.
 
 Jakmile RPC Server obdrží zprávu pro vzdálený výpočet, vytvoří vlákno s vybranou funkcí a argumenty. Vlákno po skončení výpočtu samo pošle výsledek uzlu, který si o výpočet zažádal.
 
