@@ -35,17 +35,17 @@ def function():
 
 Výraz ```nonlocal``` je užitečný pokud vytváříme vlákna v rámci procesu mezi kterými chceme sdílet data.
 
-### Rozšíření hearth beat
-Dnešním úkolem bude rozšířit Hearth Beat z minulého cvičení. V minulém cvičení počet úloh odpovídal počtu ```worker``` uzlů. V realitě máme většinou větší počet úkolů než je uzlů typu ```worker```, proto je nutné implementovat postupné opakované přiřazování práce jednotlivým uzlům.
+### Rozšíření Heart beat
+Dnešním úkolem bude rozšířit Heart Beat z minulého cvičení. V minulém cvičení počet úloh odpovídal počtu ```worker``` uzlů. V realitě máme většinou větší počet úkolů než je uzlů typu ```worker```, proto je nutné implementovat postupné opakované přiřazování práce jednotlivým uzlům.
 
 Rozšířený uzel ```master``` bude mít tedy tyto tři části:
 1. **Rozeslání úkolů**
-2. **Kontrola Hearth Beats**
+2. **Kontrola Heart Beats**
 3. **Příjem a třídění zpráv**
 
 Uzel ```master``` tedy rozdá práci tak, aby zaměstnal všechny nepracující uzly typu ```worker```. Jakmile nějaký ```worker``` dokončí práci, informuje o tom uzel ```master```. Ten si výsledek uloží, a poté uzlu pošle práci další.
 
 
-{% include task.html content="Naprogramujte rozšířenou verzi Hearth Beats. Jako problém použíjte zvětšení čísla o jedničku. Uzel <code>master</code> tedy obdrží <code>list</code> hodnot, který je větší než počet uzlů <code>worker</code>. Výsledkem bude seznam, kde každé číslo bude zvětšeno o jedna." %}
+{% include task.html content="Naprogramujte rozšířenou verzi Heart Beats. Jako problém použíjte zvětšení čísla o jedničku. Uzel <code>master</code> tedy obdrží <code>list</code> hodnot, který je větší než počet uzlů <code>worker</code>. Výsledkem bude seznam, kde každé číslo bude zvětšeno o jedna." %}
 
 

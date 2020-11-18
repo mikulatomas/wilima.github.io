@@ -16,5 +16,8 @@ alert_covid: Na vyučovaných předmětech <strong><a href="https://koronavirus.
 
 **Stránky předmětu:** [{{ page.course_page }}]({{ page.course_page }})
 
+## Showcase
+Stránka s obrázky vytvořených za pomoci želvý grafiky v jazyku Lisp je dostupná [zde](/teaching/showcase).
+
 ## Zápočet
 Účast na cvičení (absence max 25%).

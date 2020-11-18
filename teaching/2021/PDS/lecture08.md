@@ -21,7 +21,7 @@ year: 2021
 Dnešním rozšířením bude simulace selhání workera během výpočtu. Nová distribuovaná síť by tedy měla fungovat následovně:
 
 1. Jakmile nastartuje ```worker```, oznámí uzlu ```master```, že je připraven.
-2. Nastartovaný ```worker``` se pravidelně hlásí uzlu ```master``` skrze hearth beats.
+2. Nastartovaný ```worker``` se pravidelně hlásí uzlu ```master``` skrze Heart beats.
 3. Uzel ```master``` si udržuje aktuálně aktivní uzly ```worker``` a přiřazuje jim úlohy.
 4. Práce je přiřazena okamžitě jakmile nějaký uzel ```worker``` oznámí, že práci dokončil, nebo se připojí ```worker``` nový (např. restart po selhání).
 5. Jakmile se po nějaké době přestane některý z uzlů ```worker``` hlásit, tak ```master``` uzel ```worker``` vyřadí. V případě, že měl ```worker``` přidělenou práci, ```master``` ji přiradí někomu jinému.
@@ -34,6 +34,6 @@ Při práci si dávejte pozor na semafory. Pokud někde čekáte na semafor done
 ### Jak simulovat selhání?
 Například za pomoci generování náhodného čísla. Celý kód uzlu ```worker``` se může nacházet uvnitř ```while``` cyklu, ten se stará o samotný "restart".
 
-{% include task.html content="Naprogramujte rozšířenou verzi Hearth Beats s podporou selhání uzlu <code>worker</code>." %}
+{% include task.html content="Naprogramujte rozšířenou verzi Heart Beats s podporou selhání uzlu <code>worker</code>." %}
 
 
