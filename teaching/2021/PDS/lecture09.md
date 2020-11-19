@@ -16,7 +16,7 @@ year: 2021
 * [SimpleXMLRPCServer Example](https://docs.python.org/3/library/xmlrpc.server.html#simplexmlrpcserver-example)
 
 ### Kolekce ``namedtuple``
-Pro vytvoření jednoduché třídy na reprezentaci zprávy je vhodné použít ``namedtuple``. Interně se jedná o ``tuple`` a lze s ním tak pracovat.
+Pro vytvoření jednoduché třídy na reprezentaci zprávy je vhodné použít ``namedtuple``. Interně se jedná o ``tuple`` a lze s ním tak pracovat. Pozor nejedná se o mutovatelnou strukturu.
 
 {% highlight python linenos %}
 from collections import namedtuple
