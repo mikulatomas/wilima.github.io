@@ -41,6 +41,7 @@ function.__code__.co_varnames
 
 {% endhighlight %}
 
+
 ### RPC Server
 Úkolem bude vytvořit RPC Server, který půjde spustit jako vlákno v rámci kódu třídy ``Node``. Uživatel při vytvoření RPC Serveru předá seznam funkcí, které bude RPC podporovat. Tyto funkce poté mohou klienti serveru vzdáleně volat s dodanýmy argumenty.
 
@@ -49,6 +50,19 @@ V aktuální verzi bude RPC Server obsluhovat veškeré zprávy, které do dané
 Jakmile RPC Server obdrží zprávu pro vzdálený výpočet, vytvoří vlákno s vybranou funkcí a argumenty. Vlákno po skončení výpočtu samo pošle výsledek uzlu, který si o výpočet zažádal.
 
 RPC Server je možné ukončit zavoláním metody ``stop()`` (to klasické vlákno neumožňuje).
+
+Vzorová šablona třídy ``RPCServer``
+
+{% highlight python linenos %}
+class RPCServer(threading.Thread):
+    def __init__(self, functions, node, logger):
+        pass
+        threading.Thread.__init__(self)
+
+    def run(self):
+        pass
+
+{% endhighlight %}
 
 Kód uzlu ``master`` může vypadat nasledovně:
 
