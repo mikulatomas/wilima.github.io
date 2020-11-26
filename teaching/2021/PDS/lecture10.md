@@ -30,14 +30,13 @@ V rámci simulované sítě vytvořenou knihovnou ``distsim`` bude architektura 
 1. jeden ``master`` uzel
 2. několik ``worker`` uzlů provádějící ``map`` nebo ``reduce``
 
-Podstatné jsou dva parametry. 
-
 #### Parametr ``R``
 Určuje počet ``reduce`` operací. Parametr ``R`` hraje důležitou roli v hashovací funkci zmíněné níže.
 
 ### Uzel ``master``
 Uzel ``master`` má několik povinností:
 
+* Zaregistruje dostupné uzly ``worker``.
 * Rozešlě ``map`` požadavek všem uzlům ``worker``.
 * Počká jakmile budou ``map`` výsledky hotovy pro všechny vstupní soubory.
 * Jakmile jsou části ``map`` hotovy, rozešle požadavek ``reduce`` všem ``R`` uzlům typu ``worker``.
@@ -46,6 +45,7 @@ Uzel ``master`` má několik povinností:
 ### Uzel ``worker``
 Uzel ``worker`` má v sobě uložené dvě funkce ``map`` a ``reduce``. Uzel ``woker`` má několik povinností:
 
+* Registruje u uzlu ``master``.
 * Periodicky odpovída na zprávy typu ``ping``.
 * V případě přijetí zprávy ``map`` si otevře příslušné soubory a provede funkci ``map``. Výsledek uloží do speciálního souboru a jeho název pošle uzlu ``master``.
 * V případě přijetí zpávy ``reduce`` si otevře příslušné soubory a provede funkci ``reduce``. Výsledek uloží do speciálního souboru a jeho název pošle uzlu ``master``.
@@ -84,10 +84,9 @@ c 1
 Příklad funkce ``map``:
 
 {% highlight python linenos %}
-def map_emit_fun(r):
+def map_emit_fun(r, worker_task_id):
     def emit(key, value):
         prefix = int(hashlib.sha1(s.encode()).hexdigest(), 16) % r
-        worker_task_id = str(uuid.uuid1())
 
         filename = f'{prefix}_{worker_task_id}'
         append_line(filename, f"{key} {value}")
