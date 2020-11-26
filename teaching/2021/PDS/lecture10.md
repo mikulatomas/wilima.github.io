@@ -130,10 +130,8 @@ c 1
 Příklad funkce ``reduce``:
 
 {% highlight python linenos %}
-def reduce_emit_fun(reduce_id):
+def reduce_emit_fun(reduce_id, worker_task_id):
     def emit(key, value):
-        worker_task_id = str(uuid.uuid1())
-
         filename = f'{reduce_id}_{worker_task_id}'
         append_line(filename, f"{key} {value}")
 
