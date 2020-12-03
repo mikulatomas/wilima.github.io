@@ -141,4 +141,4 @@ def reduce_count(key, values, emit):
     emit(key, len(values))
 {% endhighlight %}
 
-{% include task.html content="Implementujte MapReduce na úkol výpočtu word count pro vstupní data dostupná <a href='/assets/files/2021/dataset.zip'>zde</a>." %}
+{% include task.html content="Implementujte MapReduce na úkol výpočtu word count pro vstupní data dostupná <a href='/assets/files/2021/dataset.zip'>zde</a>. Správný výsledek naleznete <a href='/assets/files/2021/solution.txt'>zde</a>." %}
