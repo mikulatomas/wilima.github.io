@@ -5,9 +5,8 @@ lector: Mgr. Jan Tříska, Ph.D.
 types: [course, winter]
 course: PDS
 year: 2021
-alert_covid: Na vyučovaných předmětech <strong><a href="https://koronavirus.mzcr.cz/aktualni-opatreni/">dodržujte vládní
-        nařízení týkající se COVID-19</a></strong>. V případě <strong>jakýchkoli příznaků se neúčastněte prezenční výuky
-    mých předmětů</strong>. Pro více informací k distanční výuce mě kontaktujte.
+alert_covid: Na vyučovaných předmětech <strong><a href="https://covid.gov.cz/opatreni">dodržujte vládní
+        nařízení týkající se COVID-19</a></strong>. Pro více informací k distanční výuce mě kontaktujte.
 ---
 
 ## {{ page.title }}
