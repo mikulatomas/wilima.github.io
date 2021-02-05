@@ -20,6 +20,7 @@ Kurs je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu
 
 ### Splnění předmětu
 * Shlédnutí záznamů přednášek online.
+* Prostudování [materiálů](/teaching/skripta).
 
 ### Seznam přednášek
 Níže bude během semestru umístěn seznam online přednášek. V případě jakýchkoli dotazů se na mě obraťte.
