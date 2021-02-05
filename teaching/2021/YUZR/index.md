@@ -19,7 +19,7 @@ Kurs je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu
 5.	Časté chyby v návrhu uživatelského rozhraní.
 
 ### Splnění předmětu
-* Shlédnutí záznamů přednášek online.
+* Zhlédnutí záznamů přednášek online.
 * Prostudování [materiálů](/teaching/skripta).
 
 ### Seznam přednášek
