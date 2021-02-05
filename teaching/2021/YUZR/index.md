@@ -4,7 +4,7 @@ title: KMI/YUZR Uživatelská rozhraní
 types: [course, summer]
 course: YUZR
 year: 2021
-alert_covid: Z důvodu platných omezení kvůli COVID-19 probíhá výuka tohoto předmětu online! Více informací níže.
+alert_covid: Z důvodu vládních omezení (COVID-19), probíhá výuka tohoto předmětu do odvolání online! Více informací níže.
 ---
 
 ## {{ page.title }}
