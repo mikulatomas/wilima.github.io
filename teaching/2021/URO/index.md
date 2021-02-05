@@ -19,7 +19,7 @@ Kurs je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu
 5.	Časté chyby v návrhu uživatelského rozhraní.
 
 ### Semináře online:
-**Semináře budou do odvolání probíhat pouze online**. Pro komunikaci využíjte platformu **Microsoft Teams** (pozvánka by Vám měla přijít na Váš univerzitní email, v opačném případě mě prosím kontaktujte).
+**Semináře budou do odvolání probíhat pouze online**. Pro komunikaci využíjte platformu **Microsoft Teams** (pozvánka by Vám měla přijít na Váš univerzitní email, v opačném případě mě prosím kontaktujte). Studenti jsou povinni zajistit funkčkní Microsoft Teams do začátku semestru.
 
 ### Splnění předmětu
 * Aktivita na hodině (v online podobě).
