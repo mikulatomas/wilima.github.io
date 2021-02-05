@@ -18,6 +18,9 @@ Kurs je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu
 4.	Základní prvky pro tvorbu uživatelského rozhraní. 
 5.	Časté chyby v návrhu uživatelského rozhraní.
 
+### Semináře online:
+**Semináře budou do odvolání probíhat pouze online**. Pro komunikaci využíjte platformu **Microsoft Teams** (pozvánka by Vám měla přijít na Váš univerzitní email, v opačném případě mě prosím kontaktujte).
+
 ### Splnění předmětu
 * Aktivita na hodině (v online podobě).
 * Návrh wireframe na splnění kolokvia (více informací během semestru).
