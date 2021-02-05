@@ -4,7 +4,7 @@ title: KMI/URO Uživatelská rozhraní
 types: [course, summer]
 course: URO
 year: 2021
-alert_covid: Z důvodu platných omezení skrze COVID-19 probíhá výuka tohoto předmětu online!
+alert_covid: Z důvodu platných omezení kvůli COVID-19 probíhá výuka tohoto předmětu online! Více informací níže.
 ---
 
 ## {{ page.title }}
