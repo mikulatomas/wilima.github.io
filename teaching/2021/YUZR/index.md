@@ -25,6 +25,8 @@ Kurs je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu
 ### Seznam přednášek
 Níže bude během semestru umístěn seznam online přednášek. V případě jakýchkoli dotazů se na mě obraťte.
 
+1. První přednáška https://youtu.be/GxwqltLjZyY (dostupná od 18.2.2021)
+
 ### Materiály k předmětu
 * [Ke stažení zde](/teaching/skripta)
 
