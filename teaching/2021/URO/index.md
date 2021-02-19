@@ -33,6 +33,8 @@ Kurs je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu
 
 ### Užitečné odkazy
 * [UI design game](https://cantunsee.space)
+* [Netflix - Abstract - Ian Spalter: Digital Product Design (UI Design)](https://www.netflix.com/watch/80237097?trackId=200257859)
+* [Netflix - Highscore (Game Design)](https://www.netflix.com/watch/81058575?trackId=254794450)
 * [Pravidla UX designu](https://lawsofux.com)
 * [Hack design](https://hackdesign.org)
 * [Kerning game](https://type.method.ac)
