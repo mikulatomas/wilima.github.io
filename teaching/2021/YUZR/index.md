@@ -18,14 +18,15 @@ Kurs je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu
 4.	Základní prvky pro tvorbu uživatelského rozhraní. 
 5.	Časté chyby v návrhu uživatelského rozhraní.
 
-### Splnění předmětu
+ ### Splnění předmětu
 * Zhlédnutí záznamů přednášek online.
 * Prostudování [materiálů](/teaching/skripta).
 
 ### Seznam přednášek
 Níže bude během semestru umístěn seznam online přednášek. V případě jakýchkoli dotazů se na mě obraťte.
 
-1. První přednáška [Youtube záznam](https://youtu.be/GxwqltLjZyY)
+1. [Youtube záznam](https://youtu.be/GxwqltLjZyY)
+2. [Youtube záznam](https://youtu.be/coWqDuQvxTg)
 
 ### Materiály k předmětu
 * [Ke stažení zde](/teaching/skripta)
