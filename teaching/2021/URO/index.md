@@ -23,6 +23,7 @@ Kurs je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu
 
 1. 18.2.2021 - [Youtube stream](https://youtu.be/GxwqltLjZyY)
 2. 25.2.2021 - [Youtube stream](https://youtu.be/coWqDuQvxTg)
+3. 4.3.2021 - [Youtube stream](https://youtu.be/BQ-x5I95wDI)
 
 ### Splnění předmětu
 * Aktivita na hodině (v online podobě).
