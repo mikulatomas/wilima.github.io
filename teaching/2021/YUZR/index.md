@@ -32,6 +32,10 @@ Níže bude během semestru umístěn seznam online přednášek. V případě j
 ### Materiály k předmětu
 * [Ke stažení zde](/teaching/skripta)
 
+### Doporučená literatura
+* [Daniel Kahneman - Myšlení: rychlé a pomalé (Thinking, Fast and Slow)](https://www.databazeknih.cz/knihy/mysleni-rychle-a-pomale-140504)
+* [Donald Norman - Design věcí všedního dne (The Design of Everyday Things)](https://cs.qaz.wiki/wiki/The_Design_of_Everyday_Things)
+
 ### Užitečné odkazy
 
 * [UI design game](https://cantunsee.space)

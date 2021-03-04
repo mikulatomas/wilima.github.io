@@ -33,6 +33,10 @@ Kurs je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu
 ### Materiály k předmětu
 * [Ke stažení zde](/teaching/skripta)
 
+### Doporučená literatura
+* [Daniel Kahneman - Myšlení: rychlé a pomalé (Thinking, Fast and Slow)](https://www.databazeknih.cz/knihy/mysleni-rychle-a-pomale-140504)
+* [Donald Norman - Design věcí všedního dne (The Design of Everyday Things)](https://cs.qaz.wiki/wiki/The_Design_of_Everyday_Things)
+
 ### Užitečné odkazy
 * [UI design game](https://cantunsee.space)
 * [Netflix - Abstract - Ian Spalter: Digital Product Design (UI Design)](https://www.netflix.com/watch/80237097?trackId=200257859)
