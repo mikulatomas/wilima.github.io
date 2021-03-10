@@ -21,9 +21,10 @@ Kurs je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu
 ### Semináře online:
 **Semináře budou do odvolání probíhat pouze online**. Pro komunikaci využíjte platformu **Microsoft Teams** (pozvánka by Vám měla přijít na Váš univerzitní email, v opačném případě mě prosím kontaktujte). Studenti jsou povinni zajistit funkčkní Microsoft Teams do začátku semestru.
 
-1. 18.2.2021 - [Youtube stream](https://youtu.be/GxwqltLjZyY)
-2. 25.2.2021 - [Youtube stream](https://youtu.be/coWqDuQvxTg)
-3. 4.3.2021 - [Youtube stream](https://youtu.be/BQ-x5I95wDI)
+1. 18.2. - [Youtube stream](https://youtu.be/GxwqltLjZyY)
+2. 25.2. - [Youtube stream](https://youtu.be/coWqDuQvxTg)
+3. 4.3. - [Youtube stream](https://youtu.be/BQ-x5I95wDI)
+4. 11.3. - [Youtube stream](https://youtu.be/rXvbXOLFf1Y)
 
 ### Splnění předmětu
 * Aktivita na hodině (v online podobě).
