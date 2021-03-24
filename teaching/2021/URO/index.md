@@ -30,7 +30,7 @@ Kurs je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu
 ### Splnění předmětu
 * Aktivita na hodině (v online podobě).
 * Samostudium [materiálů](/teaching/skripta).
-* Návrh wireframe na splnění kolokvia (více informací během semestru).
+* Návrh wireframe na splnění kolokvia ([zadání](wireframe.html))
 
 ### Materiály k předmětu
 * [Ke stažení zde](/teaching/skripta)
