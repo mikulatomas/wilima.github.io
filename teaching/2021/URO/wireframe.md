@@ -6,9 +6,9 @@ title: Návrh uživatelského rozhraní (wireframe)
 
 ## {{ page.title }}
 
-Cílem projektu je vypracovat wireframe systému **realizující system pro rezervaci očkování**. Projekt má dva možné alternativy. První možností je navrhnout wireframe **mobilní aplikace**, druhou možností je pak **aplikace webová**. 
+Cílem projektu je vypracovat wireframe **systému pro rezervaci očkování**. Projekt má dvě možné alternativy. První možností je wireframe **mobilní aplikace**, druhou možností je wireframe **aplikace webová**. V případě webové aplikace není nutné navrhovat responzivní verzi.
 
-Wireframe musí být vytvořen v **papírové** podobě a musí obsahovat **veškerou požadovanou funkcionalitu** (výjimku tvoří wireframe vytvořený elektronickou tužkou na tabletu, cílem je nepoužívat žádné komplexní nástroje). Šablonu pro wireframe naleznete [zde](https://sneakpeekit.com).
+Wireframe musí být vytvořen v **papírové** podobě (výjimku tvoří wireframe vytvořený elektronickou tužkou na tabletu, cílem je nepoužívat žádné komplexní nástroje) a musí obsahovat **veškerou požadovanou funkcionalitu**. Šablonu pro wireframe naleznete [zde](https://sneakpeekit.com).
 
 #### Co **musí** obsahovat wireframe?
 * Základní rozmístění a volba elementů
@@ -20,23 +20,19 @@ Wireframe musí být vytvořen v **papírové** podobě a musí obsahovat **veš
 * Podrobný vzhled elementů (zaoblené/nezaoblené rohy)
 * Nedůležitý text, může být nahrazen vlnovkami
 
+### Splnění kolokvia
+Během semestru probíhají "cykly hodnocení", které jsou simulací realné práce na projektu. Pro získání průběžné zpětné vazby mi prosím zašlete **naskenovaný/vyfocený wireframe ve formátu PDF** (všechny stránky v jednom souboru) na platformu **MS Teams** (do osobního chatu). Do wireframu zakreslím své připomínky a poté jej zašlu zpět. Tento cyklus můžete opakovat tolikrát kolikrát budete potřebovat, jedná se o výukový nástroj, průběžné hodnocení nemá vliv na výsledný verdikt kolokvia a průběžné odevzdávání je více než doporučeno.
+
+V závěru semestru bude možné wireframe projektu odevzdat k finálnímu hodnocení, za které bude studentovi uděleno splnění kolokvia. **První kolokvia budou vypsána v zápočtovém týdnu, doporučuji cílit na tento deadline**.
+
 #### Užitečné odkazy
-* [UI design game](https://cantunsee.space)
-* [Pravidla UX designu](https://lawsofux.com)
-* [Hack design](https://hackdesign.org)
-* [Kerning game](https://type.method.ac)
 * [Printable wireframe layouts](https://sneakpeekit.com)
 * [Human Interface Guidelines (iOS)](https://developer.apple.com/design/human-interface-guidelines/)
 * [Material Design (Android)](https://material.io/components/)
 * [Bootstrap Framework](https://getbootstrap.com)
 
-### Splnění kolokvia
-Během semestru probíhají "hodnotící kolečka", která jsou simulaci realné práce na projektu. Pro získání průběžné zpětné vazby mi prosím zašlete **naskenovaný/vyfocený wireframe ve formátu PDF** (jeden soubor, více stránek) na platformě **MS Teams** . Do wireframu zakreslím své připomínky a poté Vám jej zašlu zpět. Toto kolečko můžete opakovat v libovolném množství, jedná se o výukový nástroj, průběžné hodnocení nemá vliv na výsledný verdikt kolokvia.
-
-V závěru semestru bude možné wireframe projektu odevzdat k finálnímu hodnocení, za které bude studentovi uděleno splnění kolokvia. **První kolokvia budou vypsána v zápočtovém týdnu, doporučuji cílit na tento deadline**.
-
 ## Systém pro rezervace očkovaní
-Jednoduchý a přehledný systém pro rezervaci k očkování. První verze systému MZČR je po uživatelské stránce silně nevyhovující. Následující obrázek **demonstruje jak systém nemá vypadat**. Dbejte na jednoduchost a přehlednost, systém budou používat lidé všech věkových kategorii. Snažte se navrhnout systém lepší.
+Jednoduchý a přehledný systém pro rezervaci očkování. První verze systému MZČR je po uživatelské stránce silně nevyhovující. Následující obrázek **demonstruje jak systém nemá vypadat**. Dbejte na jednoduchost a přehlednost, systém budou používat lidé všech věkových kategorii.
 
 <img src="/assets/images/ockovani.png" style="width:100%;"/>
 
