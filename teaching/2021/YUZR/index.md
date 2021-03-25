@@ -30,6 +30,7 @@ Níže bude během semestru umístěn seznam online přednášek. V případě j
 3. [Youtube záznam](https://youtu.be/BQ-x5I95wDI)
 4. [Youtube záznam](https://youtu.be/rXvbXOLFf1Y)
 5. [Youtube záznam](https://youtu.be/GP7k5FD--3k)
+6. [Youtube záznam](https://youtu.be/fw5Gr5Epjkc)
 
 ### Materiály k předmětu
 * [Ke stažení zde](/teaching/skripta)

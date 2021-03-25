@@ -26,6 +26,7 @@ Kurs je zaměřen na problematiku uživatelských rozhraní s důrazem na tvorbu
 3. 4.3. - [Youtube stream](https://youtu.be/BQ-x5I95wDI)
 4. 11.3. - [Youtube stream](https://youtu.be/rXvbXOLFf1Y)
 5. 18.3. - [Youtube stream](https://youtu.be/GP7k5FD--3k)
+6. 25.3. - [Youtube stream](https://youtu.be/fw5Gr5Epjkc)
 
 ### Splnění předmětu
 * Aktivita na hodině (v online podobě).
